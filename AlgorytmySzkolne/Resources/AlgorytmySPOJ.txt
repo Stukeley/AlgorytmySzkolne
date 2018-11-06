@@ -1,0 +1,417 @@
+﻿//Name: Zabawne Dodawanie Piotrusia
+using System;
+
+public class DodawaniePiotrusia
+    {
+        private static int kroki;
+
+        private static void dod(string pom)
+        {
+            bool czy = true;
+            for (int i = 0; i < pom.Length / 2; i++)
+            {
+                if (pom[i] != pom[pom.Length - i - 1])
+                {
+                    czy = false;
+                    break;
+                }
+            }
+            if (czy)
+            {
+                Console.WriteLine(pom + " " + kroki);
+            }
+            else
+            {
+                kroki++;
+                string pom2 = "";
+                for (int i = pom.Length - 1; i >= 0; i--)
+                {
+                    pom2 += pom[i];
+                }
+                int p = int.Parse(pom) + int.Parse(pom2);
+                dod(p.ToString());
+            }
+        }
+
+        public static void Main()
+        {
+            int k = int.Parse(Console.ReadLine());
+            int j = 0;
+            while (j < k)
+            {
+                string pom = Console.ReadLine();
+                kroki = 0;
+                dod(pom);
+                j++;
+            }
+        }
+    }
+//end
+
+//Name: Liczby pierwsze
+using System;
+
+public class Liczbypierwsze
+    {
+        private static bool sprawdz(int k)
+        {
+            if (k == 1) return false;
+            if (k == 2) return true;
+            for (int i = 2; i <= Math.Sqrt(k); i++)
+                if (k % i == 0) return false;
+            return true;
+        }
+
+        public static void Main()
+        {
+            int n = int.Parse(Console.ReadLine());
+            int j = 0;
+            while (j < n)
+            {
+                int k = int.Parse(Console.ReadLine());
+
+                if (sprawdz(k)) Console.WriteLine("TAK");
+                else Console.WriteLine("NIE");
+                j++;
+            }
+        }
+    }
+//end
+
+//Name: SkarbFinder
+using System;
+
+public class SkarbFinder
+    {
+        private static void dodaj(ref int x, ref int y, int w, int k)
+        {
+            switch (w)
+            {
+                case 0:
+                    y += k;
+                    break;
+
+                case 1:
+                    y -= k;
+                    break;
+
+                case 2:
+                    x -= k;
+                    break;
+
+                case 3:
+                    x += k;
+                    break;
+            }
+        }
+
+        public static void Main()
+        {
+            int D = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < D; i++)
+            {
+                int w = 0, k = 0;//w - kierunek, k - ilość kroków
+                int x = 0, y = 0;//x - poz, y - pion
+                int N = int.Parse(Console.ReadLine());
+
+                for (int j = 0; j < N; j++)
+                {
+                    w = Console.Read() - 48;
+                    k = int.Parse(Console.ReadLine());
+                    dodaj(ref x, ref y, w, k);
+                }
+
+                if (x == 0 && y == 0)
+                    Console.WriteLine("studnia");
+                else
+                {
+                    if (y != 0)
+                    {
+                        if (y > 0) Console.WriteLine("0 {0}", y);
+                        else Console.WriteLine("1 {0}", -y);
+                    }
+
+                    if (x != 0)
+                    {
+                        if (x > 0) Console.WriteLine("3 {0}", x);
+                        else Console.WriteLine("2 {0}", -x);
+                    }
+                }
+            }
+        }
+    }
+//end
+
+//Name: Dwie cyfry silni
+using System;
+
+public class Silnia
+    {
+        public static void Main()
+        {
+            int D = int.Parse(Console.ReadLine());
+            int jednosci;
+            int dziesiatek;
+            int[] pierwsze9 = { 1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880 };
+            int[] input = new int[D];
+
+            for (int i = 0; i < D; i++)
+                input[i] = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < D; i++)
+            {
+                if (input[i] >= 10)
+                {
+                    jednosci = 0;
+                    dziesiatek = 0;
+                }
+                else if (input[i] > 5)
+                {
+                    jednosci = 0;
+                    dziesiatek = (input[i] * ((pierwsze9[input[i] - 1] / 10) % 10)) % 10;
+                }
+                else
+                {
+                    jednosci = pierwsze9[input[i]] % 10;
+                    dziesiatek = (pierwsze9[input[i]] / 10) % 10;
+                }
+                Console.WriteLine("{0} {1}", dziesiatek, jednosci);
+            }
+        }
+    }
+//end
+
+//Name: Czy umiesz potęgować
+using System;
+
+public class Potęgi
+    {
+        public static void mejn()
+        {
+            int D = int.Parse(Console.ReadLine());
+            int ostatniaCyfra;
+
+            for (int i = 0; i < D; i++)
+            {
+                string[] input = Console.ReadLine().Split();
+                int a = int.Parse(input[0]);
+                int b = int.Parse(input[1]);
+
+                if (a % 10 == 0 || a % 10 == 1 || a % 10 == 5 || a % 10 == 6)
+                    ostatniaCyfra = (a % 10);
+                else if (a % 10 == 4)
+                {
+                    if (b % 2 == 0) ostatniaCyfra = 6;
+                    else ostatniaCyfra = 4;
+                }
+                else if (a % 10 == 9)
+                {
+                    if (b % 2 == 0) ostatniaCyfra = 1;
+                    else ostatniaCyfra = 9;
+                }
+                else
+                {
+                    int r = (b % 100) % 4;
+
+                    if (r == 1) ostatniaCyfra = a % 10;
+                    else if (r == 2)
+                    {
+                        if ((a % 10) % 2 == 0)
+                            ostatniaCyfra = 4;
+                        else
+                            ostatniaCyfra = 9;
+                    }
+                    else if (r == 3)
+                    {
+                        if (a % 10 == 2)
+                            ostatniaCyfra = 8;
+                        else if (a % 10 == 3)
+                            ostatniaCyfra = 7;
+                        else if (a % 10 == 7)
+                            ostatniaCyfra = 3;
+                        else
+                            ostatniaCyfra = 2;
+                    }
+                    else
+                    {
+                        if ((a % 10) % 2 == 0) ostatniaCyfra = 6;
+                        else ostatniaCyfra = 1;
+                    }
+                }
+                Console.WriteLine("{0}", ostatniaCyfra);
+            }
+        }
+    }
+//end
+
+//Name: Konwersja dat
+using System;
+
+public class KonwersjaDat
+    {
+        public static string zISO(string w)
+        {
+            string output = "";
+            string pomoc = "";
+            int pom;
+            int p1, p2, p3;
+
+            pom = int.Parse(w.Substring(0, 4));
+            p1 = pom;
+            if (p1 == 0)
+                return "ERROR";
+
+            pom -= 1980;
+            while (pom != 0)
+            {
+                pomoc = ((pom % 2).ToString()) + pomoc;
+                pom /= 2;
+            }
+
+            if (pomoc.Length > 7)
+                return "ERROR";
+            else if (pomoc.Length < 7)
+            {
+                while (pomoc.Length < 7)
+                    pomoc = "0" + pomoc;
+            }
+            output = pomoc + output;
+
+            pom = int.Parse(w.Substring(5, 2));
+            p2 = pom;
+            if (p2 == 0 || p2 > 12)
+                return "ERROR";
+
+            pomoc = "";
+            while (pom != 0)
+            {
+                pomoc = ((pom % 2).ToString()) + pomoc;
+                pom /= 2;
+            }
+
+            if (pomoc.Length > 4)
+                return "ERROR";
+            else if (pomoc.Length < 4)
+            {
+                while (pomoc.Length < 4)
+                    pomoc = "0" + pomoc;
+            }
+            output = output + pomoc;
+
+            pom = int.Parse(w.Substring(8, 2));
+            p3 = pom;
+
+            if (pom == 0 || pom > 31)
+                return "ERROR";
+            if (p1 % 4 != 0 && p2 == 2 && p3 >= 29)
+                return "ERROR";
+            if (p2 != 8 && p2 % 2 == 0 && p3 == 31)
+                return "ERROR";
+
+            pomoc = "";
+            while (pom != 0)
+            {
+                pomoc = ((pom % 2).ToString()) + pomoc;
+                pom /= 2;
+            }
+
+            if (pomoc.Length > 5)
+                return "ERROR";
+            else if (pomoc.Length < 5)
+            {
+                while (pomoc.Length < 5)
+                    pomoc = "0" + pomoc;
+            }
+            output = output + pomoc;
+
+            return output;
+        }
+
+        public static string naISO(string w)
+        {
+            string wynik = "";
+            int output, output2, output3;//rok-miesiąc-dzień
+            string pom;
+
+            pom = w.Substring(0, 7);
+            output = pom[0] - 48;
+
+            for (int i = 1; i < pom.Length; i++)//w drugą stronę?
+            {
+                output = output * 2 + pom[i] - 48;
+            }
+
+            if (output == 0) return "ERROR";
+
+            output += 1980;
+            wynik = output.ToString() + "-";
+
+            pom = w.Substring(7, 4);
+            output2 = pom[0] - 48;
+
+            for (int i = 1; i < pom.Length; i++)//miesiąc
+            {
+                output2 = output2 * 2 + pom[i] - 48;
+            }
+            if (output2 == 0 || output2 > 12)
+                return "ERROR";
+            if (output2.ToString().Length == 1)
+                wynik = wynik + "0";
+            wynik = wynik + output2.ToString() + "-";
+
+            pom = w.Substring(11, 5);
+            output3 = pom[0] - 48;
+
+            for (int i = 1; i < pom.Length; i++)//dzień
+            {
+                output3 = output3 * 2 + pom[i] - 48;
+            }
+            if (output3 == 0 || output3 > 31)
+                return "ERROR";
+
+            if (output % 4 != 0 && output2 == 2 && output3 >= 29)
+                return "ERROR";
+
+            if (output2 != 8 && output2 % 2 == 0 && output3 == 31)
+                return "ERROR";
+
+            if (output3.ToString().Length == 1)
+                wynik = wynik + "0";
+            wynik = wynik + output3.ToString();
+
+            return wynik;
+        }
+
+        public static void Main()
+        {
+            string w = Console.ReadLine();
+            if (w.Length == 10)
+                Console.WriteLine(zISO(w) + " ");
+            else if (w.Length == 16)
+                Console.WriteLine(naISO(w));
+            else
+                Console.WriteLine("ERROR");
+        }
+    }
+//end
+
+//Name: Not So Fast Multiplication
+using System;
+using System.Numerics;
+
+    public class BigIntegery
+    {
+        public static void mejn()
+        {
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 0; i < n; i++)
+            {
+                string[] split = Console.ReadLine().Split();
+                BigInteger a = BigInteger.Parse(split[0]);
+                BigInteger b = BigInteger.Parse(split[1]);
+                Console.WriteLine(BigInteger.Multiply(a, b));
+            }
+        }
+    }
+//end

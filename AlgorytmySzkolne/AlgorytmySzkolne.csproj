@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2EF2C63E-AF3D-4AC0-BDD7-061E57A8450F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AlgorytmySzkolne</RootNamespace>
+    <AssemblyName>AlgorytmySzkolne</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>F:\Algorytmy Szkolne\Versions\0.3.2\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>0.3.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>56D777ECCE7C9F514F1C0B012A1AB5CB92EF67B1</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AlgorytmySzkolne_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>wiesiu.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlgorytmyUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AlgorytmyUC.Designer.cs">
+      <DependentUpon>AlgorytmyUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Algorytmy.cs" />
+    <Compile Include="ContentUCs\Aproksymacja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContentUCs\Aproksymacja.Designer.cs">
+      <DependentUpon>Aproksymacja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContentUCs\Hetman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContentUCs\Hetman.Designer.cs">
+      <DependentUpon>Hetman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContentUCs\Homepage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContentUCs\Homepage.Designer.cs">
+      <DependentUpon>Homepage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContentUCs\InfoPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContentUCs\InfoPage.Designer.cs">
+      <DependentUpon>InfoPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContentUCs\Klasyczne.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContentUCs\Klasyczne.Designer.cs">
+      <DependentUpon>Klasyczne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContentUCs\ONPUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContentUCs\ONPUC.Designer.cs">
+      <DependentUpon>ONPUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContentUCs\Projekty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContentUCs\Projekty.Designer.cs">
+      <DependentUpon>Projekty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContentUCs\SetFunction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContentUCs\SetFunction.Designer.cs">
+      <DependentUpon>SetFunction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContentUCs\Sierpinski.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContentUCs\Sierpinski.Designer.cs">
+      <DependentUpon>Sierpinski.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContentUCs\SPOJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContentUCs\SPOJ.Designer.cs">
+      <DependentUpon>SPOJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContentUCs\SystemyLiczbowe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContentUCs\SystemyLiczbowe.Designer.cs">
+      <DependentUpon>SystemyLiczbowe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContentUCs\Universal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContentUCs\Universal.Designer.cs">
+      <DependentUpon>Universal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContentUCs\Zachlanne.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContentUCs\Zachlanne.Designer.cs">
+      <DependentUpon>Zachlanne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Glowna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Glowna.Designer.cs">
+      <DependentUpon>Glowna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nazwy.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AlgorytmyUC.resx">
+      <DependentUpon>AlgorytmyUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentUCs\Aproksymacja.resx">
+      <DependentUpon>Aproksymacja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentUCs\Hetman.resx">
+      <DependentUpon>Hetman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentUCs\Homepage.resx">
+      <DependentUpon>Homepage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentUCs\InfoPage.resx">
+      <DependentUpon>InfoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentUCs\Klasyczne.resx">
+      <DependentUpon>Klasyczne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentUCs\ONPUC.resx">
+      <DependentUpon>ONPUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentUCs\Projekty.resx">
+      <DependentUpon>Projekty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentUCs\SetFunction.resx">
+      <DependentUpon>SetFunction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentUCs\Sierpinski.resx">
+      <DependentUpon>Sierpinski.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentUCs\SPOJ.resx">
+      <DependentUpon>SPOJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentUCs\SystemyLiczbowe.resx">
+      <DependentUpon>SystemyLiczbowe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentUCs\Universal.resx">
+      <DependentUpon>Universal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentUCs\Zachlanne.resx">
+      <DependentUpon>Zachlanne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Glowna.resx">
+      <DependentUpon>Glowna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="AlgorytmySzkolne_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow icon.png" />
+    <Content Include="Resources\0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\AlgorytmySPOJ.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\exit icon.png" />
+    <Content Include="Resources\help icon.png" />
+    <Content Include="Resources\home icon.png" />
+    <Content Include="Resources\info icon.png" />
+    <Content Include="Resources\language icon.png" />
+    <Content Include="wiesiu.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
