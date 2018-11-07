@@ -36,6 +36,8 @@
 		public const string fCos = "Cosinus";
 		public const string fTg = "Tangens";
 		public const string fCtg = "Cotangens";
+		public const string fLosuj = "Losuj";
+		public const string fAlternatywa = "Alternatywna metoda";
 
 		public const string aX = "x";
 		public const string aPI = "PI";

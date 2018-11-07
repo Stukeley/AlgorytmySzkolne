@@ -91,6 +91,12 @@
     <Compile Include="ContentUCs\Aproksymacja.Designer.cs">
       <DependentUpon>Aproksymacja.cs</DependentUpon>
     </Compile>
+    <Compile Include="ContentUCs\Graph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContentUCs\Graph.Designer.cs">
+      <DependentUpon>Graph.cs</DependentUpon>
+    </Compile>
     <Compile Include="ContentUCs\Hetman.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ContentUCs\Aproksymacja.resx">
       <DependentUpon>Aproksymacja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentUCs\Graph.resx">
+      <DependentUpon>Graph.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ContentUCs\Hetman.resx">
       <DependentUpon>Hetman.cs</DependentUpon>

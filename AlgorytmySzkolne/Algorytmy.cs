@@ -254,6 +254,22 @@ namespace AlgorytmySzkolne
 
 			AlgorytmyZachlanne.TypFankszynu = Nazwy.fWielomian;
 		}
+
+		public static void LosujFunkcje(ushort stopien)
+		{
+			var random = new Random();
+			string fankszyn = "";
+
+			for (int i = stopien; i >= 0; i--)
+			{
+				int o = random.Next(-10, 10);
+				fankszyn = fankszyn + o.ToString() + ' ';
+			}
+
+			AlgorytmyZachlanne.Fankszyn = fankszyn;
+			AlgorytmyZachlanne.Stopien = stopien;
+			AlgorytmyZachlanne.TypFankszynu = Nazwy.fWielomian;
+		}
 	}
 
 	internal static class AlgorytmyKlasyczne
@@ -376,7 +392,7 @@ namespace AlgorytmySzkolne
 		public static ushort stF { get; set; }
 		public static ushort stPierw { get; set; }
 
-		private static double FunkcjaWielomian(double x)
+		public static double FunkcjaWielomian(double x)
 		{
 			bool czy;
 			double wynik = 0;

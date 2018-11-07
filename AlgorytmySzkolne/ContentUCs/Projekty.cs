@@ -42,5 +42,11 @@ namespace AlgorytmySzkolne.ContentUCs
 			var skoczek = new Hetman();
 			skoczek.Show();
 		}
+
+		private void GraphButton_Click(object sender, EventArgs e)
+		{
+			var graph = new Graph();
+			graph.Show();
+		}
 	}
 }
