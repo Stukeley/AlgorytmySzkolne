@@ -239,7 +239,7 @@ namespace AlgorytmySzkolne
 		public static void LosujFunkcje()
 		{
 			Random random = new Random();
-			int stopien = random.Next(10);
+			int stopien = random.Next(1, 6);
 			string fankszyn = "";
 
 			for (int i = stopien; i >= 0; i--)

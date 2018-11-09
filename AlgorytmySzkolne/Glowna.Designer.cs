@@ -47,7 +47,7 @@
 			this.Controls.Add(this.algorytmyUC1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.KeyPreview = true;
-			this.MaximizeBox = false;
+			this.MinimizeBox = false;
 			this.Name = "Glowna";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Glowna_OnClose);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Glowna_Close);

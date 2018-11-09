@@ -45,7 +45,6 @@ namespace AlgorytmySzkolne.ContentUCs
 			}
 			catch (Exception)
 			{
-				MessageBox.Show("Nie ustawiono wzoru funkcji!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 			}
 		}
 	}

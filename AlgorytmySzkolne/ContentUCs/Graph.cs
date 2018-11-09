@@ -4,59 +4,35 @@ using System.Windows.Forms;
 
 namespace AlgorytmySzkolne.ContentUCs
 {
-	public partial class Graph : Form//nie jest jeszcze skończone - są wyjątki, nie najlepsza skala + nie przetestowany do końca
+	public partial class Graph : Form//generalnie działa
 	{
 		private PointF[] points;
-		private PointF[] points2;//tylko gdy jest overflow - nieoptymalne af
-		private bool IsOverflown = false;
 
 		public Graph()
 		{
 			InitializeComponent();
 			if (string.IsNullOrEmpty(AlgorytmyZachlanne.Fankszyn))
 			{
-				this.Close();
+				var result = MessageBox.Show("Nie ustawiono wzoru funkcji! Czy chcesz go wylosować?", "Błąd",
+					MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+				if (result == DialogResult.Yes)
+				{
+					RunAlgorithms.LosujFunkcje();
+				}
+				else
+				{
+					this.Close();
+					return;
+				}
 			}
-			else
-			{
-				points = new PointF[200];
-				points2 = new PointF[40];
-				Calculate();
-			}
+			points = new PointF[40];
+			Calculate();
+			this.Paint += new PaintEventHandler(this.MainPanel_Paint);
 		}
 
 		private void Calculate()
 		{
 			float y = 0;
-			for (int x = -100; x < 100; x++)
-			{
-				try
-				{
-					y = checked((float)AlgorytmyZachlanne.FunkcjaWielomian(x));
-				}
-				catch (OverflowException)
-				{
-					var result = MessageBox.Show("Podany wzór funkcji wychodzi poza typ danych! Czy chcesz spróbować zawężyć dziedzinę funkcji?",
-						"Błąd", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-					if (result == DialogResult.Yes)
-					{
-						IsOverflown = true;
-						Calculate2();
-						break;
-					}
-					else
-					{
-						this.Close();
-					}
-				}
-				points[x + 100] = new PointF(x, -y);
-			}
-		}
-
-		private void Calculate2()
-		{
-			float y = 0;
-
 			for (int x = -20; x < 20; x++)
 			{
 				try
@@ -65,11 +41,9 @@ namespace AlgorytmySzkolne.ContentUCs
 				}
 				catch (OverflowException)
 				{
-					MessageBox.Show("Podany wzór funkcji wychodzi poza typ danych, nawet dla zawężonej dziedziny! Proszę spróbować " +
-						"dla innego wzoru.", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-					this.Close();
+					y = float.MaxValue;
 				}
-				points2[x + 20] = new PointF(x, y);
+				points[x + 20] = new PointF(x, y);
 			}
 		}
 
@@ -80,17 +54,10 @@ namespace AlgorytmySzkolne.ContentUCs
 			e.Graphics.DrawLine(Pens.Black, new Point(MainPanel.Width / 2, 0), new Point(MainPanel.Width / 2, MainPanel.Height));
 
 			e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-			e.Graphics.TranslateTransform(MainPanel.Width / 2f, MainPanel.Height / 2f);
-			e.Graphics.ScaleTransform(1, -4);
+			e.Graphics.TranslateTransform(MainPanel.Width / 2, MainPanel.Height / 2);
+			e.Graphics.ScaleTransform(4, -1f);
 
-			if (IsOverflown)
-			{
-				e.Graphics.DrawLines(Pens.Blue, points2);
-			}
-			else
-			{
-				e.Graphics.DrawLines(Pens.Blue, points);
-			}
+			e.Graphics.DrawLines(Pens.Blue, points);
 		}
 	}
 }

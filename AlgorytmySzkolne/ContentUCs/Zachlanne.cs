@@ -84,7 +84,8 @@ namespace AlgorytmySzkolne.ContentUCs
 			}
 			else
 			{
-				MessageBox.Show(f, "Wzór funkcji", MessageBoxButtons.OK);
+				MessageBox.Show("Typ funkcji: " + AlgorytmyZachlanne.TypFankszynu + Environment.NewLine + "Funkcja: " + f,
+					"Wzór funkcji", MessageBoxButtons.OK);
 			}
 		}
 	}

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace AlgorytmySzkolne.ContentUCs
 {
@@ -37,11 +39,12 @@ namespace AlgorytmySzkolne.ContentUCs
 			{
 				PointF[] punkty = new PointF[3]//największy trójkąt
                 {
-					new PointF(x/2,0),
-					new PointF(0,y),
-					new PointF(x,y)
+					new PointF(x/2, 0),
+					new PointF(0, y),
+					new PointF(x, y)
 				};
 				e.Graphics.DrawPolygon(myPen, punkty);
+
 				Rysuj(x / 2, 0, 0, y, x, y, n, e);
 			}
 		}
