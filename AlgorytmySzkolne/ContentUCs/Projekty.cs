@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AlgorytmySzkolne.ContentUCs
@@ -46,7 +39,14 @@ namespace AlgorytmySzkolne.ContentUCs
 		private void GraphButton_Click(object sender, EventArgs e)
 		{
 			var graph = new Graph();
-			graph.Show();
+			try//nie podoba mi się to rozwiązanie - do zmiany
+			{
+				graph.Show();
+			}
+			catch (Exception)
+			{
+				MessageBox.Show("Nie ustawiono wzoru funkcji!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			}
 		}
 	}
 }

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AlgorytmySzkolne.ContentUCs
@@ -21,15 +15,13 @@ namespace AlgorytmySzkolne.ContentUCs
 			InitializeComponent();
 			if (string.IsNullOrEmpty(AlgorytmyZachlanne.Fankszyn))
 			{
-				MessageBox.Show("Nie ustawiono wzoru funkcji!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-				this.Close();//
+				this.Close();
 			}
 			else
 			{
 				points = new PointF[200];
 				points2 = new PointF[40];
 				Calculate();
-				this.Paint += MainPanel_Paint;//
 			}
 		}
 
@@ -40,7 +32,7 @@ namespace AlgorytmySzkolne.ContentUCs
 			{
 				try
 				{
-					y = (float)AlgorytmyZachlanne.FunkcjaWielomian(x);
+					y = checked((float)AlgorytmyZachlanne.FunkcjaWielomian(x));
 				}
 				catch (OverflowException)
 				{
@@ -69,7 +61,7 @@ namespace AlgorytmySzkolne.ContentUCs
 			{
 				try
 				{
-					y = (float)AlgorytmyZachlanne.FunkcjaWielomian(x);
+					y = checked((float)AlgorytmyZachlanne.FunkcjaWielomian(x));
 				}
 				catch (OverflowException)
 				{
@@ -77,7 +69,7 @@ namespace AlgorytmySzkolne.ContentUCs
 						"dla innego wzoru.", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 					this.Close();
 				}
-				points2[x + 20] = new PointF(x, -y);
+				points2[x + 20] = new PointF(x, y);
 			}
 		}
 
@@ -89,7 +81,7 @@ namespace AlgorytmySzkolne.ContentUCs
 
 			e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
 			e.Graphics.TranslateTransform(MainPanel.Width / 2f, MainPanel.Height / 2f);
-			e.Graphics.ScaleTransform(1, 0.25f);
+			e.Graphics.ScaleTransform(1, -4);
 
 			if (IsOverflown)
 			{

@@ -1,19 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Text;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Numerics;
 using AlgorytmySzkolne.ContentUCs;
 
 namespace AlgorytmySzkolne
 {
-    public partial class Glowna : Form
+	public partial class Glowna : Form
     {
         public static void ShowMessageBox(string kejs)
         {

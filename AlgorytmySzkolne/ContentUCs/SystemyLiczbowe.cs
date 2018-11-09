@@ -1,17 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using AlgorytmySzkolne.ContentUCs;
 
 namespace AlgorytmySzkolne.ContentUCs
 {
-    public partial class SystemyLiczbowe : UserControl
+	public partial class SystemyLiczbowe : UserControl
     {
         public AlgorytmyUC algorytmyUC;
 

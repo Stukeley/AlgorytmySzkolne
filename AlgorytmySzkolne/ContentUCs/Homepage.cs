@@ -1,18 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using AlgorytmySzkolne.ContentUCs;
-using AlgorytmySzkolne;
 
 namespace AlgorytmySzkolne.ContentUCs
 {
-    public partial class Homepage : UserControl
+	public partial class Homepage : UserControl
     {
         private AlgorytmyUC algorytmyUC;//ale ja jestem kurwa mądry
 
