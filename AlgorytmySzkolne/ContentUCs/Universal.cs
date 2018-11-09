@@ -112,50 +112,52 @@ namespace AlgorytmySzkolne.ContentUCs
 					break;
 
 				case Nazwy.strSilnia:
-					HelpLabel.Text = "";
+					HelpLabel.Text = "Podaj liczbę aby uzyskać jej silnię (silnia może mieć maksymalnie ~600 milionów cyfr, ale " +
+						"próba taka może skończyć się bardzo, bardzo źle!)";
 					break;
 
 				case Nazwy.strPierwsza:
-					HelpLabel.Text = "";
+					HelpLabel.Text = "Podaj liczbę aby sprawdzić, czy jest ona pierwsza.";
 					break;
 
 				case Nazwy.strSumaDzielnikow:
-					HelpLabel.Text = "";
+					HelpLabel.Text = "Podaj liczbę aby uzyskać sumę jej dzielników naturalnych.";
 					break;
 
 				case Nazwy.strCzynnikiPierwsze:
-					HelpLabel.Text = "";
+					HelpLabel.Text = "Podaj liczbę aby uzyskać jej rozkład na czynniki pierwsze (w kolejności niemalejącej)";
 					break;
 
 				case Nazwy.strSumaPrzedzialu:
-					HelpLabel.Text = "";
+					HelpLabel.Text = "Podaj początek i koniec przedziału aby uzyskać liczbę będącą sumą wszystkich liczb całkowitych " +
+						"z tego przedziału (przedział jest obustronnie domknięty)";
 					break;
 
 				case Nazwy.strSumaCyfr:
-					HelpLabel.Text = "";
+					HelpLabel.Text = "Podaj liczbę aby uzyskać sumę wszystkich jej cyfr.";
 					break;
 
 				case Nazwy.strRNG:
-					HelpLabel.Text = "";
+					HelpLabel.Text = "Podaj 2 liczby by uzyskać losową liczbę całkowitą z tego przedziału (obustronnie domkniętego)";
 					break;
 
 				case Nazwy.strZerowe:
-					HelpLabel.Text = "Podaj początek i koniec przedziału by znaleźć miejsce zerowe. Pamiętaj, że jest to\n" +
-						"możliwe tylko gdy wartość funkcji na początku i końcu przedziału mają różne znaki.\n" +
-						"Pamiętaj również o podaniu wzoru funkcji przed uruchomieniem algorytmu. Jeżeli\n" +
+					HelpLabel.Text = "Podaj początek i koniec przedziału by znaleźć miejsce zerowe. Pamiętaj, że jest to " +
+						"możliwe tylko gdy wartość funkcji na początku i końcu przedziału mają różne znaki. " +
+						"Pamiętaj również o podaniu wzoru funkcji przed uruchomieniem algorytmu. Jeżeli " +
 						"nie podano wzoru, istnieje możliwość jego wylosowania.";
 					break;
 
 				case Nazwy.strCalka:
-					HelpLabel.Text = "Podaj dokładność(ilość odcinków) oraz początek i koniec przedziału by otrzymać\n" +
-						"pole pod wykresem podanej funkcji. Pamiętaj o podaniu wzoru funkcji przed uruchomieniem\n" +
-						"algorytmu. Jeżeli nie podano wzoru, istnieje możliwość jego wylosowania.\n" +
+					HelpLabel.Text = "Podaj dokładność(ilość odcinków) oraz początek i koniec przedziału by otrzymać " +
+						"pole pod wykresem podanej funkcji. Pamiętaj o podaniu wzoru funkcji przed uruchomieniem " +
+						"algorytmu. Jeżeli nie podano wzoru, istnieje możliwość jego wylosowania." +
 						"Domyślna wartość: 10000 lub więcej.";
 					break;
 
 				case Nazwy.strPierwiastek:
-					HelpLabel.Text = "Podaj dokładność obliczeń oraz liczbę aby otrzymać jej pierwiastek kwadratowy.\n" +
-						"Domyślna wartość: 0,0001 lub mniej. Dozwolone jest zarówno podawanie z kropką, jak i\n" +
+					HelpLabel.Text = "Podaj dokładność obliczeń oraz liczbę aby otrzymać jej pierwiastek kwadratowy. " +
+						"Domyślna wartość: 0,0001 lub mniej. Dozwolone jest zarówno podawanie z kropką, jak i " +
 						"z przecinkiem.";
 					break;
 

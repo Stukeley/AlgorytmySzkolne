@@ -51,7 +51,7 @@
 			this.inputLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.inputLabel1.Name = "inputLabel1";
 			this.inputLabel1.Size = new System.Drawing.Size(291, 37);
-			this.inputLabel1.TabIndex = 0;
+			this.inputLabel1.TabIndex = 10;
 			this.inputLabel1.Text = "Placeholder";
 			this.inputLabel1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
@@ -62,7 +62,7 @@
 			this.inputLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.inputLabel2.Name = "inputLabel2";
 			this.inputLabel2.Size = new System.Drawing.Size(291, 37);
-			this.inputLabel2.TabIndex = 1;
+			this.inputLabel2.TabIndex = 11;
 			this.inputLabel2.Text = "Placeholder";
 			this.inputLabel2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
@@ -75,7 +75,7 @@
 			this.outputLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.outputLabel1.Name = "outputLabel1";
 			this.outputLabel1.Size = new System.Drawing.Size(291, 37);
-			this.outputLabel1.TabIndex = 2;
+			this.outputLabel1.TabIndex = 8;
 			this.outputLabel1.Text = "Placeholder";
 			this.outputLabel1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
@@ -87,7 +87,7 @@
 			this.inputBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.inputBox1.Name = "inputBox1";
 			this.inputBox1.Size = new System.Drawing.Size(289, 35);
-			this.inputBox1.TabIndex = 3;
+			this.inputBox1.TabIndex = 0;
 			this.inputBox1.Enter += new System.EventHandler(this.inputBox1_Enter);
 			this.inputBox1.Leave += new System.EventHandler(this.inputBox1_Leave);
 			// 
@@ -99,7 +99,7 @@
 			this.inputBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.inputBox2.Name = "inputBox2";
 			this.inputBox2.Size = new System.Drawing.Size(289, 35);
-			this.inputBox2.TabIndex = 4;
+			this.inputBox2.TabIndex = 1;
 			this.inputBox2.Enter += new System.EventHandler(this.inputBox2_Enter);
 			this.inputBox2.Leave += new System.EventHandler(this.inputBox2_Leave);
 			// 
@@ -111,7 +111,7 @@
 			this.outputBox1.Name = "outputBox1";
 			this.outputBox1.ReadOnly = true;
 			this.outputBox1.Size = new System.Drawing.Size(289, 35);
-			this.outputBox1.TabIndex = 5;
+			this.outputBox1.TabIndex = 4;
 			// 
 			// ObliczButton
 			// 
@@ -121,7 +121,7 @@
 			this.ObliczButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.ObliczButton.Name = "ObliczButton";
 			this.ObliczButton.Size = new System.Drawing.Size(120, 74);
-			this.ObliczButton.TabIndex = 6;
+			this.ObliczButton.TabIndex = 3;
 			this.ObliczButton.Text = "Oblicz!";
 			this.ObliczButton.UseVisualStyleBackColor = true;
 			this.ObliczButton.Click += new System.EventHandler(this.ObliczButton_Click);
@@ -135,7 +135,7 @@
 			this.outputLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.outputLabel2.Name = "outputLabel2";
 			this.outputLabel2.Size = new System.Drawing.Size(291, 37);
-			this.outputLabel2.TabIndex = 7;
+			this.outputLabel2.TabIndex = 9;
 			this.outputLabel2.Text = "Placeholder";
 			this.outputLabel2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			// 
@@ -147,7 +147,7 @@
 			this.outputBox2.Name = "outputBox2";
 			this.outputBox2.ReadOnly = true;
 			this.outputBox2.Size = new System.Drawing.Size(289, 35);
-			this.outputBox2.TabIndex = 8;
+			this.outputBox2.TabIndex = 6;
 			// 
 			// CopyButton1
 			// 
@@ -157,7 +157,7 @@
 			this.CopyButton1.Margin = new System.Windows.Forms.Padding(0);
 			this.CopyButton1.Name = "CopyButton1";
 			this.CopyButton1.Size = new System.Drawing.Size(75, 37);
-			this.CopyButton1.TabIndex = 10;
+			this.CopyButton1.TabIndex = 5;
 			this.CopyButton1.Text = "Kopiuj";
 			this.CopyButton1.UseVisualStyleBackColor = true;
 			this.CopyButton1.Click += new System.EventHandler(this.CopyButton1_Click);
@@ -170,7 +170,7 @@
 			this.CopyButton2.Margin = new System.Windows.Forms.Padding(0);
 			this.CopyButton2.Name = "CopyButton2";
 			this.CopyButton2.Size = new System.Drawing.Size(75, 37);
-			this.CopyButton2.TabIndex = 11;
+			this.CopyButton2.TabIndex = 7;
 			this.CopyButton2.Text = "Kopiuj";
 			this.CopyButton2.UseVisualStyleBackColor = true;
 			this.CopyButton2.Click += new System.EventHandler(this.CopyButton2_Click);
@@ -183,7 +183,7 @@
 			this.EpsilonBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.EpsilonBox.Name = "EpsilonBox";
 			this.EpsilonBox.Size = new System.Drawing.Size(289, 35);
-			this.EpsilonBox.TabIndex = 12;
+			this.EpsilonBox.TabIndex = 2;
 			this.EpsilonBox.Visible = false;
 			this.EpsilonBox.Enter += new System.EventHandler(this.EpsilonBox_Enter);
 			// 
@@ -194,7 +194,7 @@
 			this.EpsilonLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.EpsilonLabel.Name = "EpsilonLabel";
 			this.EpsilonLabel.Size = new System.Drawing.Size(291, 37);
-			this.EpsilonLabel.TabIndex = 13;
+			this.EpsilonLabel.TabIndex = 12;
 			this.EpsilonLabel.Text = "Podaj dokladność";
 			this.EpsilonLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			this.EpsilonLabel.Visible = false;
@@ -208,7 +208,7 @@
 			this.HelpLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.HelpLabel.Name = "HelpLabel";
 			this.HelpLabel.Size = new System.Drawing.Size(542, 284);
-			this.HelpLabel.TabIndex = 14;
+			this.HelpLabel.TabIndex = 13;
 			this.HelpLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			// 
 			// Universal
