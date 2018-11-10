@@ -71,6 +71,7 @@ namespace AlgorytmySzkolne.ContentUCs
 		private void RunButton_Click(object sender, EventArgs e)
 		{
 			var title = ONPChoiceBox.GetItemText(ONPChoiceBox.SelectedItem);
+			ResultBox.ForeColor = Color.Maroon;
 			if (title == Nazwy.oZONP)
 			{
 				var result = MessageBox.Show("Uwaga! Chuj wie czy to działa. Czy na pewno chcesz spróbować?", "Ostrzeżenie",
@@ -86,9 +87,11 @@ namespace AlgorytmySzkolne.ContentUCs
 			}
 		}
 
-		private void ONPUC_Load(object sender, EventArgs e)//nie odpala się event
+		private void ONPUC_Load(object sender, EventArgs e)
 		{
 			RunAlgorithms.SetONPUC(this);
+			ResultBox.BackColor = ResultBox.BackColor;//to jest wymagane żeby działał ForeColor xD!
+
 			//var coll = new List<string>()
 			//{
 			//	Nazwy.oWartosc,

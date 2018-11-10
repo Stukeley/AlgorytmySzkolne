@@ -57,7 +57,5 @@
 		public const string lRosyjski = "Rosyjski";
 		public const string lFrancuski = "Francuski";
 		public const string lRumunski = "Rumuński";
-
-		//zrobić z tego dictionary
 	}
 }

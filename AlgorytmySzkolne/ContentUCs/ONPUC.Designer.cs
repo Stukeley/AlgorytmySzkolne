@@ -71,6 +71,7 @@
 			this.ResultBox.Location = new System.Drawing.Point(251, 255);
 			this.ResultBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.ResultBox.Name = "ResultBox";
+			this.ResultBox.ReadOnly = true;
 			this.ResultBox.Size = new System.Drawing.Size(564, 35);
 			this.ResultBox.TabIndex = 3;
 			this.ResultBox.Text = "Wynik";

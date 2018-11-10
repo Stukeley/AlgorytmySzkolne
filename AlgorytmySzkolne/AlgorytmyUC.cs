@@ -120,6 +120,7 @@ namespace AlgorytmySzkolne
 		{
 			MainPanel.Controls.Clear();
 			PreviousList.Clear();
+			BackButton.Visible = false;//
 			SetTitle(Nazwy.strGlowna);
 			var homepage = new Homepage();
 			homepage.SetUC(this);
