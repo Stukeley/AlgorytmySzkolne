@@ -21,3 +21,6 @@ Oryginalnie napisany między czerwcem a sierpniem 2018, program nie jest jeszcze
 3. Nowy projekt - szkic wykresu funkcji (być może zostanie w przyszłości nieco rozbudowany)
 4. Udoskonalono pomoc przy podawaniu danych do algorytmów.
 5. Naprawa kilku błędów (i jednoczesne stworzenie takiej samej ilości nowych).
+
+# UŻYWANIE AUTOTRANSLATE:
+Wystarczy kliknąć ikonę Translatora w prawym górnym rogu aplikacji, a następnie wybrać z listy rozwijalnej język. Naciśnięcie przycisku Translate stworzy nowy plik z przetłumaczonymi zasobami - trwa około 30-40 sekund i wymaga stałego połączenia z Internetem. Jeżeli przetłumaczony plik już istnieje, to nie jest wymagane ponowne jego tłumaczenie, a jedynie załadowanie zasobów z tego pliku. Przycisk Revert zmienia aktywny język na polski.
