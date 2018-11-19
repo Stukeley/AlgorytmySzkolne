@@ -21,12 +21,11 @@ namespace AlgorytmySzkolne.ContentUCs
 				if (sprawdz)
 				{
 					RunAlgorithms.LosujFunkcje(result);
-					MessageBox.Show("Wylosowano funkcję pomyślnie!", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
+					MessageBox.Show(Nazwy.eWylosowano, Nazwy.eSukces, MessageBoxButtons.OK, MessageBoxIcon.Information);
 				}
 				else
 				{
-					MessageBox.Show("Nieporawnie podano stopień losowej funkcji. Pamiętaj, że dozwolone są tylko liczby całkowite dodatnie.",
-						"Błąd", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+					MessageBox.Show(Nazwy.emsgStopieńLosowejFunkcji, Nazwy.eBłąd, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 				}
 			}
 			else
@@ -38,7 +37,7 @@ namespace AlgorytmySzkolne.ContentUCs
 					if (ArgumentChoiceBox1.GetItemText(ArgumentChoiceBox1.SelectedItem) == Nazwy.aX)
 					{
 						AlgorytmyZachlanne.TypArgumentu = Nazwy.aX;
-						MessageBox.Show("Ustawiono funkcję pomyślnie.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
+						MessageBox.Show(Nazwy.eUstawiono, Nazwy.eSukces, MessageBoxButtons.OK, MessageBoxIcon.Information);
 					}
 					else if (ArgumentChoiceBox1.GetItemText(ArgumentChoiceBox1.SelectedItem) == Nazwy.aPI)
 					{
@@ -52,8 +51,13 @@ namespace AlgorytmySzkolne.ContentUCs
 						if (sprawdz)
 						{
 							AlgorytmyZachlanne.IloscPI = temp;
-							MessageBox.Show("Ustawiono funkcję pomyślnie.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
+							MessageBox.Show(Nazwy.eUstawiono, Nazwy.eSukces, MessageBoxButtons.OK, MessageBoxIcon.Information);
 						}
+					}
+					else//gdy użytkownik poda coś swojego zamiast wyboru z listy
+					{
+						MessageBox.Show("Incorrect type of argument! Please choose one from the list, rather than typing something in.", Nazwy.eBłąd,
+							MessageBoxButtons.OK, MessageBoxIcon.Error);
 					}
 				}
 
@@ -63,11 +67,11 @@ namespace AlgorytmySzkolne.ContentUCs
 					if (sprawdz)
 					{
 						AlgorytmyZachlanne.Stopien = temp;
-						MessageBox.Show("Ustawiono funkcję pomyślnie.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
+						MessageBox.Show(Nazwy.eUstawiono, Nazwy.eUstawiono, MessageBoxButtons.OK, MessageBoxIcon.Information);
 					}
 					else
 					{
-						MessageBox.Show("Nieprawidłowy stopień funkcji", "Błąd stopnia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+						MessageBox.Show(Nazwy.emsgNieprawidłowyStopień, Nazwy.eBłądStopnia, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 					}
 				}
 				else if (AlgorytmyZachlanne.TypFankszynu == Nazwy.fWymierna)
@@ -78,14 +82,14 @@ namespace AlgorytmySzkolne.ContentUCs
 					{
 						AlgorytmyZachlanne.stLicz = temp1;
 						AlgorytmyZachlanne.stMian = temp2;
-						MessageBox.Show("Ustawiono funkcję pomyślnie.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
+						MessageBox.Show(Nazwy.eUstawiono, Nazwy.eSukces, MessageBoxButtons.OK, MessageBoxIcon.Information);
 					}
 					else
 					{
-						MessageBox.Show("Nieprawidłowy stopień funkcji", "Błąd stopnia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+						MessageBox.Show(Nazwy.emsgNieprawidłowyStopień, Nazwy.eBłądStopnia, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 					}
 				}
-				else if (AlgorytmyZachlanne.TypFankszynu == Nazwy.fPieriwastek)
+				else if (AlgorytmyZachlanne.TypFankszynu == Nazwy.fPierwiastek)
 				{
 					bool sprawdz1 = ushort.TryParse(StopienBox1.Text, out ushort temp1);
 					bool sprawdz2 = ushort.TryParse(StopienBox2.Text, out ushort temp2);
@@ -93,12 +97,17 @@ namespace AlgorytmySzkolne.ContentUCs
 					{
 						AlgorytmyZachlanne.stF = temp1;
 						AlgorytmyZachlanne.stPierw = temp2;
-						MessageBox.Show("Ustawiono funkcję pomyślnie.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
+						MessageBox.Show(Nazwy.eUstawiono, Nazwy.eSukces, MessageBoxButtons.OK, MessageBoxIcon.Information);
 					}
 					else
 					{
-						MessageBox.Show("Nieprawidłowy stopień funkcji", "Błąd stopnia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+						MessageBox.Show(Nazwy.emsgNieprawidłowyStopień, Nazwy.eBłądStopnia, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 					}
+				}
+				else//gdy użytkownik poda coś swojego zamiast wyboru z listy
+				{
+					MessageBox.Show("Incorrect type of function! Please choose one from the list, rather than typing something in.", Nazwy.eBłąd,
+						MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
 			}
 			//tutaj
@@ -109,83 +118,93 @@ namespace AlgorytmySzkolne.ContentUCs
 			string selection = FunctionChoiceBox.GetItemText(FunctionChoiceBox.SelectedItem);
 			ArgumentChoiceBox1.ResetText();
 
-			switch (selection)
+			if (selection == Nazwy.fWielomian)
 			{
-				case Nazwy.fWielomian:
-					StopienBox1.Visible = true;
-					StopienBox1.Text = "Podaj stopień";
-					StopienBox1.ForeColor = Color.SlateGray;
-					StopienBox1.Location = new Point(322, 57);
-					StopienBox2.Visible = false;
-					HelpLabel.Visible = true;
-					HelpLabel.Text = String.Format("Wybierz stopień wielomianu, a nastepnie podaj wszystkie{0}współczynniki oddzielone spacjami. Podaj współczynniki{0}nawet gdy " +
-						"wynoszą one zero.{0}Ułamki póki co nie działają, więc podaj tylko liczby całkowite.", Environment.NewLine);
-					SetFunctionBox.Text = "Przyklad: 1 0 3 2 4 0";
-					SetFunctionBox.ForeColor = Color.SlateGray;
-					SetFunctionButton.Visible = true;
-					break;
-
-				case Nazwy.fWymierna:
-					StopienBox1.Visible = true;
-					StopienBox1.Text = "Podaj st. licznika";
-					StopienBox1.ForeColor = Color.SlateGray;
-					StopienBox1.Location = new Point(240, 57);
-					StopienBox2.Visible = true;
-					StopienBox2.Text = "Podaj st. mianownika";
-					StopienBox2.ForeColor = Color.SlateGray;
-					HelpLabel.Visible = true;
-					HelpLabel.Text = String.Format("Wybierz stopień licznika i mianownika, a nastepnie podaj wszystkie{0}współczynniki oddzielone spacjami w nawiasach{0}(rownież oddzielonych spacjami) poprzedzonych" +
-						"literami L i M. Ułamki póki co nie dzialają, więc podaj tylko liczby całkowite.", Environment.NewLine);
-					SetFunctionBox.Text = "Przyklad: L(2 1 3 0) M(7 1 2)";
-					SetFunctionBox.ForeColor = Color.SlateGray;
-					SetFunctionButton.Visible = true;
-					break;
-
-				case Nazwy.fPieriwastek:
-					StopienBox1.Visible = true;
-					StopienBox1.Text = "Podaj st. funkcji";
-					StopienBox1.ForeColor = Color.SlateGray;
-					StopienBox1.Location = new Point(240, 57);
-					StopienBox2.Visible = true;
-					StopienBox2.Text = "Podaj st. pierw.";
-					StopienBox2.ForeColor = Color.SlateGray;
-					HelpLabel.Visible = true;
-					HelpLabel.Text = String.Format("Wybierz stopień funkcji pod pierwiastkiem oraz stopień pierwiastka.{0}Następnie podaj stopień pierwiastka poprzedzony " +
-						"literą S, po czym{0}podaj oddzielone spacjami wszystkie współczynniki, nawet gdy wynoszą 0. Ułamki póki co nie dzialaja, więc podaj tylko liczby calkowite.", Environment.NewLine);
-					SetFunctionBox.Text = "Przyklad: S3 2 1 -3 0";
-					SetFunctionBox.ForeColor = Color.SlateGray;
-					SetFunctionButton.Visible = true;
-					break;
-
-				case Nazwy.fLosuj:
-					StopienBox1.Visible = true;
-					StopienBox1.Text = "Podaj stopień";
-					StopienBox1.ForeColor = Color.SlateGray;
-					StopienBox1.Location = new Point(322, 57);
-					StopienBox2.Visible = false;
-					HelpLabel.Visible = true;
-					HelpLabel.Text = String.Format("Podaj stopień funkcji (musi być to liczba całkowita dodatnia).{0}Następnie program sam wylosuje wszystkie współczynniki " +
-						"i funkcja będzie gotowa do użycia.", Environment.NewLine);
-					SetFunctionBox.Visible = false;
-					SetFunctionButton.Visible = true;
-					break;
-
-				default:
-					StopienBox1.Visible = false;
-					StopienBox2.Visible = false;
-					HelpLabel.Visible = true;
-					HelpLabel.Text = "Wybierz typ argumentu.";
-					ArgumentChoiceBox1.Visible = true;
-					ArgumentChoiceBox1.Text = "Wybierz agrument";
-					SetFunctionBox.Text = "";
-					SetFunctionBox.ForeColor = Color.Maroon;
-					break;
+				StopienBox1.Visible = true;
+				StopienBox1.Text = Nazwy.bPodajStopień;
+				StopienBox1.ForeColor = Color.SlateGray;
+				StopienBox1.Location = new Point(322, 57);
+				StopienBox2.Visible = false;
+				HelpLabel.Visible = true;
+				//HelpLabel.Text = String.Format("Wybierz stopień wielomianu, a nastepnie podaj wszystkie{0}współczynniki oddzielone spacjami. Podaj współczynniki{0}nawet gdy " +
+				//	"wynoszą one zero.{0}Ułamki póki co nie działają, więc podaj tylko liczby całkowite.", Environment.NewLine);
+				HelpLabel.Text = Nazwy.iFWielomian;
+				SetFunctionBox.Text = Nazwy.bPrzykład + ": 1 0 3 2 4 0";
+				SetFunctionBox.ForeColor = Color.SlateGray;
+				SetFunctionButton.Visible = true;
+				ArgumentChoiceBox1.Visible = false;
+			}
+			else if (selection == Nazwy.fWymierna)
+			{
+				StopienBox1.Visible = true;
+				StopienBox1.Text = Nazwy.bPodajStopieńLicznika;
+				StopienBox1.ForeColor = Color.SlateGray;
+				StopienBox1.Location = new Point(240, 57);
+				StopienBox2.Visible = true;
+				StopienBox2.Text = Nazwy.bPodajStopieńMianownika;
+				StopienBox2.ForeColor = Color.SlateGray;
+				HelpLabel.Visible = true;
+				//HelpLabel.Text = String.Format("Wybierz stopień licznika i mianownika, a nastepnie podaj wszystkie{0}współczynniki oddzielone spacjami w nawiasach{0}(rownież oddzielonych spacjami) poprzedzonych" +
+				//	"literami L i M. Ułamki póki co nie dzialają, więc podaj tylko liczby całkowite.", Environment.NewLine);
+				HelpLabel.Text = Nazwy.iFWymierna;
+				SetFunctionBox.Text = Nazwy.bPrzykład + ": L(2 1 3 0) M(7 1 2)";
+				SetFunctionBox.ForeColor = Color.SlateGray;
+				SetFunctionButton.Visible = true;
+				ArgumentChoiceBox1.Visible = false;
+			}
+			else if (selection == Nazwy.fPierwiastek)
+			{
+				StopienBox1.Visible = true;
+				StopienBox1.Text = Nazwy.bPodajStopieńFunkcji;
+				StopienBox1.ForeColor = Color.SlateGray;
+				StopienBox1.Location = new Point(240, 57);
+				StopienBox2.Visible = true;
+				StopienBox2.Text = Nazwy.bPodajStopieńPierwiastka;
+				StopienBox2.ForeColor = Color.SlateGray;
+				HelpLabel.Visible = true;
+				//HelpLabel.Text = String.Format("Wybierz stopień funkcji pod pierwiastkiem oraz stopień pierwiastka.{0}Następnie podaj stopień pierwiastka poprzedzony " +
+				//	"literą S, po czym{0}podaj oddzielone spacjami wszystkie współczynniki, nawet gdy wynoszą 0. Ułamki póki co nie dzialaja, więc podaj tylko liczby calkowite.", Environment.NewLine);
+				HelpLabel.Text = Nazwy.iFPierwiastek;
+				SetFunctionBox.Text = Nazwy.bPrzykład + ": S3 2 1 -3 0";
+				SetFunctionBox.ForeColor = Color.SlateGray;
+				SetFunctionButton.Visible = true;
+				ArgumentChoiceBox1.Visible = false;
+			}
+			else if (selection == Nazwy.fLosuj)
+			{
+				StopienBox1.Visible = true;
+				StopienBox1.Text = Nazwy.bPodajStopień;
+				StopienBox1.ForeColor = Color.SlateGray;
+				StopienBox1.Location = new Point(322, 57);
+				StopienBox2.Visible = false;
+				HelpLabel.Visible = true;
+				//HelpLabel.Text = String.Format("Podaj stopień funkcji (musi być to liczba całkowita dodatnia).{0}Następnie program sam wylosuje wszystkie współczynniki " +
+				//	"i funkcja będzie gotowa do użycia.", Environment.NewLine);
+				HelpLabel.Text = Nazwy.iFLosuj;
+				SetFunctionBox.Visible = false;
+				SetFunctionButton.Visible = true;
+				ArgumentChoiceBox1.Visible = false;
+			}
+			else if (selection == Nazwy.fAlternatywa)
+			{
+				MessageBox.Show("Not implemented yet!", "Soon™", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			}
+			else if (selection == Nazwy.fSin || selection == Nazwy.fCos || selection == Nazwy.fTg || selection == Nazwy.fCtg)
+			{
+				StopienBox1.Visible = false;
+				StopienBox2.Visible = false;
+				HelpLabel.Visible = true;
+				HelpLabel.Text = Nazwy.bWybierzTypArgumentu;
+				ArgumentChoiceBox1.Visible = true;
+				ArgumentChoiceBox1.Text = Nazwy.bWybierzArgument;
+				SetFunctionBox.Text = "";
+				SetFunctionBox.ForeColor = Color.Maroon;
 			}
 		}
 
 		private void StopienBox1_Enter(object sender, EventArgs e)
 		{
-			if (StopienBox1.Text == "Podaj stopień" || StopienBox1.Text == "Podaj st. licznika" || StopienBox1.Text == "Podaj st. funkcji")
+			if (StopienBox1.Text == Nazwy.bPodajStopień || StopienBox1.Text == Nazwy.bPodajStopieńLicznika || StopienBox1.Text == Nazwy.bPodajStopieńFunkcji)
 			{
 				StopienBox1.Text = "";
 				StopienBox1.ForeColor = Color.Maroon;
@@ -200,32 +219,35 @@ namespace AlgorytmySzkolne.ContentUCs
 		{
 			string selection = ArgumentChoiceBox1.GetItemText(ArgumentChoiceBox1.SelectedItem);
 			SetFunctionButton.Visible = true;
-			switch (selection)
-			{
-				case Nazwy.aX:
-					StopienBox1.Visible = true;
-					StopienBox1.Text = "Podaj stopien";
-					StopienBox1.ForeColor = Color.SlateGray;
-					StopienBox1.Location = new Point(322, 57);
-					HelpLabel.Text = String.Format("Podaj stopień argumentu, a następnie wszystkie{0}współczynniki oddzielone spacjami. Podaj współczynniki{0}nawet gdy " +
-						"wynoszą one zero. Póki co bez ułamków, ale już wkrótce!", Environment.NewLine);
-					SetFunctionBox.Text = "Przyklad: 1 0 3 2 4 0";
-					SetFunctionBox.ForeColor = Color.SlateGray;
-					break;
 
-				case Nazwy.aPI:
-					StopienBox1.Visible = false;
-					HelpLabel.Text = String.Format("Funkcja {0}(x) przesunięta o podaną ilość PI, np.{1}{0}(x+0,3). Może zawierać ułamki, ale tylko w postaci dziesiętnej. " +
-						"Podaj tylko liczbę.", FunctionChoiceBox.GetItemText(FunctionChoiceBox.SelectedItem), Environment.NewLine);
-					SetFunctionBox.Text = "Przyklad: 2,78";
-					SetFunctionBox.ForeColor = Color.SlateGray;
-					break;
+			if (selection == Nazwy.aX)
+			{
+				StopienBox1.Visible = true;
+				StopienBox1.Text = Nazwy.bPodajStopień;
+				StopienBox1.ForeColor = Color.SlateGray;
+				StopienBox1.Location = new Point(322, 57);
+				//HelpLabel.Text = String.Format("Podaj stopień argumentu, a następnie wszystkie{0}współczynniki oddzielone spacjami. Podaj współczynniki{0}nawet gdy " +
+				//	"wynoszą one zero. Póki co bez ułamków, ale już wkrótce!", Environment.NewLine);
+				HelpLabel.Text = Nazwy.iFTrygonometrycznaX;
+				SetFunctionBox.Text = Nazwy.bPrzykład + ": 1 0 3 2 4 0";
+				SetFunctionBox.ForeColor = Color.SlateGray;
+				SetFunctionButton.Visible = true;
+			}
+			else if (selection == Nazwy.aPI)
+			{
+				StopienBox1.Visible = false;
+				//HelpLabel.Text = String.Format("Funkcja {0}(x) przesunięta o podaną ilość PI, np.{1}{0}(x+0,3). Może zawierać ułamki, ale tylko w postaci dziesiętnej. " +
+				//	"Podaj tylko liczbę.", FunctionChoiceBox.GetItemText(FunctionChoiceBox.SelectedItem), Environment.NewLine);
+				HelpLabel.Text = Nazwy.iFTrygonometrycznaPI;
+				SetFunctionBox.Text = Nazwy.bPrzykład + ": 2,78";
+				SetFunctionBox.ForeColor = Color.SlateGray;
+				SetFunctionButton.Visible = true;
 			}
 		}
 
 		private void StopienBox2_Enter(object sender, EventArgs e)
 		{
-			if (StopienBox2.Text == "Podaj st. mianownika" || StopienBox2.Text == "Podaj st. pierw.")
+			if (StopienBox2.Text == Nazwy.bPodajStopieńMianownika || StopienBox2.Text == Nazwy.bPodajStopieńPierwiastka)
 			{
 				StopienBox2.Text = "";
 				StopienBox2.ForeColor = Color.Maroon;
@@ -235,7 +257,8 @@ namespace AlgorytmySzkolne.ContentUCs
 		private void SetFunctionBox_Enter(object sender, EventArgs e)
 		{
 			string content = SetFunctionBox.Text;
-			if (content == "Przyklad: L(2 1 3 0) M(7 1 2)" || content == "Przyklad: S3 2 1 -3 0" || content == "Przyklad: 1 0 3 2 4 0" || content == "Przyklad: 2,78")
+			if (content == Nazwy.bPrzykład + ": L(2 1 3 0) M(7 1 2)" || content == Nazwy.bPrzykład + ": S3 2 1 -3 0" || content == Nazwy.bPrzykład + ": 1 0 3 2 4 0"
+				|| content == Nazwy.bPrzykład + ": 2,78")
 			{
 				SetFunctionBox.Text = "";
 				SetFunctionBox.ForeColor = Color.Maroon;

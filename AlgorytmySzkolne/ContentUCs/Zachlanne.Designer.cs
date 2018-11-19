@@ -47,7 +47,7 @@
 			this.MiejsceZeroweButton.Name = "MiejsceZeroweButton";
 			this.MiejsceZeroweButton.Size = new System.Drawing.Size(428, 43);
 			this.MiejsceZeroweButton.TabIndex = 2;
-			this.MiejsceZeroweButton.Text = "Miejsce zerowe funkcji";
+			this.MiejsceZeroweButton.Text = Nazwy.bMiejsceZerowe;
 			this.MiejsceZeroweButton.UseVisualStyleBackColor = false;
 			this.MiejsceZeroweButton.Click += new System.EventHandler(this.MiejsceZeroweButton_Click);
 			// 
@@ -63,7 +63,7 @@
 			this.PierwiastekButton.Name = "PierwiastekButton";
 			this.PierwiastekButton.Size = new System.Drawing.Size(428, 43);
 			this.PierwiastekButton.TabIndex = 3;
-			this.PierwiastekButton.Text = "Pierwiastek kwadratowy";
+			this.PierwiastekButton.Text = Nazwy.bPierwiastekKwadratowy;
 			this.PierwiastekButton.UseVisualStyleBackColor = false;
 			this.PierwiastekButton.Click += new System.EventHandler(this.PierwiastekButton_Click);
 			// 
@@ -79,7 +79,7 @@
 			this.CalkaButton.Name = "CalkaButton";
 			this.CalkaButton.Size = new System.Drawing.Size(428, 43);
 			this.CalkaButton.TabIndex = 4;
-			this.CalkaButton.Text = "Całka";
+			this.CalkaButton.Text = Nazwy.bCałka;
 			this.CalkaButton.UseVisualStyleBackColor = false;
 			this.CalkaButton.Click += new System.EventHandler(this.CalkaButton_Click);
 			// 
@@ -95,7 +95,7 @@
 			this.UstawFunkcjeButton.Name = "UstawFunkcjeButton";
 			this.UstawFunkcjeButton.Size = new System.Drawing.Size(428, 43);
 			this.UstawFunkcjeButton.TabIndex = 5;
-			this.UstawFunkcjeButton.Text = "Ustaw funkcje";
+			this.UstawFunkcjeButton.Text = Nazwy.bUstawFunkcję;
 			this.UstawFunkcjeButton.UseVisualStyleBackColor = false;
 			this.UstawFunkcjeButton.Click += new System.EventHandler(this.UstawFunkcjeButton_Click);
 			// 
@@ -111,7 +111,7 @@
 			this.PokazFunkcjeButton.Name = "PokazFunkcjeButton";
 			this.PokazFunkcjeButton.Size = new System.Drawing.Size(428, 43);
 			this.PokazFunkcjeButton.TabIndex = 6;
-			this.PokazFunkcjeButton.Text = "Pokaż wzór funkcji";
+			this.PokazFunkcjeButton.Text = Nazwy.bPokażFunkcję;
 			this.PokazFunkcjeButton.UseVisualStyleBackColor = false;
 			this.PokazFunkcjeButton.Click += new System.EventHandler(this.PokazFunkcjeButton_Click);
 			// 

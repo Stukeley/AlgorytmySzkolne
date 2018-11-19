@@ -42,7 +42,7 @@
 			this.SetFunctionBox.Font = new System.Drawing.Font("High Tower Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.SetFunctionBox.ForeColor = System.Drawing.Color.Maroon;
 			this.SetFunctionBox.Location = new System.Drawing.Point(161, 161);
-			this.SetFunctionBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.SetFunctionBox.Margin = new System.Windows.Forms.Padding(4);
 			this.SetFunctionBox.Name = "SetFunctionBox";
 			this.SetFunctionBox.Size = new System.Drawing.Size(743, 35);
 			this.SetFunctionBox.TabIndex = 4;
@@ -51,10 +51,10 @@
 			// HelpLabel
 			// 
 			this.HelpLabel.Font = new System.Drawing.Font("Gabriola", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.HelpLabel.Location = new System.Drawing.Point(0, 251);
+			this.HelpLabel.Location = new System.Drawing.Point(161, 251);
 			this.HelpLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.HelpLabel.Name = "HelpLabel";
-			this.HelpLabel.Size = new System.Drawing.Size(1067, 207);
+			this.HelpLabel.Size = new System.Drawing.Size(743, 207);
 			this.HelpLabel.TabIndex = 5;
 			this.HelpLabel.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate\r\nlibero " +
     "nisi, a lacinia velit hendrerit ut. Nunc aliquam ex nunc, sed egestas\r\naugue dig" +
@@ -68,29 +68,29 @@
 			this.FunctionChoiceBox.Font = new System.Drawing.Font("High Tower Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.FunctionChoiceBox.ForeColor = System.Drawing.Color.Maroon;
 			this.FunctionChoiceBox.FormattingEnabled = true;
+			this.FunctionChoiceBox.Text = Nazwy.bWybierzFunkcję;
 			this.FunctionChoiceBox.Items.AddRange(new object[] {
-            "Wielomian",
-            "Funkcja wymierna",
-            "Pierwiastek",
-            "Sinus",
-            "Cosinus",
-            "Tangens",
-            "Contangens",
-            "Losuj",
-            "Alternatywna metoda"});
+			Nazwy.fWielomian,
+			Nazwy.fWymierna,
+			Nazwy.fPierwiastek,
+			Nazwy.fSin,
+			Nazwy.fCos,
+			Nazwy.fTg,
+			Nazwy.fCtg,
+			Nazwy.fLosuj,
+			Nazwy.fAlternatywa });
 			this.FunctionChoiceBox.Location = new System.Drawing.Point(429, 30);
-			this.FunctionChoiceBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.FunctionChoiceBox.Margin = new System.Windows.Forms.Padding(4);
 			this.FunctionChoiceBox.Name = "FunctionChoiceBox";
 			this.FunctionChoiceBox.Size = new System.Drawing.Size(208, 31);
 			this.FunctionChoiceBox.TabIndex = 6;
-			this.FunctionChoiceBox.Text = "Wybierz funkcje";
 			this.FunctionChoiceBox.SelectionChangeCommitted += new System.EventHandler(this.FunctionChoiceBox_SelectionChangeCommitted);
 			// 
 			// SetFunctionButton
 			// 
 			this.SetFunctionButton.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.SetFunctionButton.Location = new System.Drawing.Point(476, 206);
-			this.SetFunctionButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.SetFunctionButton.Margin = new System.Windows.Forms.Padding(4);
 			this.SetFunctionButton.Name = "SetFunctionButton";
 			this.SetFunctionButton.Size = new System.Drawing.Size(115, 42);
 			this.SetFunctionButton.TabIndex = 7;
@@ -104,7 +104,7 @@
 			this.StopienBox1.Font = new System.Drawing.Font("High Tower Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.StopienBox1.ForeColor = System.Drawing.Color.Maroon;
 			this.StopienBox1.Location = new System.Drawing.Point(320, 70);
-			this.StopienBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.StopienBox1.Margin = new System.Windows.Forms.Padding(4);
 			this.StopienBox1.Name = "StopienBox1";
 			this.StopienBox1.Size = new System.Drawing.Size(208, 31);
 			this.StopienBox1.TabIndex = 8;
@@ -116,7 +116,7 @@
 			this.StopienBox2.Font = new System.Drawing.Font("High Tower Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.StopienBox2.ForeColor = System.Drawing.Color.Maroon;
 			this.StopienBox2.Location = new System.Drawing.Point(537, 70);
-			this.StopienBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.StopienBox2.Margin = new System.Windows.Forms.Padding(4);
 			this.StopienBox2.Name = "StopienBox2";
 			this.StopienBox2.Size = new System.Drawing.Size(208, 31);
 			this.StopienBox2.TabIndex = 9;
@@ -133,11 +133,11 @@
             "x",
             "PI"});
 			this.ArgumentChoiceBox1.Location = new System.Drawing.Point(429, 110);
-			this.ArgumentChoiceBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.ArgumentChoiceBox1.Margin = new System.Windows.Forms.Padding(4);
 			this.ArgumentChoiceBox1.Name = "ArgumentChoiceBox1";
+			this.ArgumentChoiceBox1.Text = Nazwy.bWybierzTypArgumentu;
 			this.ArgumentChoiceBox1.Size = new System.Drawing.Size(208, 31);
 			this.ArgumentChoiceBox1.TabIndex = 10;
-			this.ArgumentChoiceBox1.Text = "Wybierz argument";
 			this.ArgumentChoiceBox1.Visible = false;
 			this.ArgumentChoiceBox1.SelectionChangeCommitted += new System.EventHandler(this.ArgumentChoiceBox1_SelectionChangeCommitted);
 			// 
@@ -153,7 +153,7 @@
 			this.Controls.Add(this.FunctionChoiceBox);
 			this.Controls.Add(this.HelpLabel);
 			this.Controls.Add(this.SetFunctionBox);
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "SetFunction";
 			this.Size = new System.Drawing.Size(1067, 458);
 			this.Load += new System.EventHandler(this.SetFunction_Load);

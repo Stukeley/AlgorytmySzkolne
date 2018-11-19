@@ -74,7 +74,7 @@
 			this.outputLabel1.Location = new System.Drawing.Point(37, 21);
 			this.outputLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.outputLabel1.Name = "outputLabel1";
-			this.outputLabel1.Size = new System.Drawing.Size(291, 37);
+			this.outputLabel1.Size = new System.Drawing.Size(370, 37);
 			this.outputLabel1.TabIndex = 8;
 			this.outputLabel1.Text = "Placeholder";
 			this.outputLabel1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -84,7 +84,7 @@
 			this.inputBox1.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.inputBox1.ForeColor = System.Drawing.Color.Maroon;
 			this.inputBox1.Location = new System.Drawing.Point(37, 212);
-			this.inputBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.inputBox1.Margin = new System.Windows.Forms.Padding(4);
 			this.inputBox1.Name = "inputBox1";
 			this.inputBox1.Size = new System.Drawing.Size(289, 35);
 			this.inputBox1.TabIndex = 0;
@@ -96,7 +96,7 @@
 			this.inputBox2.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.inputBox2.ForeColor = System.Drawing.Color.Maroon;
 			this.inputBox2.Location = new System.Drawing.Point(37, 308);
-			this.inputBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.inputBox2.Margin = new System.Windows.Forms.Padding(4);
 			this.inputBox2.Name = "inputBox2";
 			this.inputBox2.Size = new System.Drawing.Size(289, 35);
 			this.inputBox2.TabIndex = 1;
@@ -107,7 +107,7 @@
 			// 
 			this.outputBox1.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.outputBox1.Location = new System.Drawing.Point(37, 64);
-			this.outputBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.outputBox1.Margin = new System.Windows.Forms.Padding(4);
 			this.outputBox1.Name = "outputBox1";
 			this.outputBox1.ReadOnly = true;
 			this.outputBox1.Size = new System.Drawing.Size(289, 35);
@@ -117,12 +117,12 @@
 			// 
 			this.ObliczButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.ObliczButton.Font = new System.Drawing.Font("Trebuchet MS", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.ObliczButton.Location = new System.Drawing.Point(909, 27);
-			this.ObliczButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.ObliczButton.Location = new System.Drawing.Point(884, 27);
+			this.ObliczButton.Margin = new System.Windows.Forms.Padding(4);
 			this.ObliczButton.Name = "ObliczButton";
-			this.ObliczButton.Size = new System.Drawing.Size(120, 74);
+			this.ObliczButton.Size = new System.Drawing.Size(179, 74);
 			this.ObliczButton.TabIndex = 3;
-			this.ObliczButton.Text = "Oblicz!";
+			this.ObliczButton.Text = Nazwy.pOblicz;
 			this.ObliczButton.UseVisualStyleBackColor = true;
 			this.ObliczButton.Click += new System.EventHandler(this.ObliczButton_Click);
 			// 
@@ -134,7 +134,7 @@
 			this.outputLabel2.Location = new System.Drawing.Point(472, 21);
 			this.outputLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.outputLabel2.Name = "outputLabel2";
-			this.outputLabel2.Size = new System.Drawing.Size(291, 37);
+			this.outputLabel2.Size = new System.Drawing.Size(369, 37);
 			this.outputLabel2.TabIndex = 9;
 			this.outputLabel2.Text = "Placeholder";
 			this.outputLabel2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -143,7 +143,7 @@
 			// 
 			this.outputBox2.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.outputBox2.Location = new System.Drawing.Point(472, 64);
-			this.outputBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.outputBox2.Margin = new System.Windows.Forms.Padding(4);
 			this.outputBox2.Name = "outputBox2";
 			this.outputBox2.ReadOnly = true;
 			this.outputBox2.Size = new System.Drawing.Size(289, 35);
@@ -158,7 +158,7 @@
 			this.CopyButton1.Name = "CopyButton1";
 			this.CopyButton1.Size = new System.Drawing.Size(75, 37);
 			this.CopyButton1.TabIndex = 5;
-			this.CopyButton1.Text = "Kopiuj";
+			this.CopyButton1.Text = Nazwy.bKopiuj;
 			this.CopyButton1.UseVisualStyleBackColor = true;
 			this.CopyButton1.Click += new System.EventHandler(this.CopyButton1_Click);
 			// 
@@ -171,7 +171,7 @@
 			this.CopyButton2.Name = "CopyButton2";
 			this.CopyButton2.Size = new System.Drawing.Size(75, 37);
 			this.CopyButton2.TabIndex = 7;
-			this.CopyButton2.Text = "Kopiuj";
+			this.CopyButton2.Text = Nazwy.bKopiuj;
 			this.CopyButton2.UseVisualStyleBackColor = true;
 			this.CopyButton2.Click += new System.EventHandler(this.CopyButton2_Click);
 			// 
@@ -180,7 +180,7 @@
 			this.EpsilonBox.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.EpsilonBox.ForeColor = System.Drawing.Color.Maroon;
 			this.EpsilonBox.Location = new System.Drawing.Point(37, 406);
-			this.EpsilonBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.EpsilonBox.Margin = new System.Windows.Forms.Padding(4);
 			this.EpsilonBox.Name = "EpsilonBox";
 			this.EpsilonBox.Size = new System.Drawing.Size(289, 35);
 			this.EpsilonBox.TabIndex = 2;
@@ -195,7 +195,7 @@
 			this.EpsilonLabel.Name = "EpsilonLabel";
 			this.EpsilonLabel.Size = new System.Drawing.Size(291, 37);
 			this.EpsilonLabel.TabIndex = 12;
-			this.EpsilonLabel.Text = "Podaj dokladność";
+			this.EpsilonLabel.Text = Nazwy.bDokładność;
 			this.EpsilonLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			this.EpsilonLabel.Visible = false;
 			// 
@@ -230,7 +230,7 @@
 			this.Controls.Add(this.outputLabel1);
 			this.Controls.Add(this.inputLabel2);
 			this.Controls.Add(this.inputLabel1);
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "Universal";
 			this.Size = new System.Drawing.Size(1067, 458);
 			this.Load += new System.EventHandler(this.Universal_Load);

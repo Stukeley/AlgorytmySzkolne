@@ -72,7 +72,7 @@
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(54, 20);
 			this.label2.TabIndex = 4;
-			this.label2.Text = "Wynik";
+			this.label2.Text = Nazwy.aWynik;
 			// 
 			// label1
 			// 
@@ -82,7 +82,7 @@
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(97, 20);
 			this.label1.TabIndex = 3;
-			this.label1.Text = "Dokładność";
+			this.label1.Text = Nazwy.bDokładność;
 			// 
 			// RunButton
 			// 
@@ -92,7 +92,7 @@
 			this.RunButton.Name = "RunButton";
 			this.RunButton.Size = new System.Drawing.Size(88, 53);
 			this.RunButton.TabIndex = 1;
-			this.RunButton.Text = "Pokaż";
+			this.RunButton.Text = Nazwy.bPokaż;
 			this.RunButton.UseVisualStyleBackColor = true;
 			this.RunButton.Click += new System.EventHandler(this.RunButton_Click);
 			// 
@@ -129,7 +129,7 @@
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.MaximizeBox = false;
 			this.Name = "Aproksymacja";
-			this.Text = "Aproksymacja";
+			this.Text = Nazwy.bAproksymacja;
 			this.TopPanel.ResumeLayout(false);
 			this.TopPanel.PerformLayout();
 			this.ResumeLayout(false);

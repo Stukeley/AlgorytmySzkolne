@@ -1,0 +1,585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="strGlowna" xml:space="preserve">
+    <value>Homepage</value>
+  </data>
+  <data name="strInfo" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="strKlasyczne" xml:space="preserve">
+    <value>Classical algorithms</value>
+  </data>
+  <data name="strZachlanne" xml:space="preserve">
+    <value>Greedy algorithms</value>
+  </data>
+  <data name="strSystemy" xml:space="preserve">
+    <value>Numeric systems</value>
+  </data>
+  <data name="strONP" xml:space="preserve">
+    <value>RPN</value>
+  </data>
+  <data name="strProjekty" xml:space="preserve">
+    <value>Projects</value>
+  </data>
+  <data name="strAproksymacja" xml:space="preserve">
+    <value>PI approximation</value>
+  </data>
+  <data name="strEuklides" xml:space="preserve">
+    <value>Euklides' Algorithm</value>
+  </data>
+  <data name="strSilnia" xml:space="preserve">
+    <value>Factorial</value>
+  </data>
+  <data name="strPierwsza" xml:space="preserve">
+    <value>Prime number</value>
+  </data>
+  <data name="strSumaDzielnikow" xml:space="preserve">
+    <value>Sum of prime factors</value>
+  </data>
+  <data name="strCzynnikiPierwsze" xml:space="preserve">
+    <value>Prime factors</value>
+  </data>
+  <data name="strSumaPrzedzialu" xml:space="preserve">
+    <value>Sum of a range</value>
+  </data>
+  <data name="strSumaCyfr" xml:space="preserve">
+    <value>Sum of digits</value>
+  </data>
+  <data name="strRNG" xml:space="preserve">
+    <value>Random Number Generator</value>
+  </data>
+  <data name="strUstaw" xml:space="preserve">
+    <value>Set function</value>
+  </data>
+  <data name="strZerowe" xml:space="preserve">
+    <value>Root of function</value>
+  </data>
+  <data name="strPierwiastek" xml:space="preserve">
+    <value>Square root</value>
+  </data>
+  <data name="strPierwiastek2" xml:space="preserve">
+    <value>Square root of a number</value>
+  </data>
+  <data name="strCalka" xml:space="preserve">
+    <value>Integral</value>
+  </data>
+  <data name="strCalka2" xml:space="preserve">
+    <value>Area under the curve</value>
+  </data>
+  <data name="oWartosc" xml:space="preserve">
+    <value>Value of an RPN expression</value>
+  </data>
+  <data name="oNaONP" xml:space="preserve">
+    <value>To RPN</value>
+  </data>
+  <data name="oZONP" xml:space="preserve">
+    <value>From RPN</value>
+  </data>
+  <data name="fWielomian" xml:space="preserve">
+    <value>Polynomial</value>
+  </data>
+  <data name="fWymierna" xml:space="preserve">
+    <value>Rational function</value>
+  </data>
+  <data name="fPierwiastek" xml:space="preserve">
+    <value>Square root</value>
+  </data>
+  <data name="fSin" xml:space="preserve">
+    <value>Sine</value>
+  </data>
+  <data name="fCos" xml:space="preserve">
+    <value>Cosine</value>
+  </data>
+  <data name="fTg" xml:space="preserve">
+    <value>Tangent</value>
+  </data>
+  <data name="fCtg" xml:space="preserve">
+    <value>Cotangent</value>
+  </data>
+  <data name="fLosuj" xml:space="preserve">
+    <value>Randomize</value>
+  </data>
+  <data name="fAlternatywa" xml:space="preserve">
+    <value>Alternative method</value>
+  </data>
+  <data name="aX" xml:space="preserve">
+    <value>x</value>
+  </data>
+  <data name="aPI" xml:space="preserve">
+    <value>PI</value>
+  </data>
+  <data name="aWynik" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="aLiczba" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="aDzielnik" xml:space="preserve">
+    <value>Highest common factor</value>
+  </data>
+  <data name="aWielokrotność" xml:space="preserve">
+    <value>Lowest common multiple</value>
+  </data>
+  <data name="aPierwsza" xml:space="preserve">
+    <value>Prime number?</value>
+  </data>
+  <data name="aCzynniki" xml:space="preserve">
+    <value>Factorization</value>
+  </data>
+  <data name="aPrzedział" xml:space="preserve">
+    <value>Sum of integers from this range</value>
+  </data>
+  <data name="strCzyChceszWyjść" xml:space="preserve">
+    <value>Would you like to quit the application?</value>
+  </data>
+  <data name="strWyjście" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="strPodajArgument" xml:space="preserve">
+    <value>Provide an argument</value>
+  </data>
+  <data name="strPodajEpsilon" xml:space="preserve">
+    <value>Provide the accuracy</value>
+  </data>
+  <data name="strPodajIloscOdcinkow" xml:space="preserve">
+    <value>Provide the amount of line segments</value>
+  </data>
+  <data name="strPodajLiczbę" xml:space="preserve">
+    <value>Provide a number</value>
+  </data>
+  <data name="strPodajLiczbę1" xml:space="preserve">
+    <value>Provide the first number</value>
+  </data>
+  <data name="strPodajLiczbę2" xml:space="preserve">
+    <value>Provide the second number</value>
+  </data>
+  <data name="strPrzedział1" xml:space="preserve">
+    <value>Provide the start of a range</value>
+  </data>
+  <data name="strPrzedział2" xml:space="preserve">
+    <value>Provide the end of a range</value>
+  </data>
+  <data name="strGranica1" xml:space="preserve">
+    <value>Provide lower bound</value>
+  </data>
+  <data name="strGranica2" xml:space="preserve">
+    <value>Provide upper bound</value>
+  </data>
+  <data name="strRestart" xml:space="preserve">
+    <value>Restart</value>
+  </data>
+  <data name="strInfo1" xml:space="preserve">
+    <value>The application is a compilation of most algorithms that we coded during out Computer Science classes in second grade of highschool. It can handle several basic hotkeys.</value>
+  </data>
+  <data name="strInfo2_1" xml:space="preserve">
+    <value>ESC: quit the application</value>
+  </data>
+  <data name="iOstrzeżenie" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="iNiepewne" xml:space="preserve">
+    <value>Attention! Shit knows if this works. Are you sure you want to try?</value>
+  </data>
+  <data name="iTypFunkcji" xml:space="preserve">
+    <value>Type of function: </value>
+  </data>
+  <data name="iFunkcja" xml:space="preserve">
+    <value>Function: </value>
+  </data>
+  <data name="iNWD" xml:space="preserve">
+    <value>Provide 2 numbers to get their HCF and LCM.</value>
+  </data>
+  <data name="iSilnia" xml:space="preserve">
+    <value>Provide a number to get its factorial (the factorial can have up to ~600 million digits, but such an attempt can end very, very badly!)</value>
+  </data>
+  <data name="iPierwsza" xml:space="preserve">
+    <value>Provide a number to check whether it's prime or not.</value>
+  </data>
+  <data name="iSumaDzielników" xml:space="preserve">
+    <value>Provide a number to get the sum of all its prime factors.</value>
+  </data>
+  <data name="iCzynnikiPierwsze" xml:space="preserve">
+    <value>Provide a number to get its factorization (in a non-decreasing order)</value>
+  </data>
+  <data name="iSumaPrzedziału" xml:space="preserve">
+    <value>Provide the start and end of a range to get a number that is the sum of all integers from that range.</value>
+  </data>
+  <data name="iSumaCyfr" xml:space="preserve">
+    <value>Provide a number to get the sum of its digits.</value>
+  </data>
+  <data name="iRNG" xml:space="preserve">
+    <value>Provide 2 numbers to get a random number from that range.</value>
+  </data>
+  <data name="iZerowe" xml:space="preserve">
+    <value>Provide the start and end of a range to find the root. Do note that it is possible only when the values of the function at the start and end of the range are of different signs. Also remember to set a function equation before starting the algorithm. If the equation hasn't been set, it is possible to generate a random one.</value>
+  </data>
+  <data name="iCałka" xml:space="preserve">
+    <value>Provide the accuracy (amount of line segments) and the start and end of a range to get the area under the curve.</value>
+  </data>
+  <data name="iPierwiastek" xml:space="preserve">
+    <value>Provide the accuracy and a number to get its square root. Default value: 0.0001. Both period and comma are allowed.</value>
+  </data>
+  <data name="iONPWartość" xml:space="preserve">
+    <value>Provide an expression in RPN (Reverse Polish Notation) to get its value.</value>
+  </data>
+  <data name="iONPZ" xml:space="preserve">
+    <value>Provide an expression in RPN (Reverse Polish Notation) to get its equivalent in regular notation.</value>
+  </data>
+  <data name="iONPNa" xml:space="preserve">
+    <value>Provide an expression in regular notation to get its equivalent in RPN (Reverse Polish Notation)</value>
+  </data>
+  <data name="pArgument" xml:space="preserve">
+    <value>Provide an argument...</value>
+  </data>
+  <data name="pOblicz" xml:space="preserve">
+    <value>Calculate!</value>
+  </data>
+  <data name="pWykonaj" xml:space="preserve">
+    <value>Execute!</value>
+  </data>
+  <data name="eBłąd" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="eSukces" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="eWylosowano" xml:space="preserve">
+    <value>Random function equation set successfully.</value>
+  </data>
+  <data name="eNieZnaleziono" xml:space="preserve">
+    <value>Not found</value>
+  </data>
+  <data name="emsgBłądArgumentu" xml:space="preserve">
+    <value>Error of argument/s!</value>
+  </data>
+  <data name="emsgNiePodanoFunkcji" xml:space="preserve">
+    <value>No function equation set!</value>
+  </data>
+  <data name="emsgBłądFunkcji" xml:space="preserve">
+    <value>No function set! Would you like to randomize an equation?</value>
+  </data>
+  <data name="emsgFormatWejścia" xml:space="preserve">
+    <value>Incorrect format of input.</value>
+  </data>
+  <data name="emsgPodstawaSystemu" xml:space="preserve">
+    <value>The maximum base of a numeral system is 36 !</value>
+  </data>
+  <data name="emsgException" xml:space="preserve">
+    <value>Something went wrong.</value>
+  </data>
+  <data name="emsgAproksymacjaPunkty" xml:space="preserve">
+    <value>A wrong number of points has been given! The default value will be set.</value>
+  </data>
+  <data name="emsgSierpinskiPoziomy" xml:space="preserve">
+    <value>An incorrect number has been given! The default value will be set.</value>
+  </data>
+  <data name="emsgIlośćOdcinków" xml:space="preserve">
+    <value>Error in line segment amount.</value>
+  </data>
+  <data name="hIlośćH" xml:space="preserve">
+    <value>Amount of bishops</value>
+  </data>
+  <data name="hIlośćS" xml:space="preserve">
+    <value>Amount of Knights</value>
+  </data>
+  <data name="hFailH" xml:space="preserve">
+    <value>Failed to put down eight bishops.</value>
+  </data>
+  <data name="hFailS" xml:space="preserve">
+    <value>Failed to place the knight on all tiles.</value>
+  </data>
+  <data name="hNieMożnaH" xml:space="preserve">
+    <value>Cannot place a bishop here!</value>
+  </data>
+  <data name="hNieMożnaS" xml:space="preserve">
+    <value>Cannot place the knight here!</value>
+  </data>
+  <data name="hGratulacjeH" xml:space="preserve">
+    <value>Congratulations, you put down eight bishops!</value>
+  </data>
+  <data name="hGratulacjeS" xml:space="preserve">
+    <value>Congratulations, you placed the knight on all tiles exactly once!</value>
+  </data>
+  <data name="hRestart" xml:space="preserve">
+    <value>Would you like to start over?</value>
+  </data>
+  <data name="bAproksymacja" xml:space="preserve">
+    <value>Approximation</value>
+  </data>
+  <data name="bCałka" xml:space="preserve">
+    <value>Integral</value>
+  </data>
+  <data name="bDokładność" xml:space="preserve">
+    <value>Accuracy</value>
+  </data>
+  <data name="bHetmani" xml:space="preserve">
+    <value>Bishops</value>
+  </data>
+  <data name="bKlasyczne" xml:space="preserve">
+    <value>Classical</value>
+  </data>
+  <data name="bKopiuj" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="bLiczbaPierwsza" xml:space="preserve">
+    <value>Prime number</value>
+  </data>
+  <data name="bMiejsceZerowe" xml:space="preserve">
+    <value>Function root</value>
+  </data>
+  <data name="bNWD" xml:space="preserve">
+    <value>HCF</value>
+  </data>
+  <data name="bONP" xml:space="preserve">
+    <value>RPN</value>
+  </data>
+  <data name="bPierwiastekKwadratowy" xml:space="preserve">
+    <value>Square root</value>
+  </data>
+  <data name="bPokaż" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="bPokażFunkcję" xml:space="preserve">
+    <value>View function</value>
+  </data>
+  <data name="bPoziomy" xml:space="preserve">
+    <value>Provide number of levels</value>
+  </data>
+  <data name="bProjekty" xml:space="preserve">
+    <value>Projects</value>
+  </data>
+  <data name="bRNG" xml:space="preserve">
+    <value>Random Number Generator</value>
+  </data>
+  <data name="bRozkład" xml:space="preserve">
+    <value>Factorization</value>
+  </data>
+  <data name="bSierpiński" xml:space="preserve">
+    <value>Sierpiński's Triangle</value>
+  </data>
+  <data name="bSilnia" xml:space="preserve">
+    <value>Factorial</value>
+  </data>
+  <data name="bSkoczek" xml:space="preserve">
+    <value>Knight</value>
+  </data>
+  <data name="bSPOJ" xml:space="preserve">
+    <value>SPOJ</value>
+  </data>
+  <data name="bSumaCyfr" xml:space="preserve">
+    <value>Sum of digits</value>
+  </data>
+  <data name="bSumaDzielników" xml:space="preserve">
+    <value>Sum of factors</value>
+  </data>
+  <data name="bSumaPrzedziału" xml:space="preserve">
+    <value>Sum of range</value>
+  </data>
+  <data name="bSystemNaKtóry" xml:space="preserve">
+    <value>To which</value>
+  </data>
+  <data name="bSystemPodaj" xml:space="preserve">
+    <value>Provide a number in this system</value>
+  </data>
+  <data name="bSystemy" xml:space="preserve">
+    <value>Numeric systems</value>
+  </data>
+  <data name="bSystemZKtórego" xml:space="preserve">
+    <value>From which</value>
+  </data>
+  <data name="bUstaw" xml:space="preserve">
+    <value>Set</value>
+  </data>
+  <data name="bUstawFunkcję" xml:space="preserve">
+    <value>Set function</value>
+  </data>
+  <data name="bWybierzAlgorytm" xml:space="preserve">
+    <value>Choose algorithm</value>
+  </data>
+  <data name="bWybierzFunkcję" xml:space="preserve">
+    <value>Choose function</value>
+  </data>
+  <data name="bWykres" xml:space="preserve">
+    <value>Function graph</value>
+  </data>
+  <data name="bZachlanne" xml:space="preserve">
+    <value>Greedy</value>
+  </data>
+  <data name="eUstawiono" xml:space="preserve">
+    <value>Function has been set correctly.</value>
+  </data>
+  <data name="strInfo2_2" xml:space="preserve">
+    <value>1-8: choice of a given algorithm(only on the algorithm selection screen)</value>
+  </data>
+  <data name="strInfo2_3" xml:space="preserve">
+    <value>TAB: next control</value>
+  </data>
+  <data name="bPrzykład" xml:space="preserve">
+    <value>Example</value>
+  </data>
+  <data name="bPodajStopień" xml:space="preserve">
+    <value>Provide the degree</value>
+  </data>
+  <data name="bPodajStopieńFunkcji" xml:space="preserve">
+    <value>Provide the degree of function</value>
+  </data>
+  <data name="bPodajStopieńLicznika" xml:space="preserve">
+    <value>Provide the degree of numerator</value>
+  </data>
+  <data name="bPodajStopieńMianownika" xml:space="preserve">
+    <value>Provide the degree of denominator</value>
+  </data>
+  <data name="bPodajStopieńPierwiastka" xml:space="preserve">
+    <value>Provide the degree of root</value>
+  </data>
+  <data name="bWybierzArgument" xml:space="preserve">
+    <value>Choose argument</value>
+  </data>
+  <data name="bWybierzTypArgumentu" xml:space="preserve">
+    <value>Choose argument type</value>
+  </data>
+  <data name="eBłądStopnia" xml:space="preserve">
+    <value>Error of function's degree</value>
+  </data>
+  <data name="emsgNieprawidłowyStopień" xml:space="preserve">
+    <value>Incorrect degree of function</value>
+  </data>
+  <data name="emsgStopieńLosowejFunkcji" xml:space="preserve">
+    <value>Incorrectly set the degree of function. Do note only positive integers are allowed.</value>
+  </data>
+  <data name="iFLosuj" xml:space="preserve">
+    <value>Provide the degree of function (it has to be a positive integer). Then the program will randomize all the coefficients, and the function will be ready to use.</value>
+  </data>
+  <data name="iFPierwiastek" xml:space="preserve">
+    <value>First choose the degree of inner function and the degree of the root. Then provide the degree of the root preceded by the letter S, then provide all coefficients of the innter function (even if they are equal to 0). See example.</value>
+  </data>
+  <data name="iFTrygonometrycznaPI" xml:space="preserve">
+    <value>Function moved by the given amount of PI. Can contain fractions, but only decimal. Provide only one number</value>
+  </data>
+  <data name="iFTrygonometrycznaX" xml:space="preserve">
+    <value>Provide the degree of the argument, then all the coefficients (even if they are equal to 0) divided by single spaces.</value>
+  </data>
+  <data name="iFWielomian" xml:space="preserve">
+    <value>Choose the degree of polynomial, then provide all coefficients divided by a single space. Provide the coefficients even if they are equal to 0.</value>
+  </data>
+  <data name="iFWymierna" xml:space="preserve">
+    <value>Choose the degree of numerator and denominator, then provide all coefficients (even if they are equal to 0) divided by a single space in parentheses preceded by the letters L (for numerator) and M (for denominator). See example.</value>
+  </data>
+</root>

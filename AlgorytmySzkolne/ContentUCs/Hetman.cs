@@ -29,15 +29,15 @@ namespace AlgorytmySzkolne.ContentUCs
 
 			if (Typ == Typy.Hetman)
 			{
-				LabelText = " z 8";
+				LabelText = "/8";
 				HetmanProgressBar.Maximum = 8;
-				label1.Text = "Ilość hetmanów";
+				label1.Text = Nazwy.hIlośćH;
 			}
 			else if (Typ == Typy.Skoczek)
 			{
-				LabelText = " z 64";
+				LabelText = "/64";
 				HetmanProgressBar.Maximum = 64;
-				label1.Text = "Ilość skoczków";
+				label1.Text = Nazwy.hIlośćS;
 			}
 
 			label2.Text = HetmanProgressBar.Value.ToString() + LabelText;
@@ -106,7 +106,7 @@ namespace AlgorytmySzkolne.ContentUCs
 			{
 				if (liczby[tempRow, tempCol] == 1 || liczby[tempRow, tempCol] == 2)
 				{
-					MessageBox.Show("Nie można tu postawić hetmana!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+					MessageBox.Show(Nazwy.hNieMożnaH, Nazwy.eBłąd, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 				}
 				else
 				{
@@ -162,7 +162,7 @@ namespace AlgorytmySzkolne.ContentUCs
 				}
 				else if (liczby[tempRow, tempCol] == 1 || liczby[tempRow, tempCol] == 2 || liczby[tempRow, tempCol] == 3)
 				{
-					MessageBox.Show("Nie można tu przesunąć skoczka!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+					MessageBox.Show(Nazwy.hNieMożnaS, Nazwy.eBłąd, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 				}
 				else
 				{
@@ -371,17 +371,18 @@ namespace AlgorytmySzkolne.ContentUCs
 		{
 			if (Typ == Typy.Hetman)
 			{
-				MessageBox.Show("Gratulacje, udało Ci się postawić ośmiu hetmanów!");
+				MessageBox.Show(Nazwy.hGratulacjeH);
 			}
 			else if (Typ == Typy.Skoczek)
 			{
-				MessageBox.Show("Gratulacje, udało ci się postawić skoczka na każdym miejscu dokładnie jeden raz!");
+				MessageBox.Show(Nazwy.hGratulacjeS);
 			}
 		}
 
 		private void RestartButton_Click(object sender, EventArgs e)
 		{
-			DialogResult dialogResult = MessageBox.Show("Czy chcesz zacząć od nowa?", "Restart", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+			DialogResult dialogResult = MessageBox.Show(Nazwy.hRestart, Nazwy.strRestart,
+				MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 			if (dialogResult == DialogResult.Yes)
 			{
 				for (int i = 0; i < 8; i++)
@@ -409,11 +410,11 @@ namespace AlgorytmySzkolne.ContentUCs
 		{
 			if (Typ == Typy.Hetman)
 			{
-				MessageBox.Show("Nie udało ci się postawić ośmiu hetmanów.");
+				MessageBox.Show(Nazwy.hFailH);
 			}
 			else if (Typ == Typy.Skoczek)
 			{
-				MessageBox.Show("Nie udało ci się postawić skoczka na każdym polu.");
+				MessageBox.Show(Nazwy.hFailS);
 			}
 		}
 

@@ -27,7 +27,7 @@ namespace AlgorytmySzkolne.ContentUCs
 
 		private void ArgumentBox_Enter(object sender, EventArgs e)
 		{
-			if (ArgumentBox.Text == "Podaj argument...")
+			if (ArgumentBox.Text == Nazwy.pArgument)
 			{
 				ArgumentBox.ForeColor = Color.Maroon;
 				ArgumentBox.Text = "";
@@ -36,34 +36,28 @@ namespace AlgorytmySzkolne.ContentUCs
 
 		private void ONPChoiceBox_SelectionChangeCommitted(object sender, EventArgs e)
 		{
-			ArgumentBox.Text = "Podaj argument...";
+			ArgumentBox.Text = Nazwy.pArgument;
 			ArgumentBox.ForeColor = Color.SlateGray;
-			ResultBox.Text = "Wynik";
+			ResultBox.Text = Nazwy.aWynik;
 			ResultBox.ForeColor = Color.SlateGray;
 
 			var selection = ONPChoiceBox.GetItemText(ONPChoiceBox.SelectedItem);
-			if (selection == "Wartość wyrażenia w ONP")
+			if (selection == Nazwy.oWartosc)
 			{
-				RunButton.Text = "Oblicz!";
-				HelpLabel.Text = "Podaj wyrażenie w ONP aby uzyskać jego wartość.\n" +
-					"Przykład: 2 3 + 4 *\n" +
-					"Wynik: 20";
+				RunButton.Text = Nazwy.pOblicz;
+				HelpLabel.Text = Nazwy.iONPWartość;
 				HelpLabel.Visible = true;
 			}
-			else if (selection == "Z ONP")
+			else if (selection == Nazwy.oZONP)
 			{
-				RunButton.Text = "Wykonaj!";
-				HelpLabel.Text = "Podaj wyrażenie w ONP aby uzyskać jego odpowiednik w notacji normalnej.\n" +
-					"Przykład: 2 3 + 4 *\n" +
-					"Wynik: (2+3)*4";
+				RunButton.Text = Nazwy.pWykonaj;
+				HelpLabel.Text = Nazwy.iONPZ;
 				HelpLabel.Visible = true;
 			}
-			else if (selection == "Na ONP")
+			else if (selection == Nazwy.oNaONP)
 			{
-				RunButton.Text = "Wykonaj!";
-				HelpLabel.Text = "Podaj wyrażenie w notacji normalnej aby uzyskać jego odpowiednik w ONP.\n" +
-					"Przykład: (2+3)*4\n" +
-					"Wynik: 2 3 + 4 *";
+				RunButton.Text = Nazwy.pWykonaj;
+				HelpLabel.Text = Nazwy.iONPNa;
 				HelpLabel.Visible = true;
 			}
 		}
@@ -74,7 +68,7 @@ namespace AlgorytmySzkolne.ContentUCs
 			ResultBox.ForeColor = Color.Maroon;
 			if (title == Nazwy.oZONP)
 			{
-				var result = MessageBox.Show("Uwaga! Chuj wie czy to działa. Czy na pewno chcesz spróbować?", "Ostrzeżenie",
+				var result = MessageBox.Show(Nazwy.iNiepewne, Nazwy.iOstrzeżenie,
 					MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 				if (result == DialogResult.Yes)
 				{
@@ -105,7 +99,7 @@ namespace AlgorytmySzkolne.ContentUCs
 		{
 			if (ArgumentBox.Text == "")
 			{
-				ArgumentBox.Text = "Podaj argument...";
+				ArgumentBox.Text = Nazwy.pArgument;
 				ArgumentBox.ForeColor = Color.SlateGray;
 			}
 		}

@@ -8,41 +8,6 @@ namespace AlgorytmySzkolne
 {
 	public partial class AlgorytmyUC : UserControl
 	{
-		/*To be implemented™
-        //public static string CurrentLanguage { get; set; }
-        //public static string LangTarget { get; set; }
-        //public static string LanguagePair { get; set; }
-
-        //private static string Translator(string input)//input - tekst, languagePair - języki np. pl|en
-        //{
-        //    string url = string.Format(@"http://www.google.com/translate_t?hl=en&ie=UTF8&text={0}&langpair={1}", input, LanguagePair);
-
-        //    WebClient web = new WebClient
-        //    {
-        //        Encoding = Encoding.UTF8
-        //    };
-
-        //    string result = web.DownloadString(url);
-
-        //    result = result.Substring(result.IndexOf("id=result_box") + 22, result.IndexOf("id=result_box") + 500);
-        //    result = result.Substring(0, result.IndexOf("</div"));
-        //    return result;
-        //}
-
-        //public static void Translate()
-        //{
-        //    Dictionary<string, string> LangDict = new Dictionary<string, string>
-        //    {
-        //        { Nazwy.lPolski, "pl" },
-        //        { Nazwy.lAngielski, "en" },
-        //        { Nazwy.lNiemiecki, "de" },
-        //        { Nazwy.lRosyjski, "ru" },
-        //        { Nazwy.lFrancuski, "fr" }
-        //    };
-
-        //    LanguagePair = LangDict.FirstOrDefault(x => x.Key == CurrentLanguage).Value + '|' + LangDict.FirstOrDefault(x => x.Key == LangTarget).Value;
-        //}*/
-
 		public static UserControl currentUC;
 		public static Dictionary<string, UserControl> PreviousList = new Dictionary<string, UserControl>();
 
@@ -138,7 +103,8 @@ namespace AlgorytmySzkolne
 
 		private void LanguageChangeButton_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("To be implemented™", "Not yet", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			var translator = new Translator();
+			translator.Show();
 		}
 
 		private void ExitButton_Click(object sender, EventArgs e)

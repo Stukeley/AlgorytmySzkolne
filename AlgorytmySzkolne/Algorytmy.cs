@@ -32,147 +32,137 @@ namespace AlgorytmySzkolne
 
 			if (argument1 != "")
 			{
-				switch (nazwaAlgorytmu)
+				if (nazwaAlgorytmu == Nazwy.strEuklides)
 				{
-					#region Klasyczne
-
-					case Nazwy.strEuklides:
-						result1 = int.TryParse(argument1, out pom1);
-						result2 = int.TryParse(argument2, out pom2);
-						if (result1 && result2)
+					result1 = int.TryParse(argument1, out pom1);
+					result2 = int.TryParse(argument2, out pom2);
+					if (result1 && result2)
+					{
+						wynik1 = AlgorytmyKlasyczne.NWD(pom1, pom2).ToString();
+						wynik2 = ((pom1 * pom2) / int.Parse(wynik1)).ToString();
+					}
+					else
+						throw new ArgumentException();
+				}
+				else if (nazwaAlgorytmu == Nazwy.strSilnia)
+				{
+					result1 = int.TryParse(argument1, out pom1);
+					if (result1)
+					{
+						wynik1 = AlgorytmyKlasyczne.Silnia(pom1).ToString();
+					}
+					else
+						throw new ArgumentException();
+				}
+				else if (nazwaAlgorytmu == Nazwy.strPierwsza)
+				{
+					result1 = int.TryParse(argument1, out pom1);
+					if (result1)
+					{
+						result2 = AlgorytmyKlasyczne.Pierwsza(pom1);
+						wynik1 = result2 ? "Tak" : "Nie";
+					}
+					else
+						throw new ArgumentException();
+				}
+				else if (nazwaAlgorytmu == Nazwy.strSumaDzielnikow)
+				{
+					result1 = int.TryParse(argument1, out pom1);
+					if (result1)
+					{
+						wynik1 = AlgorytmyKlasyczne.SumaDzielnikow(pom1).ToString();
+					}
+					else
+						throw new ArgumentException();
+				}
+				else if (nazwaAlgorytmu == Nazwy.strCzynnikiPierwsze)
+				{
+					result1 = int.TryParse(argument1, out pom1);
+					if (result1)
+					{
+						wynik1 = AlgorytmyKlasyczne.CzynnikiPierwsze(pom1);
+					}
+					else
+						throw new ArgumentException();
+				}
+				else if (nazwaAlgorytmu == Nazwy.strSumaPrzedzialu)
+				{
+					result1 = int.TryParse(argument1, out pom1);
+					result2 = int.TryParse(argument2, out pom2);
+					if (result1 && result2)
+					{
+						if (pom1 > pom2)
 						{
-							wynik1 = AlgorytmyKlasyczne.NWD(pom1, pom2).ToString();
-							wynik2 = ((pom1 * pom2) / int.Parse(wynik1)).ToString();
+							int x = pom1;
+							pom1 = pom2;
+							pom2 = x;
 						}
-						else
-							throw new ArgumentException();
-						break;
-
-					case Nazwy.strSilnia:
-						result1 = int.TryParse(argument1, out pom1);
-						if (result1)
+						wynik1 = AlgorytmyKlasyczne.SumaZPrzedzialu(pom1, pom2).ToString();
+					}
+					else
+						throw new ArgumentException();
+				}
+				else if (nazwaAlgorytmu == Nazwy.strSumaCyfr)
+				{
+					result1 = int.TryParse(argument1, out pom1);
+					if (result1)
+					{
+						wynik1 = AlgorytmyKlasyczne.SumaCyfr(pom1).ToString();
+					}
+				}
+				else if (nazwaAlgorytmu == Nazwy.strRNG)
+				{
+					result1 = int.TryParse(argument1, out pom1);
+					result2 = int.TryParse(argument2, out pom2);
+					if (result1 && result2)
+					{
+						if (pom1 > pom2)
 						{
-							wynik1 = AlgorytmyKlasyczne.Silnia(pom1).ToString();
+							int x = pom1;
+							pom1 = pom2;
+							pom2 = x;
 						}
-						else
-							throw new ArgumentException();
-						break;
-
-					case Nazwy.strPierwsza:
-						result1 = int.TryParse(argument1, out pom1);
-						if (result1)
-						{
-							result2 = AlgorytmyKlasyczne.Pierwsza(pom1);
-							wynik1 = result2 ? "Tak" : "Nie";
-						}
-						else
-							throw new ArgumentException();
-						break;
-
-					case Nazwy.strSumaDzielnikow:
-						result1 = int.TryParse(argument1, out pom1);
-						if (result1)
-						{
-							wynik1 = AlgorytmyKlasyczne.SumaDzielnikow(pom1).ToString();
-						}
-						else
-							throw new ArgumentException();
-						break;
-
-					case Nazwy.strCzynnikiPierwsze:
-						result1 = int.TryParse(argument1, out pom1);
-						if (result1)
-						{
-							wynik1 = AlgorytmyKlasyczne.CzynnikiPierwsze(pom1);
-						}
-						else
-							throw new ArgumentException();
-						break;
-
-					case Nazwy.strSumaPrzedzialu:
-						result1 = int.TryParse(argument1, out pom1);
-						result2 = int.TryParse(argument2, out pom2);
-						if (result1 && result2)
-						{
-							if (pom1 > pom2)
-							{
-								int x = pom1;
-								pom1 = pom2;
-								pom2 = x;
-							}
-							wynik1 = AlgorytmyKlasyczne.SumaZPrzedzialu(pom1, pom2).ToString();
-						}
-						else
-							throw new ArgumentException();
-						break;
-
-					case Nazwy.strSumaCyfr:
-						result1 = int.TryParse(argument1, out pom1);
-						if (result1)
-						{
-							wynik1 = AlgorytmyKlasyczne.SumaCyfr(pom1).ToString();
-						}
-						break;
-
-					case Nazwy.strRNG:
-						result1 = int.TryParse(argument1, out pom1);
-						result2 = int.TryParse(argument2, out pom2);
-						if (result1 && result2)
-						{
-							if (pom1 > pom2)
-							{
-								int x = pom1;
-								pom1 = pom2;
-								pom2 = x;
-							}
-							wynik1 = AlgorytmyKlasyczne.RNG(pom1, pom2).ToString();
-						}
-						else
-							throw new ArgumentException();
-						break;
-
-					#endregion Klasyczne
-
-					#region Zachłanne
-
-					case Nazwy.strZerowe:
-						result1 = double.TryParse(argument1, out arg1);
-						result2 = double.TryParse(argument2, out arg2);
-						if (result1 && result2)
-						{
-							wynik1 = AlgorytmyZachlanne.MiejsceZerowe(arg1, arg2).ToString();
-							if (!AlgorytmyZachlanne.Znaleziono)
-								wynik1 = Nazwy.strNieZnaleziono;
-						}
-						else
-							throw new ArgumentException();
-
-						break;
-
-					case Nazwy.strPierwiastek:
-						result1 = double.TryParse(argument1, out arg1);
-						if (result1)
-						{
-							wynik1 = AlgorytmyZachlanne.Pierwiastek(arg1).ToString();
-						}
-						else
-							throw new ArgumentException();
-
-						break;
-
-					case Nazwy.strCalka:
-						result1 = double.TryParse(argument1, out arg1);
-						result2 = double.TryParse(argument2, out arg2);
-						if (result1 && result2)
-						{
-							wynik1 = AlgorytmyZachlanne.Całka(arg1, arg2).ToString();
-						}
-						else
-							throw new ArgumentException();
-
-						break;
-
-						#endregion Zachłanne
+						wynik1 = AlgorytmyKlasyczne.RNG(pom1, pom2).ToString();
+					}
+					else
+						throw new ArgumentException();
+				}
+				else if (nazwaAlgorytmu == Nazwy.strZerowe)
+				{
+					result1 = double.TryParse(argument1, out arg1);
+					result2 = double.TryParse(argument2, out arg2);
+					if (result1 && result2)
+					{
+						wynik1 = AlgorytmyZachlanne.MiejsceZerowe(arg1, arg2).ToString();
+						if (!AlgorytmyZachlanne.Znaleziono)
+							wynik1 = Nazwy.eNieZnaleziono;
+					}
+					else
+						throw new ArgumentException();
+				}
+				else if (nazwaAlgorytmu == Nazwy.strCalka)
+				{
+					result1 = double.TryParse(argument1, out arg1);
+					result2 = double.TryParse(argument2, out arg2);
+					if (result1 && result2)
+					{
+						wynik1 = AlgorytmyZachlanne.Całka(arg1, arg2).ToString();
+					}
+					else
+						throw new ArgumentException();
+				}
+				else if (nazwaAlgorytmu == Nazwy.strPierwiastek)
+				{
+					result1 = double.TryParse(argument1, out arg1);
+					if (result1)
+					{
+						wynik1 = AlgorytmyZachlanne.Pierwiastek(arg1).ToString();
+					}
+					else
+						throw new ArgumentException();
+				}
+				else
+				{
 				}
 			}
 			if (wynik2 != "")
@@ -186,23 +176,20 @@ namespace AlgorytmySzkolne
 			string wynik = "";
 			try
 			{
-				switch (nazwaAlgorytmu)
+				if (nazwaAlgorytmu == Nazwy.oWartosc)
 				{
-					#region ONP
-
-					case Nazwy.oWartosc:
-						wynik = ONP.WartoscWyrazeniaONP(argument);
-						break;
-
-					case Nazwy.oZONP:
-						wynik = ONP.zONP(argument);
-						break;
-
-					case Nazwy.oNaONP:
-						wynik = ONP.NaONP(argument);
-						break;
-
-						#endregion ONP
+					wynik = ONP.WartoscWyrazeniaONP(argument);
+				}
+				else if (nazwaAlgorytmu == Nazwy.oZONP)
+				{
+					wynik = ONP.zONP(argument);
+				}
+				else if (nazwaAlgorytmu == Nazwy.oNaONP)
+				{
+					wynik = ONP.NaONP(argument);
+				}
+				else
+				{
 				}
 			}
 			catch (ArgumentException)
@@ -429,96 +416,88 @@ namespace AlgorytmySzkolne
 			double wynik = 0;
 			int indexpom;
 
-			switch (TypFankszynu)
+			if (TypFankszynu == Nazwy.fWielomian)
 			{
-				case Nazwy.fWielomian://póki co bez ułamków
+				wynik = FunkcjaWielomian(x);
+			}
+			else if (TypFankszynu == Nazwy.fWymierna)
+			{
+				string przechwyc = Fankszyn;
 
-					wynik = FunkcjaWielomian(x);
+				indexpom = Fankszyn.IndexOf("M");
+				string pom = Fankszyn.Substring(0, indexpom - 1);
+				pom = pom.Remove(0, 2);
+				pom = pom.Remove(pom.Length - 2, 2);
 
-					break;
+				Fankszyn = pom;
+				Stopien = stLicz;
+				double wLicznika = FunkcjaWielomian(x);
 
-				case Nazwy.fWymierna:
+				pom = przechwyc.Substring(indexpom, przechwyc.Length - indexpom);
+				pom = pom.Remove(0, 2);
+				pom = pom.Remove(pom.Length - 1, 1);
 
-					string przechwyc = Fankszyn;
+				Fankszyn = pom;
+				Stopien = stMian;
+				double wMianownika = FunkcjaWielomian(x);
 
-					indexpom = Fankszyn.IndexOf("M");
-					string pom = Fankszyn.Substring(0, indexpom - 1);
-					pom = pom.Remove(0, 2);
-					pom = pom.Remove(pom.Length - 2, 2);
+				if (wMianownika == 0)//?
+				{
+					throw new ArgumentException();
+				}
+				wynik = wLicznika / wMianownika;
 
-					Fankszyn = pom;
-					Stopien = stLicz;
-					double wLicznika = FunkcjaWielomian(x);
-
-					pom = przechwyc.Substring(indexpom, przechwyc.Length - indexpom);
-					pom = pom.Remove(0, 2);
-					pom = pom.Remove(pom.Length - 1, 1);
-
-					Fankszyn = pom;
-					Stopien = stMian;
-					double wMianownika = FunkcjaWielomian(x);
-
-					if (wMianownika == 0)
-					{
-						throw new ArgumentException();
-					}
-					wynik = wLicznika / wMianownika;
-
-					Fankszyn = przechwyc;
-
-					break;
-
-				case Nazwy.fPieriwastek:
-
-					Stopien = stF;
-					wynik = FunkcjaWielomian(x);
-					wynik = Math.Pow(wynik, (1.0 / stPierw));
-
-					break;
-
-				case Nazwy.fSin:
-					if (TypArgumentu == Nazwy.aX)
-					{
-						wynik = Math.Sin(FunkcjaWielomian(x));
-					}
-					else
-					{
-						wynik = Math.Sin(x + IloscPI);
-					}
-					break;
-
-				case Nazwy.fCos:
-					if (TypArgumentu == Nazwy.aX)
-					{
-						wynik = Math.Cos(FunkcjaWielomian(x));
-					}
-					else
-					{
-						wynik = Math.Cos(x + IloscPI);
-					}
-					break;
-
-				case Nazwy.fTg:
-					if (TypArgumentu == Nazwy.aX)
-					{
-						wynik = Math.Tan(FunkcjaWielomian(x));
-					}
-					else
-					{
-						wynik = Math.Tan(x + IloscPI);
-					}
-					break;
-
-				case Nazwy.fCtg:
-					if (TypArgumentu == Nazwy.aX)
-					{
-						wynik = 1 / (Math.Tan(FunkcjaWielomian(x)));
-					}
-					else
-					{
-						wynik = 1 / (Math.Tan(x + IloscPI));
-					}
-					break;
+				Fankszyn = przechwyc;
+			}
+			else if (TypFankszynu == Nazwy.fPierwiastek)
+			{
+				Stopien = stF;
+				wynik = FunkcjaWielomian(x);
+				wynik = Math.Pow(wynik, (1.0 / stPierw));
+			}
+			else if (TypFankszynu == Nazwy.fSin)
+			{
+				if (TypArgumentu == Nazwy.aX)
+				{
+					wynik = Math.Sin(FunkcjaWielomian(x));
+				}
+				else
+				{
+					wynik = Math.Sin(x + IloscPI);
+				}
+			}
+			else if (TypFankszynu == Nazwy.fCos)
+			{
+				if (TypArgumentu == Nazwy.aX)
+				{
+					wynik = Math.Cos(FunkcjaWielomian(x));
+				}
+				else
+				{
+					wynik = Math.Cos(x + IloscPI);
+				}
+			}
+			else if (TypFankszynu == Nazwy.fTg)
+			{
+				if (TypArgumentu == Nazwy.aX)
+				{
+					wynik = Math.Tan(FunkcjaWielomian(x));
+				}
+				else
+				{
+					wynik = Math.Tan(x + IloscPI);
+				}
+			}
+			else if (TypFankszynu == Nazwy.fCtg)
+			{
+				if (TypArgumentu == Nazwy.aX)
+				{
+					wynik = 1 / (Math.Tan(FunkcjaWielomian(x)));
+				}
+				else
+				{
+					wynik = 1 / (Math.Tan(x + IloscPI));
+				}
 			}
 
 			return wynik;
@@ -715,27 +694,25 @@ namespace AlgorytmySzkolne
 					a = kontejner[kontejner.Count - 2];
 					b = kontejner[kontejner.Count - 1];
 
-					switch (znak)
+					if (znak == '+')
 					{
-						case '+':
-							wynik = a + b;
-							break;
-
-						case '-':
-							wynik = a - b;
-							break;
-
-						case '*':
-							wynik = a * b;
-							break;
-
-						case '/':
-							if (b == 0)
-							{
-								throw new ArgumentException();
-							}
-							else wynik = a / b;
-							break;
+						wynik = a + b;
+					}
+					else if (znak == '-')
+					{
+						wynik = a - b;
+					}
+					else if (znak == '*')
+					{
+						wynik = a * b;
+					}
+					else if (znak == '/')
+					{
+						if (b == 0)
+						{
+							throw new ArgumentException();
+						}
+						else wynik = a / b;
 					}
 
 					kontejner.RemoveRange(kontejner.Count - 2, 2);
@@ -786,77 +763,77 @@ namespace AlgorytmySzkolne
 				{
 					pom = w[i];
 
-					switch (pom)
+					if (pom == '+')
 					{
-						case '+':
-							while (znaki.Count > 0 && znaki[znaki.Count - 1] != '(')
-							{
-								pom2 = znaki[znaki.Count - 1];
-								znaki.RemoveAt(znaki.Count - 1);
-								wynik = wynik + pom2 + ' ';
-							}
+						while (znaki.Count > 0 && znaki[znaki.Count - 1] != '(')
+						{
+							pom2 = znaki[znaki.Count - 1];
+							znaki.RemoveAt(znaki.Count - 1);
+							wynik = wynik + pom2 + ' ';
+						}
+						znaki.Add(pom);
+					}
+					else if (pom == '-')
+					{
+						while (znaki.Count > 0 && znaki[znaki.Count - 1] != '(')
+						{
+							pom2 = znaki[znaki.Count - 1];
+							znaki.RemoveAt(znaki.Count - 1);
+							wynik = wynik + pom2 + ' ';
+						}
+						znaki.Add(pom);
+					}
+					else if (pom == '*')
+					{
+						if ((!znaki.Any()) || (znaki[znaki.Count - 1] == '+' || znaki[znaki.Count - 1] == '-'))
+						{
 							znaki.Add(pom);
-							break;
-
-						case '-':
-							while (znaki.Count > 0 && znaki[znaki.Count - 1] != '(')
-							{
-								pom2 = znaki[znaki.Count - 1];
-								znaki.RemoveAt(znaki.Count - 1);
-								wynik = wynik + pom2 + ' ';
-							}
-							znaki.Add(pom);
-							break;
-
-						case '*':
-							if ((!znaki.Any()) || (znaki[znaki.Count - 1] == '+' || znaki[znaki.Count - 1] == '-'))
-							{
-								znaki.Add(pom);
-							}
-							else
-							{
-								while (znaki.Any() && znaki[znaki.Count - 1] != '(')
-								{
-									pom2 = znaki[znaki.Count - 1];
-									znaki.RemoveAt(znaki.Count - 1);
-									wynik = wynik + pom2 + ' ';
-								}
-								znaki.Add(pom);
-							}
-							break;
-
-						case '/':
-							if ((!znaki.Any()) || (znaki[znaki.Count - 1] == '+' || znaki[znaki.Count - 1] == '-'))
-							{
-								znaki.Add(pom);
-							}
-							else
-							{
-								while (znaki.Any() && znaki[znaki.Count - 1] != '(' && znaki[znaki.Count - 1] != '+' && znaki[znaki.Count - 1] != '-')
-								{
-									pom2 = znaki[znaki.Count - 1];
-									znaki.RemoveAt(znaki.Count - 1);
-									wynik = wynik + pom2 + ' ';
-								}
-								znaki.Add(pom);
-							}
-							break;
-
-						case '(':
-							znaki.Add(pom);
-							break;
-
-						case ')':
+						}
+						else
+						{
 							while (znaki.Any() && znaki[znaki.Count - 1] != '(')
 							{
 								pom2 = znaki[znaki.Count - 1];
-								wynik = wynik + pom2 + ' ';
 								znaki.RemoveAt(znaki.Count - 1);
+								wynik = wynik + pom2 + ' ';
 							}
+							znaki.Add(pom);
+						}
+					}
+					else if (pom == '/')
+					{
+						if ((!znaki.Any()) || (znaki[znaki.Count - 1] == '+' || znaki[znaki.Count - 1] == '-'))
+						{
+							znaki.Add(pom);
+						}
+						else
+						{
+							while (znaki.Any() && znaki[znaki.Count - 1] != '(' && znaki[znaki.Count - 1] != '+' && znaki[znaki.Count - 1] != '-')
+							{
+								pom2 = znaki[znaki.Count - 1];
+								znaki.RemoveAt(znaki.Count - 1);
+								wynik = wynik + pom2 + ' ';
+							}
+							znaki.Add(pom);
+						}
+					}
+					else if (pom == '(')
+					{
+						znaki.Add(pom);
+					}
+					else if (pom == ')')
+					{
+						while (znaki.Any() && znaki[znaki.Count - 1] != '(')
+						{
+							pom2 = znaki[znaki.Count - 1];
+							wynik = wynik + pom2 + ' ';
 							znaki.RemoveAt(znaki.Count - 1);
-							break;
-
-						default: continue;
+						}
+						znaki.RemoveAt(znaki.Count - 1);
+					}
+					else
+					{
+						continue;
 					}
 				}
 			}

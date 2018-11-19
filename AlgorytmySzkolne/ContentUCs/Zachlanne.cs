@@ -38,7 +38,7 @@ namespace AlgorytmySzkolne.ContentUCs
 			zerowe.SetEpsilonLabel(Nazwy.strPodajEpsilon);
 
 			algorytmyUC.SetTitle(Nazwy.strZerowe);
-			zerowe.SetLabels("Podaj początek przedziału", "Podaj koniec przedziału", "Miejsce zerowe");
+			zerowe.SetLabels(Nazwy.strPrzedział1, Nazwy.strPrzedział2, Nazwy.strZerowe);
 			zerowe.SetUC(this.algorytmyUC);
 			AlgorytmyUC.AddToList(Nazwy.strZerowe, zerowe);
 
@@ -53,7 +53,7 @@ namespace AlgorytmySzkolne.ContentUCs
 			pierwiastek.SetEpsilonLabel(Nazwy.strPodajEpsilon);
 
 			algorytmyUC.SetTitle(Nazwy.strPierwiastek);
-			pierwiastek.SetLabels("Podaj liczbę", "Pierwiastek kwadratowy z liczby");
+			pierwiastek.SetLabels(Nazwy.strPodajLiczbę, Nazwy.strPierwiastek2);
 			pierwiastek.SetUC(this.algorytmyUC);
 			AlgorytmyUC.AddToList(Nazwy.strPierwiastek, pierwiastek);
 
@@ -68,7 +68,7 @@ namespace AlgorytmySzkolne.ContentUCs
 			calka.SetEpsilonLabel(Nazwy.strPodajIloscOdcinkow);
 
 			algorytmyUC.SetTitle(Nazwy.strCalka);
-			calka.SetLabels("Podaj początek przedziału", "Podaj koniec przedziału", "Pole pod wykresem");
+			calka.SetLabels(Nazwy.strPrzedział1, Nazwy.strPrzedział2, Nazwy.strCalka2);
 			calka.SetUC(this.algorytmyUC);
 			AlgorytmyUC.AddToList(Nazwy.strCalka, calka);
 
@@ -80,12 +80,12 @@ namespace AlgorytmySzkolne.ContentUCs
 			string f = AlgorytmyZachlanne.Fankszyn;
 			if (string.IsNullOrEmpty(f))
 			{
-				MessageBox.Show("Nie podano wzoru funkcji!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				MessageBox.Show(Nazwy.emsgNiePodanoFunkcji, Nazwy.eBłąd, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 			}
 			else
 			{
-				MessageBox.Show("Typ funkcji: " + AlgorytmyZachlanne.TypFankszynu + Environment.NewLine + "Funkcja: " + f,
-					"Wzór funkcji", MessageBoxButtons.OK);
+				MessageBox.Show(Nazwy.iTypFunkcji + AlgorytmyZachlanne.TypFankszynu + Environment.NewLine + Nazwy.iFunkcja + f,
+					Nazwy.iFunkcja, MessageBoxButtons.OK);
 			}
 		}
 	}

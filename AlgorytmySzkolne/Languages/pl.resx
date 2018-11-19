@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="strGlowna" xml:space="preserve">
+    <value>Strona główna</value>
+  </data>
+  <data name="strInfo" xml:space="preserve">
+    <value>Informacje</value>
+  </data>
+  <data name="strKlasyczne" xml:space="preserve">
+    <value>Algorytmy klasyczne</value>
+  </data>
+  <data name="strZachlanne" xml:space="preserve">
+    <value>Algorytmy zachłanne</value>
+  </data>
+  <data name="strSystemy" xml:space="preserve">
+    <value>Systemy liczbowe</value>
+  </data>
+  <data name="strONP" xml:space="preserve">
+    <value>ONP</value>
+  </data>
+  <data name="strProjekty" xml:space="preserve">
+    <value>Projekty</value>
+  </data>
+  <data name="strAproksymacja" xml:space="preserve">
+    <value>Aproksymacja PI</value>
+  </data>
+  <data name="strEuklides" xml:space="preserve">
+    <value>Algorytm Euklidesa</value>
+  </data>
+  <data name="strSilnia" xml:space="preserve">
+    <value>Silnia</value>
+  </data>
+  <data name="strPierwsza" xml:space="preserve">
+    <value>Liczba pierwsza</value>
+  </data>
+  <data name="strSumaDzielnikow" xml:space="preserve">
+    <value>Suma dzielników</value>
+  </data>
+  <data name="strCzynnikiPierwsze" xml:space="preserve">
+    <value>Czynniki pierwsze</value>
+  </data>
+  <data name="strSumaPrzedzialu" xml:space="preserve">
+    <value>Suma z przedziału</value>
+  </data>
+  <data name="strSumaCyfr" xml:space="preserve">
+    <value>Suma cyfr</value>
+  </data>
+  <data name="strRNG" xml:space="preserve">
+    <value>Generator Liczb Losowych</value>
+  </data>
+  <data name="strUstaw" xml:space="preserve">
+    <value>Ustaw funkcję</value>
+  </data>
+  <data name="strZerowe" xml:space="preserve">
+    <value>Miejsce zerowe funkcji</value>
+  </data>
+  <data name="strPierwiastek" xml:space="preserve">
+    <value>Pierwiastek kwadratowy</value>
+  </data>
+  <data name="strPierwiastek2" xml:space="preserve">
+    <value>Pierwiastek kwadratowy z liczby</value>
+  </data>
+  <data name="strCalka" xml:space="preserve">
+    <value>Całka</value>
+  </data>
+  <data name="strCalka2" xml:space="preserve">
+    <value>Pole pod wykresem</value>
+  </data>
+  <data name="oWartosc" xml:space="preserve">
+    <value>Wartość wyrażenia w ONP</value>
+  </data>
+  <data name="oNaONP" xml:space="preserve">
+    <value>Na ONP</value>
+  </data>
+  <data name="oZONP" xml:space="preserve">
+    <value>Z ONP</value>
+  </data>
+  <data name="fWielomian" xml:space="preserve">
+    <value>Wielomian</value>
+  </data>
+  <data name="fWymierna" xml:space="preserve">
+    <value>Funkcja wymierna</value>
+  </data>
+  <data name="fPierwiastek" xml:space="preserve">
+    <value>Pierwiastek</value>
+  </data>
+  <data name="fSin" xml:space="preserve">
+    <value>Sinus</value>
+  </data>
+  <data name="fCos" xml:space="preserve">
+    <value>Cosinus</value>
+  </data>
+  <data name="fTg" xml:space="preserve">
+    <value>Tangens</value>
+  </data>
+  <data name="fCtg" xml:space="preserve">
+    <value>Cotangens</value>
+  </data>
+  <data name="fLosuj" xml:space="preserve">
+    <value>Losuj</value>
+  </data>
+  <data name="fAlternatywa" xml:space="preserve">
+    <value>Alternatywna metoda</value>
+  </data>
+  <data name="aX" xml:space="preserve">
+    <value>x</value>
+  </data>
+  <data name="aPI" xml:space="preserve">
+    <value>PI</value>
+  </data>
+  <data name="aWynik" xml:space="preserve">
+    <value>Wynik</value>
+  </data>
+  <data name="aLiczba" xml:space="preserve">
+    <value>Liczba</value>
+  </data>
+  <data name="aDzielnik" xml:space="preserve">
+    <value>Największy wspólny dzielnik</value>
+  </data>
+  <data name="aWielokrotność" xml:space="preserve">
+    <value>Najmniejsza wielokrotność</value>
+  </data>
+  <data name="aPierwsza" xml:space="preserve">
+    <value>Liczba pierwsza?</value>
+  </data>
+  <data name="aCzynniki" xml:space="preserve">
+    <value>Rozkład na czynniki</value>
+  </data>
+  <data name="aPrzedział" xml:space="preserve">
+    <value>Suma liczb całkowitych z tego przedziału</value>
+  </data>
+  <data name="strCzyChceszWyjść" xml:space="preserve">
+    <value>Czy chcesz wyjść z aplikacji?</value>
+  </data>
+  <data name="strWyjście" xml:space="preserve">
+    <value>Wyjście</value>
+  </data>
+  <data name="strPodajArgument" xml:space="preserve">
+    <value>Podaj argument</value>
+  </data>
+  <data name="strPodajEpsilon" xml:space="preserve">
+    <value>Podaj dokładność</value>
+  </data>
+  <data name="strPodajIloscOdcinkow" xml:space="preserve">
+    <value>Podaj ilość odcinków</value>
+  </data>
+  <data name="strPodajLiczbę" xml:space="preserve">
+    <value>Podaj liczbę</value>
+  </data>
+  <data name="strPodajLiczbę1" xml:space="preserve">
+    <value>Podaj pierwszą liczbę</value>
+  </data>
+  <data name="strPodajLiczbę2" xml:space="preserve">
+    <value>Podaj drugą liczbę</value>
+  </data>
+  <data name="strPrzedział1" xml:space="preserve">
+    <value>Podaj początek przedziału</value>
+  </data>
+  <data name="strPrzedział2" xml:space="preserve">
+    <value>Podaj koniec przedziału</value>
+  </data>
+  <data name="strGranica1" xml:space="preserve">
+    <value>Podaj dolną granicę</value>
+  </data>
+  <data name="strGranica2" xml:space="preserve">
+    <value>Podaj górną granicę</value>
+  </data>
+  <data name="strRestart" xml:space="preserve">
+    <value>Restart</value>
+  </data>
+  <data name="strInfo1" xml:space="preserve">
+    <value>Aplikacja będąca kompilacją większości algorytmów które pisaliśmy na lekcjach informatyki w klasie 2.liceum w roku szkolnym 2017 / 2018. Obsługuje kilka podstawowych skrótów klawiszowych.</value>
+  </data>
+  <data name="strInfo2_1" xml:space="preserve">
+    <value>ESC: wyjście z aplikacji</value>
+  </data>
+  <data name="iOstrzeżenie" xml:space="preserve">
+    <value>Ostrzeżenie</value>
+  </data>
+  <data name="iNiepewne" xml:space="preserve">
+    <value>Uwaga! Chuj wie czy to działa. Czy na pewno chcesz spróbować?</value>
+  </data>
+  <data name="iTypFunkcji" xml:space="preserve">
+    <value>Typ funkcji: </value>
+  </data>
+  <data name="iFunkcja" xml:space="preserve">
+    <value>Funkcja: </value>
+  </data>
+  <data name="iNWD" xml:space="preserve">
+    <value>Podaj 2 liczby by uzyskać ich NWW i NWD.</value>
+  </data>
+  <data name="iSilnia" xml:space="preserve">
+    <value>Podaj liczbę aby uzyskać jej silnię (silnia może mieć maksymalnie ~600 milionów cyfr, ale próba taka może skończyć się bardzo, bardzo źle!)</value>
+  </data>
+  <data name="iPierwsza" xml:space="preserve">
+    <value>Podaj liczbę aby sprawdzić, czy jest ona pierwsza.</value>
+  </data>
+  <data name="iSumaDzielników" xml:space="preserve">
+    <value>Podaj liczbę aby uzyskać sumę jej dzielników naturalnych.</value>
+  </data>
+  <data name="iCzynnikiPierwsze" xml:space="preserve">
+    <value>Podaj liczbę aby uzyskać jej rozkład na czynniki pierwsze (w kolejności niemalejącej)</value>
+  </data>
+  <data name="iSumaPrzedziału" xml:space="preserve">
+    <value>Podaj początek i koniec przedziału aby uzyskać liczbę będącą sumą wszystkich liczb całkowitych z tego przedziału (przedział jest obustronnie domknięty)</value>
+  </data>
+  <data name="iSumaCyfr" xml:space="preserve">
+    <value>Podaj liczbę aby uzyskać sumę wszystkich jej cyfr.</value>
+  </data>
+  <data name="iRNG" xml:space="preserve">
+    <value>Podaj 2 liczby by uzyskać losową liczbę całkowitą z tego przedziału (obustronnie domkniętego)</value>
+  </data>
+  <data name="iZerowe" xml:space="preserve">
+    <value>Podaj początek i koniec przedziału by znaleźć miejsce zerowe. Pamiętaj, że jest to możliwe tylko gdy wartość funkcji na początku i końcu przedziału mają różne znaki. Pamiętaj również o podaniu wzoru funkcji przed uruchomieniem algorytmu. Jeżeli nie podano wzoru, istnieje możliwość jego wylosowania.</value>
+  </data>
+  <data name="iCałka" xml:space="preserve">
+    <value>Podaj dokładność(ilość odcinków) oraz początek i koniec przedziału by otrzymać pole pod wykresem podanej funkcji. Pamiętaj o podaniu wzoru funkcji przed uruchomieniem algorytmu. Jeżeli nie podano wzoru, istnieje możliwość jego wylosowania.Domyślna wartość: 10000 lub więcej.</value>
+  </data>
+  <data name="iPierwiastek" xml:space="preserve">
+    <value>Podaj dokładność obliczeń oraz liczbę aby otrzymać jej pierwiastek kwadratowy. Domyślna wartość: 0,0001 lub mniej. Dozwolone jest zarówno podawanie z kropką, jak i z przecinkiem.</value>
+  </data>
+  <data name="iONPWartość" xml:space="preserve">
+    <value>Podaj wyrażenie w ONP aby uzyskać jego wartość.
+Przykład: 2 3 + 4 *
+Wynik: 20</value>
+  </data>
+  <data name="iONPZ" xml:space="preserve">
+    <value>Podaj wyrażenie w ONP aby uzyskać jego odpowiednik w notacji normalnej.
+Przykład: 2 3 + 4 *
+Wynik: (2+3)*4</value>
+  </data>
+  <data name="iONPNa" xml:space="preserve">
+    <value>Podaj wyrażenie w notacji normalnej aby uzyskać jego odpowiednik w ONP.
+Przykład: (2+3)*4
+Wynik: 2 3 + 4 *</value>
+  </data>
+  <data name="pArgument" xml:space="preserve">
+    <value>Podaj argument...</value>
+  </data>
+  <data name="pOblicz" xml:space="preserve">
+    <value>Oblicz!</value>
+  </data>
+  <data name="pWykonaj" xml:space="preserve">
+    <value>Wykonaj!</value>
+  </data>
+  <data name="eBłąd" xml:space="preserve">
+    <value>Błąd</value>
+  </data>
+  <data name="eSukces" xml:space="preserve">
+    <value>Sukces</value>
+  </data>
+  <data name="eWylosowano" xml:space="preserve">
+    <value>Wylosowano wzór funkcji pomyślnie.</value>
+  </data>
+  <data name="eNieZnaleziono" xml:space="preserve">
+    <value>Nie znaleziono</value>
+  </data>
+  <data name="emsgBłądArgumentu" xml:space="preserve">
+    <value>Błąd argumentu/ów!</value>
+  </data>
+  <data name="emsgNiePodanoFunkcji" xml:space="preserve">
+    <value>Nie podano wzoru funkcji!</value>
+  </data>
+  <data name="emsgBłądFunkcji" xml:space="preserve">
+    <value>Nie podano funkcji! Czy chcesz wylosować wzór?</value>
+  </data>
+  <data name="emsgFormatWejścia" xml:space="preserve">
+    <value>Nieprawidłowy format wejścia.</value>
+  </data>
+  <data name="emsgPodstawaSystemu" xml:space="preserve">
+    <value>Maksymalna podstawa systemu liczbowego to 36 !</value>
+  </data>
+  <data name="emsgException" xml:space="preserve">
+    <value>Coś poszło nie tak.</value>
+  </data>
+  <data name="emsgAproksymacjaPunkty" xml:space="preserve">
+    <value>Podano niewłaściwą ilość punktów! Zostanie przydzielona wartość domyślna.</value>
+  </data>
+  <data name="emsgSierpinskiPoziomy" xml:space="preserve">
+    <value>Nie podano poprawnej liczby! Zostanie ustawiona wartość domyślna.</value>
+  </data>
+  <data name="emsgIlośćOdcinków" xml:space="preserve">
+    <value>Błąd w ilości odcinków.</value>
+  </data>
+  <data name="hIlośćH" xml:space="preserve">
+    <value>Ilość hetmanów</value>
+  </data>
+  <data name="hIlośćS" xml:space="preserve">
+    <value>Ilość skoczków</value>
+  </data>
+  <data name="hFailH" xml:space="preserve">
+    <value>Nie udało ci się postawić ośmiu hetmanów.</value>
+  </data>
+  <data name="hFailS" xml:space="preserve">
+    <value>Nie udało ci się postawić skoczka na każdym polu.</value>
+  </data>
+  <data name="hNieMożnaH" xml:space="preserve">
+    <value>Nie można tu postawić hetmana!</value>
+  </data>
+  <data name="hNieMożnaS" xml:space="preserve">
+    <value>Nie można tu przesunąć skoczka!</value>
+  </data>
+  <data name="hGratulacjeH" xml:space="preserve">
+    <value>Gratulacje, udało Ci się postawić ośmiu hetmanów!</value>
+  </data>
+  <data name="hGratulacjeS" xml:space="preserve">
+    <value>Gratulacje, udało ci się postawić skoczka na każdym miejscu dokładnie jeden raz!</value>
+  </data>
+  <data name="hRestart" xml:space="preserve">
+    <value>Czy chcesz zacząć od nowa?</value>
+  </data>
+  <data name="bAproksymacja" xml:space="preserve">
+    <value>Aproksymacja</value>
+  </data>
+  <data name="bCałka" xml:space="preserve">
+    <value>Całka</value>
+  </data>
+  <data name="bDokładność" xml:space="preserve">
+    <value>Dokładność</value>
+  </data>
+  <data name="bHetmani" xml:space="preserve">
+    <value>Hetmani</value>
+  </data>
+  <data name="bKlasyczne" xml:space="preserve">
+    <value>Klasyczne</value>
+  </data>
+  <data name="bKopiuj" xml:space="preserve">
+    <value>Kopiuj</value>
+  </data>
+  <data name="bLiczbaPierwsza" xml:space="preserve">
+    <value>Liczba pierwsza</value>
+  </data>
+  <data name="bMiejsceZerowe" xml:space="preserve">
+    <value>Miejsce zerowe funkcji</value>
+  </data>
+  <data name="bNWD" xml:space="preserve">
+    <value>NWD i NWW</value>
+  </data>
+  <data name="bONP" xml:space="preserve">
+    <value>ONP</value>
+  </data>
+  <data name="bPierwiastekKwadratowy" xml:space="preserve">
+    <value>Pierwiastek kwadratowy</value>
+  </data>
+  <data name="bPokaż" xml:space="preserve">
+    <value>Pokaż</value>
+  </data>
+  <data name="bPokażFunkcję" xml:space="preserve">
+    <value>Pokaż wzór funkcji</value>
+  </data>
+  <data name="bPoziomy" xml:space="preserve">
+    <value>Podaj ilość poziomów</value>
+  </data>
+  <data name="bProjekty" xml:space="preserve">
+    <value>Projekty</value>
+  </data>
+  <data name="bRNG" xml:space="preserve">
+    <value>Generator Liczb Losowych</value>
+  </data>
+  <data name="bRozkład" xml:space="preserve">
+    <value>Rozkład na czynniki</value>
+  </data>
+  <data name="bSierpiński" xml:space="preserve">
+    <value>Trójkąt Sierpińskiego</value>
+  </data>
+  <data name="bSilnia" xml:space="preserve">
+    <value>Silnia</value>
+  </data>
+  <data name="bSkoczek" xml:space="preserve">
+    <value>Skoczek</value>
+  </data>
+  <data name="bSPOJ" xml:space="preserve">
+    <value>SPOJ</value>
+  </data>
+  <data name="bSumaCyfr" xml:space="preserve">
+    <value>Suma cyfr</value>
+  </data>
+  <data name="bSumaDzielników" xml:space="preserve">
+    <value>Suma dzielników</value>
+  </data>
+  <data name="bSumaPrzedziału" xml:space="preserve">
+    <value>Suma z przedziału</value>
+  </data>
+  <data name="bSystemNaKtóry" xml:space="preserve">
+    <value>Na który</value>
+  </data>
+  <data name="bSystemPodaj" xml:space="preserve">
+    <value>Podaj liczbę w tym systemie</value>
+  </data>
+  <data name="bSystemy" xml:space="preserve">
+    <value>Zamiana systemów liczbowych</value>
+  </data>
+  <data name="bSystemZKtórego" xml:space="preserve">
+    <value>Z którego</value>
+  </data>
+  <data name="bUstaw" xml:space="preserve">
+    <value>Ustaw</value>
+  </data>
+  <data name="bUstawFunkcję" xml:space="preserve">
+    <value>Ustaw funkcję</value>
+  </data>
+  <data name="bWybierzAlgorytm" xml:space="preserve">
+    <value>Wybierz algorytm</value>
+  </data>
+  <data name="bWybierzFunkcję" xml:space="preserve">
+    <value>Wybierz funkcję</value>
+  </data>
+  <data name="bWykres" xml:space="preserve">
+    <value>Wykres funkcji</value>
+  </data>
+  <data name="bZachlanne" xml:space="preserve">
+    <value>Zachłanne</value>
+  </data>
+  <data name="eUstawiono" xml:space="preserve">
+    <value>Ustawiono funkcję pomyślnie.</value>
+  </data>
+  <data name="strInfo2_2" xml:space="preserve">
+    <value>1 - 8: wybór danego algorytmu(tylko na ekranie wyboru algorytmów)</value>
+  </data>
+  <data name="strInfo2_3" xml:space="preserve">
+    <value>TAB: następna kontrolka</value>
+  </data>
+  <data name="bPrzykład" xml:space="preserve">
+    <value>Przykład</value>
+  </data>
+  <data name="bPodajStopień" xml:space="preserve">
+    <value>Podaj stopień</value>
+  </data>
+  <data name="bPodajStopieńFunkcji" xml:space="preserve">
+    <value>Podaj stopień funkcji</value>
+  </data>
+  <data name="bPodajStopieńLicznika" xml:space="preserve">
+    <value>Podaj stopień licznika</value>
+  </data>
+  <data name="bPodajStopieńMianownika" xml:space="preserve">
+    <value>Podaj stopień mianownika</value>
+  </data>
+  <data name="bPodajStopieńPierwiastka" xml:space="preserve">
+    <value>Podaj stopień pierwiastka</value>
+  </data>
+  <data name="bWybierzArgument" xml:space="preserve">
+    <value>Wybierz argument</value>
+  </data>
+  <data name="bWybierzTypArgumentu" xml:space="preserve">
+    <value>Wybierz typ argumentu</value>
+  </data>
+  <data name="emsgNieprawidłowyStopień" xml:space="preserve">
+    <value>Nieprawidłowy stopień funkcji</value>
+  </data>
+  <data name="emsgStopieńLosowejFunkcji" xml:space="preserve">
+    <value>Nieporawnie podano stopień losowej funkcji. Pamiętaj, że dozwolone są tylko liczby całkowite dodatnie.</value>
+  </data>
+  <data name="iFLosuj" xml:space="preserve">
+    <value>Podaj stopień funkcji(musi być to liczba całkowita dodatnia). Następnie program sam wylosuje wszystkie współczynniki i funkcja będzie gotowa do użycia.</value>
+  </data>
+  <data name="iFPierwiastek" xml:space="preserve">
+    <value>Wybierz stopień funkcji pod pierwiastkiem oraz stopień pierwiastka. Następnie podaj stopień pierwiastka poprzedzony literą S, po czym podaj oddzielone spacjami wszystkie współczynniki, nawet gdy wynoszą 0.</value>
+  </data>
+  <data name="iFTrygonometrycznaPI" xml:space="preserve">
+    <value>Funkcja przesunięta o podaną ilość PI. Może zawierać ułamki, ale tylko w postaci dziesiętnej. Podaj tylko jedną liczbę.</value>
+  </data>
+  <data name="iFTrygonometrycznaX" xml:space="preserve">
+    <value>Podaj stopień argumentu, a następnie wszystkie współczynniki oddzielone spacjami. Podaj współczynniki nawet gdy wynoszą one zero.</value>
+  </data>
+  <data name="iFWielomian" xml:space="preserve">
+    <value>Wybierz stopień wielomianu, a nastepnie podaj wszystkie współczynniki oddzielone spacjami. Podaj współczynniki nawet gdy wynoszą one zero.</value>
+  </data>
+  <data name="iFWymierna" xml:space="preserve">
+    <value>Wybierz stopień licznika i mianownika, a nastepnie podaj wszystkie współczynniki oddzielone spacjami w nawiasach (rownież oddzielonych spacjami) poprzedzonych literami L i M.</value>
+  </data>
+</root>

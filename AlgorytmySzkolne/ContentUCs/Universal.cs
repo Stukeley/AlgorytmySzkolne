@@ -98,78 +98,68 @@ namespace AlgorytmySzkolne.ContentUCs
 		private void Universal_Load(object sender, EventArgs e)
 		{
 			inputBox1.ForeColor = Color.SlateGray;
-			inputBox1.Text = "Podaj argument";
+			inputBox1.Text = Nazwy.strPodajArgument;
 			inputBox2.ForeColor = Color.SlateGray;
-			inputBox2.Text = "Podaj argument";
+			inputBox2.Text = Nazwy.strPodajArgument;
 			EpsilonBox.ForeColor = Color.SlateGray;
 
 			RunAlgorithms.SetUniversal(this);
 
-			switch (algorytmyUC.GetTitle())
+			string temp = algorytmyUC.GetTitle();
+
+			if (temp == Nazwy.strEuklides)
 			{
-				case Nazwy.strEuklides:
-					HelpLabel.Text = "Podaj 2 liczby by uzyskać ich NWW i NWD.";
-					break;
-
-				case Nazwy.strSilnia:
-					HelpLabel.Text = "Podaj liczbę aby uzyskać jej silnię (silnia może mieć maksymalnie ~600 milionów cyfr, ale " +
-						"próba taka może skończyć się bardzo, bardzo źle!)";
-					break;
-
-				case Nazwy.strPierwsza:
-					HelpLabel.Text = "Podaj liczbę aby sprawdzić, czy jest ona pierwsza.";
-					break;
-
-				case Nazwy.strSumaDzielnikow:
-					HelpLabel.Text = "Podaj liczbę aby uzyskać sumę jej dzielników naturalnych.";
-					break;
-
-				case Nazwy.strCzynnikiPierwsze:
-					HelpLabel.Text = "Podaj liczbę aby uzyskać jej rozkład na czynniki pierwsze (w kolejności niemalejącej)";
-					break;
-
-				case Nazwy.strSumaPrzedzialu:
-					HelpLabel.Text = "Podaj początek i koniec przedziału aby uzyskać liczbę będącą sumą wszystkich liczb całkowitych " +
-						"z tego przedziału (przedział jest obustronnie domknięty)";
-					break;
-
-				case Nazwy.strSumaCyfr:
-					HelpLabel.Text = "Podaj liczbę aby uzyskać sumę wszystkich jej cyfr.";
-					break;
-
-				case Nazwy.strRNG:
-					HelpLabel.Text = "Podaj 2 liczby by uzyskać losową liczbę całkowitą z tego przedziału (obustronnie domkniętego)";
-					break;
-
-				case Nazwy.strZerowe:
-					HelpLabel.Text = "Podaj początek i koniec przedziału by znaleźć miejsce zerowe. Pamiętaj, że jest to " +
-						"możliwe tylko gdy wartość funkcji na początku i końcu przedziału mają różne znaki. " +
-						"Pamiętaj również o podaniu wzoru funkcji przed uruchomieniem algorytmu. Jeżeli " +
-						"nie podano wzoru, istnieje możliwość jego wylosowania.";
-					break;
-
-				case Nazwy.strCalka:
-					HelpLabel.Text = "Podaj dokładność(ilość odcinków) oraz początek i koniec przedziału by otrzymać " +
-						"pole pod wykresem podanej funkcji. Pamiętaj o podaniu wzoru funkcji przed uruchomieniem " +
-						"algorytmu. Jeżeli nie podano wzoru, istnieje możliwość jego wylosowania." +
-						"Domyślna wartość: 10000 lub więcej.";
-					break;
-
-				case Nazwy.strPierwiastek:
-					HelpLabel.Text = "Podaj dokładność obliczeń oraz liczbę aby otrzymać jej pierwiastek kwadratowy. " +
-						"Domyślna wartość: 0,0001 lub mniej. Dozwolone jest zarówno podawanie z kropką, jak i " +
-						"z przecinkiem.";
-					break;
-
-				default:
-					MessageBox.Show("Coś poszło nie tak. To nie powinno było się stać.");
-					break;
+				HelpLabel.Text = Nazwy.iNWD;
+			}
+			else if (temp == Nazwy.strSilnia)
+			{
+				HelpLabel.Text = Nazwy.iSilnia;
+			}
+			else if (temp == Nazwy.strPierwsza)
+			{
+				HelpLabel.Text = Nazwy.iPierwsza;
+			}
+			else if (temp == Nazwy.strSumaDzielnikow)
+			{
+				HelpLabel.Text = Nazwy.iSumaDzielników;
+			}
+			else if (temp == Nazwy.strCzynnikiPierwsze)
+			{
+				HelpLabel.Text = Nazwy.iCzynnikiPierwsze;
+			}
+			else if (temp == Nazwy.strSumaPrzedzialu)
+			{
+				HelpLabel.Text = Nazwy.iSumaPrzedziału;
+			}
+			else if (temp == Nazwy.strSumaCyfr)
+			{
+				HelpLabel.Text = Nazwy.iSumaCyfr;
+			}
+			else if (temp == Nazwy.strRNG)
+			{
+				HelpLabel.Text = Nazwy.iRNG;
+			}
+			else if (temp == Nazwy.strZerowe)
+			{
+				HelpLabel.Text = Nazwy.iZerowe;
+			}
+			else if (temp == Nazwy.strCalka)
+			{
+				HelpLabel.Text = Nazwy.iCałka;
+			}
+			else if (temp == Nazwy.strPierwiastek)
+			{
+				HelpLabel.Text = Nazwy.iPierwiastek;
+			}
+			else
+			{
+				HelpLabel.Text = "Unhandled exception";
 			}
 		}
 
 		private void inputBox1_Enter(object sender, EventArgs e)
 		{
-			if (inputBox1.Text == "Podaj argument")
+			if (inputBox1.Text == Nazwy.strPodajArgument)
 			{
 				inputBox1.Text = "";
 				inputBox1.ForeColor = Color.Maroon;
@@ -180,14 +170,14 @@ namespace AlgorytmySzkolne.ContentUCs
 		{
 			if (inputBox1.Text == "")
 			{
-				inputBox1.Text = "Podaj argument";
+				inputBox1.Text = Nazwy.strPodajArgument;
 				inputBox1.ForeColor = Color.SlateGray;
 			}
 		}
 
 		private void inputBox2_Enter(object sender, EventArgs e)
 		{
-			if (inputBox2.Text == "Podaj argument")
+			if (inputBox2.Text == Nazwy.strPodajArgument)
 			{
 				inputBox2.Text = "";
 				inputBox2.ForeColor = Color.Maroon;
@@ -198,7 +188,7 @@ namespace AlgorytmySzkolne.ContentUCs
 		{
 			if (inputBox2.Text == "")
 			{
-				inputBox2.Text = "Podaj argument";
+				inputBox2.Text = Nazwy.strPodajArgument;
 				inputBox2.ForeColor = Color.SlateGray;
 			}
 		}
@@ -207,17 +197,17 @@ namespace AlgorytmySzkolne.ContentUCs
 		{
 			if ((algorytmyUC.GetTitle() == Nazwy.strZerowe || algorytmyUC.GetTitle() == Nazwy.strCalka) && AlgorytmyZachlanne.Fankszyn == null)
 			{
-				DialogResult dialogResult = MessageBox.Show("Nie podano funkcji! Czy chcesz wylosować wzór?", "Błąd", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+				DialogResult dialogResult = MessageBox.Show(Nazwy.emsgBłądFunkcji, Nazwy.eBłąd, MessageBoxButtons.YesNo, MessageBoxIcon.Error);
 				if (dialogResult == DialogResult.Yes)
 				{
 					RunAlgorithms.LosujFunkcje();
-					MessageBox.Show("Wylosowano funkcję pomyślnie!", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
+					MessageBox.Show(Nazwy.eWylosowano, Nazwy.eSukces, MessageBoxButtons.OK, MessageBoxIcon.Information);
 				}
 			}
 
-			if (inputBox1.Text == "" || inputBox1.Text == "Podaj argument")
+			if (inputBox1.Text == "" || inputBox1.Text == Nazwy.strPodajArgument)
 			{
-				MessageBox.Show("Błąd argumentu/ów!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(Nazwy.emsgBłądArgumentu, Nazwy.eBłąd, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 
 			if (EpsilonBox.Visible && (algorytmyUC.GetTitle() == Nazwy.strPierwiastek || algorytmyUC.GetTitle() == Nazwy.strZerowe))
@@ -238,7 +228,7 @@ namespace AlgorytmySzkolne.ContentUCs
 				}
 				else
 				{
-					MessageBox.Show("Błąd w ilości odcinków!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					MessageBox.Show(Nazwy.emsgIlośćOdcinków, Nazwy.eBłąd, MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
 			}
 
@@ -250,15 +240,15 @@ namespace AlgorytmySzkolne.ContentUCs
 			}
 			catch (ArgumentException)
 			{
-				MessageBox.Show("Błąd argumentu/ów!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(Nazwy.emsgBłądArgumentu, Nazwy.eBłąd, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 			catch (FormatException)
 			{
-				MessageBox.Show("Niepoprawny format wejścia!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(Nazwy.emsgFormatWejścia, Nazwy.eBłąd, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 			catch (Exception)
 			{
-				MessageBox.Show("Coś poszło nie tak.", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(Nazwy.emsgException, Nazwy.eBłąd, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 

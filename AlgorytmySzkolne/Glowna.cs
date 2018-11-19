@@ -11,15 +11,15 @@ namespace AlgorytmySzkolne
 			switch (kejs)
 			{
 				case "ZaDuzySystem":
-					MessageBox.Show("Maksymalna podstawa systemu liczbowego to 36 !", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					MessageBox.Show(Nazwy.emsgPodstawaSystemu, Nazwy.eBłąd, MessageBoxButtons.OK, MessageBoxIcon.Error);
 					break;
 
 				case "Argument":
-					MessageBox.Show("Nieprawidłowy format wejścia.", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					MessageBox.Show(Nazwy.emsgFormatWejścia, Nazwy.eBłąd, MessageBoxButtons.OK, MessageBoxIcon.Error);
 					break;
 
 				case "Inny":
-					MessageBox.Show("Coś poszło nie tak.", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					MessageBox.Show(Nazwy.emsgException, Nazwy.eBłąd, MessageBoxButtons.OK, MessageBoxIcon.Error);
 					break;
 			}
 		}
@@ -27,6 +27,9 @@ namespace AlgorytmySzkolne
 		public Glowna()
 		{
 			InitializeComponent();
+			Nazwy.LoadStrings();//!!!!!!!!
+
+			//Nazwy.RevertLanguage();//debug only
 		}
 
 		private void Glowna_Load(object sender, EventArgs e)
@@ -36,12 +39,12 @@ namespace AlgorytmySzkolne
 			AlgorytmyUC.AddToList(Nazwy.strGlowna, homepage);
 			homepage.SetUC(algorytmyUC1);
 			algorytmyUC1.SetPanel(homepage);
-			//AlgorytmyUC.CurrentLanguage = Nazwy.lPolski;
 		}
 
 		private void Glowna_OnClose(object sender, FormClosingEventArgs e)//Form.Closing
 		{
-			DialogResult dialogResult = MessageBox.Show("Czy chcesz wyjść z aplikacji?", "Wyjście", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+			DialogResult dialogResult = MessageBox.Show(Nazwy.strCzyChceszWyjść, Nazwy.strWyjście,
+				MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 			if (dialogResult == DialogResult.Yes)
 			{
 			}

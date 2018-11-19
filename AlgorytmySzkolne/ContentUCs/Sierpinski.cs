@@ -88,7 +88,7 @@ namespace AlgorytmySzkolne.ContentUCs
 			{
 				if (n <= 0)
 				{
-					MessageBox.Show("Nie podano poprawnej liczby! Zostanie ustawiona wartość domyślna.", "Błąd",
+					MessageBox.Show(Nazwy.emsgSierpinskiPoziomy, Nazwy.eBłąd,
 						MessageBoxButtons.OK, MessageBoxIcon.Error);
 					n = 10;
 					LevelsBox.Text = "10";
@@ -96,7 +96,7 @@ namespace AlgorytmySzkolne.ContentUCs
 			}
 			else
 			{
-				MessageBox.Show("Nie podano poprawnej liczby! Zostanie ustawiona wartość domyślna.", "Błąd",
+				MessageBox.Show(Nazwy.emsgSierpinskiPoziomy, Nazwy.eBłąd,
 						MessageBoxButtons.OK, MessageBoxIcon.Error);
 				n = 10;
 				LevelsBox.Text = "10";

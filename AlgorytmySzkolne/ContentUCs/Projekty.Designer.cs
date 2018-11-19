@@ -47,7 +47,7 @@
 			this.AproksymacjaButton.Name = "AproksymacjaButton";
 			this.AproksymacjaButton.Size = new System.Drawing.Size(428, 43);
 			this.AproksymacjaButton.TabIndex = 0;
-			this.AproksymacjaButton.Text = "Aproksymacja";
+			this.AproksymacjaButton.Text = Nazwy.bAproksymacja;
 			this.AproksymacjaButton.UseVisualStyleBackColor = false;
 			this.AproksymacjaButton.Click += new System.EventHandler(this.AproksymacjaButton_Click);
 			// 
@@ -63,7 +63,7 @@
 			this.SierpinskiButton.Name = "SierpinskiButton";
 			this.SierpinskiButton.Size = new System.Drawing.Size(428, 43);
 			this.SierpinskiButton.TabIndex = 1;
-			this.SierpinskiButton.Text = "Sierpiński";
+			this.SierpinskiButton.Text = Nazwy.bSierpiński;
 			this.SierpinskiButton.UseVisualStyleBackColor = false;
 			this.SierpinskiButton.Click += new System.EventHandler(this.SierpinskiButton_Click);
 			// 
@@ -79,7 +79,7 @@
 			this.HetmanButton.Name = "HetmanButton";
 			this.HetmanButton.Size = new System.Drawing.Size(428, 43);
 			this.HetmanButton.TabIndex = 2;
-			this.HetmanButton.Text = "Hetmani";
+			this.HetmanButton.Text = Nazwy.bHetmani;
 			this.HetmanButton.UseVisualStyleBackColor = false;
 			this.HetmanButton.Click += new System.EventHandler(this.HetmanButton_Click);
 			// 
@@ -95,7 +95,7 @@
 			this.SkoczekButton.Name = "SkoczekButton";
 			this.SkoczekButton.Size = new System.Drawing.Size(428, 43);
 			this.SkoczekButton.TabIndex = 3;
-			this.SkoczekButton.Text = "Skoczek";
+			this.SkoczekButton.Text = Nazwy.bSkoczek;
 			this.SkoczekButton.UseVisualStyleBackColor = false;
 			this.SkoczekButton.Click += new System.EventHandler(this.SkoczekButton_Click);
 			// 
@@ -111,7 +111,7 @@
 			this.GraphButton.Name = "GraphButton";
 			this.GraphButton.Size = new System.Drawing.Size(428, 43);
 			this.GraphButton.TabIndex = 4;
-			this.GraphButton.Text = "Wykres funkcji";
+			this.GraphButton.Text = Nazwy.bWykres;
 			this.GraphButton.UseVisualStyleBackColor = false;
 			this.GraphButton.Click += new System.EventHandler(this.GraphButton_Click);
 			// 

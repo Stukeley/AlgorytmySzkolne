@@ -40,15 +40,15 @@
 			this.ONPChoiceBox.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.ONPChoiceBox.FormattingEnabled = true;
 			this.ONPChoiceBox.Items.AddRange(new object[] {
-            "Wartość wyrażenia w ONP",
-            "Na ONP",
-            "Z ONP"});
+            Nazwy.oWartosc,
+			Nazwy.oNaONP,
+			Nazwy.oZONP});
 			this.ONPChoiceBox.Location = new System.Drawing.Point(397, 32);
 			this.ONPChoiceBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.ONPChoiceBox.Name = "ONPChoiceBox";
 			this.ONPChoiceBox.Size = new System.Drawing.Size(273, 32);
 			this.ONPChoiceBox.TabIndex = 0;
-			this.ONPChoiceBox.Text = "Wybierz algorytm";
+			this.ONPChoiceBox.Text = Nazwy.bWybierzAlgorytm;
 			this.ONPChoiceBox.SelectionChangeCommitted += new System.EventHandler(this.ONPChoiceBox_SelectionChangeCommitted);
 			// 
 			// ArgumentBox
@@ -60,7 +60,7 @@
 			this.ArgumentBox.Name = "ArgumentBox";
 			this.ArgumentBox.Size = new System.Drawing.Size(564, 35);
 			this.ArgumentBox.TabIndex = 1;
-			this.ArgumentBox.Text = "Podaj argument...";
+			this.ArgumentBox.Text = Nazwy.pArgument;
 			this.ArgumentBox.Enter += new System.EventHandler(this.ArgumentBox_Enter);
 			this.ArgumentBox.Leave += new System.EventHandler(this.ArgumentBox_Leave);
 			// 
@@ -74,7 +74,7 @@
 			this.ResultBox.ReadOnly = true;
 			this.ResultBox.Size = new System.Drawing.Size(564, 35);
 			this.ResultBox.TabIndex = 3;
-			this.ResultBox.Text = "Wynik";
+			this.ResultBox.Text = Nazwy.aWynik;
 			// 
 			// RunButton
 			// 
@@ -84,7 +84,7 @@
 			this.RunButton.Name = "RunButton";
 			this.RunButton.Size = new System.Drawing.Size(167, 74);
 			this.RunButton.TabIndex = 2;
-			this.RunButton.Text = "Oblicz!";
+			this.RunButton.Text = Nazwy.pOblicz;
 			this.RunButton.UseVisualStyleBackColor = true;
 			this.RunButton.Click += new System.EventHandler(this.RunButton_Click);
 			// 

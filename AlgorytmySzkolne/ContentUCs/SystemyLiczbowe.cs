@@ -4,50 +4,50 @@ using System.Windows.Forms;
 namespace AlgorytmySzkolne.ContentUCs
 {
 	public partial class SystemyLiczbowe : UserControl
-    {
-        public AlgorytmyUC algorytmyUC;
+	{
+		public AlgorytmyUC algorytmyUC;
 
-        public void SetUC(AlgorytmyUC algorytmyUC)
-        {
-            this.algorytmyUC = algorytmyUC;
-        }
+		public void SetUC(AlgorytmyUC algorytmyUC)
+		{
+			this.algorytmyUC = algorytmyUC;
+		}
 
-        public void SetResult(string wynik)
-        {
-            ResultBox.Text = wynik;
-        }
+		public void SetResult(string wynik)
+		{
+			ResultBox.Text = wynik;
+		}
 
-        public SystemyLiczbowe()
-        {
-            InitializeComponent();
-        }
+		public SystemyLiczbowe()
+		{
+			InitializeComponent();
+		}
 
-        private void SystemyLiczbowe_Load(object sender, EventArgs e)
-        {
-        }
+		private void SystemyLiczbowe_Load(object sender, EventArgs e)
+		{
+		}
 
-        private void ObliczButton_Click(object sender, EventArgs e)
-        {
-            string argument1 = GivenBox.Text;
-            string argument2 = TargetBox.Text;
-            string argument3 = NumberBox.Text;
+		private void ObliczButton_Click(object sender, EventArgs e)
+		{
+			string argument1 = GivenBox.Text;
+			string argument2 = TargetBox.Text;
+			string argument3 = NumberBox.Text;
 
-            try
-            {
-                RunAlgorithms.Run(this, argument1, argument2, argument3);
-            }
-            catch (ArgumentOutOfRangeException)
-            {
-                MessageBox.Show("Zbyt duża podstawa systemu liczbowego!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (ArgumentException)
-            {
-                MessageBox.Show("Błąd argumentu/ów!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Coś poszło nie tak.", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-    }
+			try
+			{
+				RunAlgorithms.Run(this, argument1, argument2, argument3);
+			}
+			catch (ArgumentOutOfRangeException)
+			{
+				MessageBox.Show(Nazwy.emsgPodstawaSystemu, Nazwy.eBłąd, MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			catch (ArgumentException)
+			{
+				MessageBox.Show(Nazwy.emsgBłądArgumentu, Nazwy.eBłąd, MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			catch (Exception)
+			{
+				MessageBox.Show(Nazwy.emsgException, Nazwy.eBłąd, MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+	}
 }

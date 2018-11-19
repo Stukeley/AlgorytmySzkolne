@@ -48,7 +48,7 @@
             this.KlasyczneButton.Name = "KlasyczneButton";
             this.KlasyczneButton.Size = new System.Drawing.Size(482, 54);
             this.KlasyczneButton.TabIndex = 0;
-            this.KlasyczneButton.Text = "Klasyczne";
+            this.KlasyczneButton.Text = Nazwy.bKlasyczne;
             this.KlasyczneButton.UseVisualStyleBackColor = false;
             this.KlasyczneButton.Click += new System.EventHandler(this.KlasyczneButton_Click);
             // 
@@ -64,7 +64,7 @@
             this.ZachlanneButton.Name = "ZachlanneButton";
             this.ZachlanneButton.Size = new System.Drawing.Size(482, 54);
             this.ZachlanneButton.TabIndex = 1;
-            this.ZachlanneButton.Text = "Zachłanne";
+            this.ZachlanneButton.Text = Nazwy.bZachlanne;
             this.ZachlanneButton.UseVisualStyleBackColor = false;
             this.ZachlanneButton.Click += new System.EventHandler(this.ZachlanneButton_Click);
             // 
@@ -80,7 +80,7 @@
             this.SystemyButton.Name = "SystemyButton";
             this.SystemyButton.Size = new System.Drawing.Size(482, 54);
             this.SystemyButton.TabIndex = 2;
-            this.SystemyButton.Text = "Zamiana systemów liczbowych";
+            this.SystemyButton.Text = Nazwy.bSystemy;
             this.SystemyButton.UseVisualStyleBackColor = false;
             this.SystemyButton.Click += new System.EventHandler(this.SystemyButton_Click);
             // 
@@ -96,7 +96,7 @@
             this.ONPButton.Name = "ONPButton";
             this.ONPButton.Size = new System.Drawing.Size(482, 54);
             this.ONPButton.TabIndex = 3;
-            this.ONPButton.Text = "ONP";
+            this.ONPButton.Text = Nazwy.bONP;
             this.ONPButton.UseVisualStyleBackColor = false;
             this.ONPButton.Click += new System.EventHandler(this.ONPButton_Click);
             // 
@@ -112,7 +112,7 @@
             this.ProjektyButton.Name = "ProjektyButton";
             this.ProjektyButton.Size = new System.Drawing.Size(482, 54);
             this.ProjektyButton.TabIndex = 4;
-            this.ProjektyButton.Text = "Projekty";
+            this.ProjektyButton.Text = Nazwy.bProjekty;
             this.ProjektyButton.UseVisualStyleBackColor = false;
             this.ProjektyButton.Click += new System.EventHandler(this.ProjektyButton_Click);
             // 
@@ -128,7 +128,7 @@
             this.SPOJButton.Name = "SPOJButton";
             this.SPOJButton.Size = new System.Drawing.Size(482, 54);
             this.SPOJButton.TabIndex = 5;
-            this.SPOJButton.Text = "SPOJ";
+            this.SPOJButton.Text = Nazwy.bSPOJ;
             this.SPOJButton.UseVisualStyleBackColor = false;
             this.SPOJButton.Click += new System.EventHandler(this.SPOJButton_Click);
             // 

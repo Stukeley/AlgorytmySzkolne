@@ -50,7 +50,7 @@
             this.EuklidesButton.Name = "EuklidesButton";
             this.EuklidesButton.Size = new System.Drawing.Size(482, 54);
             this.EuklidesButton.TabIndex = 1;
-            this.EuklidesButton.Text = "NWD i NWW Euklidesem";
+            this.EuklidesButton.Text = Nazwy.bNWD;
             this.EuklidesButton.UseVisualStyleBackColor = false;
             this.EuklidesButton.Click += new System.EventHandler(this.EuklidesButton_Click);
             // 
@@ -66,7 +66,7 @@
             this.SilniaButton.Name = "SilniaButton";
             this.SilniaButton.Size = new System.Drawing.Size(482, 54);
             this.SilniaButton.TabIndex = 2;
-            this.SilniaButton.Text = "Silnia";
+            this.SilniaButton.Text = Nazwy.bSilnia;
             this.SilniaButton.UseVisualStyleBackColor = false;
             this.SilniaButton.Click += new System.EventHandler(this.SilniaButton_Click);
             // 
@@ -82,7 +82,7 @@
             this.PierwszaButton.Name = "PierwszaButton";
             this.PierwszaButton.Size = new System.Drawing.Size(482, 54);
             this.PierwszaButton.TabIndex = 3;
-            this.PierwszaButton.Text = "Liczba pierwsza";
+            this.PierwszaButton.Text = Nazwy.bLiczbaPierwsza;
             this.PierwszaButton.UseVisualStyleBackColor = false;
             this.PierwszaButton.Click += new System.EventHandler(this.PierwszaButton_Click);
             // 
@@ -98,7 +98,7 @@
             this.DzielnikiButton.Name = "DzielnikiButton";
             this.DzielnikiButton.Size = new System.Drawing.Size(482, 54);
             this.DzielnikiButton.TabIndex = 4;
-            this.DzielnikiButton.Text = "Suma dzielników";
+            this.DzielnikiButton.Text = Nazwy.bSumaDzielników;
             this.DzielnikiButton.UseVisualStyleBackColor = false;
             this.DzielnikiButton.Click += new System.EventHandler(this.DzielnikiButton_Click);
             // 
@@ -114,8 +114,8 @@
             this.CzynnikiButton.Name = "CzynnikiButton";
             this.CzynnikiButton.Size = new System.Drawing.Size(482, 54);
             this.CzynnikiButton.TabIndex = 5;
-            this.CzynnikiButton.Text = "Rozkład na czynniki";
-            this.CzynnikiButton.UseVisualStyleBackColor = false;
+            this.CzynnikiButton.Text = Nazwy.bRozkład;
+			this.CzynnikiButton.UseVisualStyleBackColor = false;
             this.CzynnikiButton.Click += new System.EventHandler(this.CzynnikiButton_Click);
             // 
             // SumaPrzedzialButton
@@ -130,7 +130,7 @@
             this.SumaPrzedzialButton.Name = "SumaPrzedzialButton";
             this.SumaPrzedzialButton.Size = new System.Drawing.Size(482, 54);
             this.SumaPrzedzialButton.TabIndex = 6;
-            this.SumaPrzedzialButton.Text = "Suma z przedziału";
+            this.SumaPrzedzialButton.Text = Nazwy.bSumaPrzedziału;
             this.SumaPrzedzialButton.UseVisualStyleBackColor = false;
             this.SumaPrzedzialButton.Click += new System.EventHandler(this.SumaPrzedzialButton_Click);
             // 
@@ -146,7 +146,7 @@
             this.SumaCyfrButton.Name = "SumaCyfrButton";
             this.SumaCyfrButton.Size = new System.Drawing.Size(482, 54);
             this.SumaCyfrButton.TabIndex = 7;
-            this.SumaCyfrButton.Text = "Suma cyfr";
+            this.SumaCyfrButton.Text = Nazwy.bSumaCyfr;
             this.SumaCyfrButton.UseVisualStyleBackColor = false;
             this.SumaCyfrButton.Click += new System.EventHandler(this.SumaCyfrButton_Click);
             // 
@@ -162,7 +162,7 @@
             this.RNGButton.Name = "RNGButton";
             this.RNGButton.Size = new System.Drawing.Size(482, 54);
             this.RNGButton.TabIndex = 8;
-            this.RNGButton.Text = "Generator Liczb Losowych";
+            this.RNGButton.Text = Nazwy.bRNG;
             this.RNGButton.UseVisualStyleBackColor = false;
             this.RNGButton.Click += new System.EventHandler(this.RNGButton_Click);
             // 

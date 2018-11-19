@@ -76,7 +76,7 @@
             this.AlgorytmChoiceBox.Name = "AlgorytmChoiceBox";
             this.AlgorytmChoiceBox.Size = new System.Drawing.Size(360, 28);
             this.AlgorytmChoiceBox.TabIndex = 0;
-            this.AlgorytmChoiceBox.Text = "Wybierz algorytm";
+            this.AlgorytmChoiceBox.Text = Nazwy.bWybierzAlgorytm;
             this.AlgorytmChoiceBox.SelectionChangeCommitted += new System.EventHandler(this.AlgorytmChoiceBox_SelectionChangeCommitted);
             // 
             // OutputBox

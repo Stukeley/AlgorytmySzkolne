@@ -13,7 +13,7 @@ namespace AlgorytmySzkolne.ContentUCs
 			InitializeComponent();
 			if (string.IsNullOrEmpty(AlgorytmyZachlanne.Fankszyn))
 			{
-				var result = MessageBox.Show("Nie ustawiono wzoru funkcji! Czy chcesz go wylosować?", "Błąd",
+				var result = MessageBox.Show(Nazwy.emsgBłądFunkcji, Nazwy.eBłąd,
 					MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 				if (result == DialogResult.Yes)
 				{

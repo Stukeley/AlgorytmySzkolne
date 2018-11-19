@@ -82,57 +82,57 @@
 			// 
 			// GivenLabel
 			// 
-			this.GivenLabel.Font = new System.Drawing.Font("Trebuchet MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.GivenLabel.Font = new System.Drawing.Font("Trebuchet MS", 13F);
 			this.GivenLabel.Location = new System.Drawing.Point(245, 58);
 			this.GivenLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.GivenLabel.Name = "GivenLabel";
 			this.GivenLabel.Size = new System.Drawing.Size(210, 30);
 			this.GivenLabel.TabIndex = 13;
-			this.GivenLabel.Text = "Z którego";
+			this.GivenLabel.Text = Nazwy.bSystemZKtórego;
 			this.GivenLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// TargetLabel
 			// 
-			this.TargetLabel.Font = new System.Drawing.Font("Trebuchet MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.TargetLabel.Font = new System.Drawing.Font("Trebuchet MS", 13F);
 			this.TargetLabel.Location = new System.Drawing.Point(612, 58);
 			this.TargetLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.TargetLabel.Name = "TargetLabel";
 			this.TargetLabel.Size = new System.Drawing.Size(210, 30);
 			this.TargetLabel.TabIndex = 14;
-			this.TargetLabel.Text = "Na który";
+			this.TargetLabel.Text = Nazwy.bSystemNaKtóry;
 			this.TargetLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// label1
 			// 
-			this.label1.Font = new System.Drawing.Font("Trebuchet MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.label1.Font = new System.Drawing.Font("Trebuchet MS", 13F);
 			this.label1.Location = new System.Drawing.Point(162, 176);
 			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(744, 30);
 			this.label1.TabIndex = 15;
-			this.label1.Text = "Podaj liczbę w tym systemie";
+			this.label1.Text = Nazwy.bSystemPodaj;
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// label2
 			// 
-			this.label2.Font = new System.Drawing.Font("Trebuchet MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.label2.Font = new System.Drawing.Font("Trebuchet MS", 13F);
 			this.label2.Location = new System.Drawing.Point(162, 272);
 			this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(744, 30);
 			this.label2.TabIndex = 16;
-			this.label2.Text = "Wynik";
+			this.label2.Text = Nazwy.aWynik;
 			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// ObliczButton
 			// 
-			this.ObliczButton.Font = new System.Drawing.Font("Trebuchet MS", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.ObliczButton.Location = new System.Drawing.Point(459, 359);
+			this.ObliczButton.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.ObliczButton.Location = new System.Drawing.Point(445, 359);
 			this.ObliczButton.Margin = new System.Windows.Forms.Padding(4);
 			this.ObliczButton.Name = "ObliczButton";
-			this.ObliczButton.Size = new System.Drawing.Size(149, 62);
+			this.ObliczButton.Size = new System.Drawing.Size(177, 62);
 			this.ObliczButton.TabIndex = 4;
-			this.ObliczButton.Text = "Oblicz!";
+			this.ObliczButton.Text = Nazwy.pOblicz;
 			this.ObliczButton.UseVisualStyleBackColor = true;
 			this.ObliczButton.Click += new System.EventHandler(this.ObliczButton_Click);
 			// 
