@@ -17,10 +17,6 @@ namespace AlgorytmySzkolne.ContentUCs
 			InitializeComponent();
 		}
 
-		private void Zachlanne_Load(object sender, EventArgs e)
-		{
-		}
-
 		private void UstawFunkcjeButton_Click(object sender, EventArgs e)
 		{
 			var ustaw = new SetFunction();

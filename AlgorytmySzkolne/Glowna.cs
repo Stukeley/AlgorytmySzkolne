@@ -54,14 +54,6 @@ namespace AlgorytmySzkolne
 			}
 		}
 
-		private void Glowna_Close(object sender, FormClosedEventArgs e)
-		{
-		}
-
-		private void algorytmyUC1_Load(object sender, EventArgs e)
-		{
-		}
-
 		private void Glowna_KeyDown(object sender, KeyEventArgs e)
 		{
 			//if (e.KeyCode == Keys.Back)//co z wpisywaniem??

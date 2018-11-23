@@ -211,10 +211,6 @@ namespace AlgorytmySzkolne.ContentUCs
 			}
 		}
 
-		private void SetFunction_Load(object sender, EventArgs e)
-		{
-		}
-
 		private void ArgumentChoiceBox1_SelectionChangeCommitted(object sender, EventArgs e)
 		{
 			string selection = ArgumentChoiceBox1.GetItemText(ArgumentChoiceBox1.SelectedItem);

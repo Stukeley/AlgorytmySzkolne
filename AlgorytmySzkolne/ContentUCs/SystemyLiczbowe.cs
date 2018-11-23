@@ -22,10 +22,6 @@ namespace AlgorytmySzkolne.ContentUCs
 			InitializeComponent();
 		}
 
-		private void SystemyLiczbowe_Load(object sender, EventArgs e)
-		{
-		}
-
 		private void ObliczButton_Click(object sender, EventArgs e)
 		{
 			string argument1 = GivenBox.Text;

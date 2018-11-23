@@ -37,7 +37,6 @@
 			this.algorytmyUC1.BackColor = System.Drawing.SystemColors.ControlLight;
 			resources.ApplyResources(this.algorytmyUC1, "algorytmyUC1");
 			this.algorytmyUC1.Name = "algorytmyUC1";
-			this.algorytmyUC1.Load += new System.EventHandler(this.algorytmyUC1_Load);
 			// 
 			// Glowna
 			// 
@@ -50,7 +49,6 @@
 			this.MinimizeBox = false;
 			this.Name = "Glowna";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Glowna_OnClose);
-			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Glowna_Close);
 			this.Load += new System.EventHandler(this.Glowna_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Glowna_KeyDown);
 			this.ResumeLayout(false);

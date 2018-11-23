@@ -128,8 +128,7 @@
 			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.Name = "Zachlanne";
 			this.Size = new System.Drawing.Size(1067, 458);
-			this.Load += new System.EventHandler(this.Zachlanne_Load);
-			this.ResumeLayout(false);
+ 			this.ResumeLayout(false);
 			this.PerformLayout();
 
         }

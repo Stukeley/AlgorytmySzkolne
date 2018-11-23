@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using AlgorytmySzkolne;
 
 namespace AlgorytmySzkolne.ContentUCs
 {
@@ -38,13 +39,14 @@ namespace AlgorytmySzkolne.ContentUCs
 
 		private void GraphButton_Click(object sender, EventArgs e)
 		{
-			var graph = new Graph();
-			try//nie podoba mi się to rozwiązanie - do zmiany
+			if (String.IsNullOrEmpty(AlgorytmyZachlanne.Fankszyn))
 			{
-				graph.Show();
+				MessageBox.Show(Nazwy.emsgNiePodanoFunkcji, Nazwy.eBłąd, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
-			catch (Exception)
+			else
 			{
+				var graph = new Graph();
+				graph.Show();
 			}
 		}
 	}
