@@ -49,15 +49,19 @@ namespace AlgorytmySzkolne.ContentUCs
 
 		private void MainPanel_Paint(object sender, PaintEventArgs e)
 		{
+			//dla łatwiejszej kontroli nad penami
+			var BlackPen = new Pen(Color.FromArgb(255, 0, 0, 0), 2);
+			var BluePen = new Pen(Color.FromArgb(255, 0, 0, 255), 1);
+
 			//narysuj osie
-			e.Graphics.DrawLine(Pens.Black, new Point(0, MainPanel.Height / 2), new Point(MainPanel.Width, MainPanel.Height / 2));
-			e.Graphics.DrawLine(Pens.Black, new Point(MainPanel.Width / 2, 0), new Point(MainPanel.Width / 2, MainPanel.Height));
+			e.Graphics.DrawLine(BlackPen, new Point(0, MainPanel.Height / 2), new Point(MainPanel.Width, MainPanel.Height / 2));
+			e.Graphics.DrawLine(BlackPen, new Point(MainPanel.Width / 2, 0), new Point(MainPanel.Width / 2, MainPanel.Height));
 
 			e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
 			e.Graphics.TranslateTransform(MainPanel.Width / 2, MainPanel.Height / 2);
-			e.Graphics.ScaleTransform(4, -1f);
+			e.Graphics.ScaleTransform(4, -1f);//
 
-			e.Graphics.DrawLines(Pens.Blue, points);
+			e.Graphics.DrawLines(BluePen, points);
 		}
 	}
 }

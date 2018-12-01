@@ -37,6 +37,7 @@ namespace AlgorytmySzkolne.ContentUCs
 		{
 			if (WasClicked)
 			{
+				WasClicked = false;
 				PointF[] punkty = new PointF[3]//największy trójkąt
                 {
 					new PointF(x/2, 0),
@@ -78,6 +79,8 @@ namespace AlgorytmySzkolne.ContentUCs
 				Rysuj(x1, y1, h1, w1, h3, w3, n - 1, e);
 				Rysuj(h1, w1, x2, y2, h2, w2, n - 1, e);
 				Rysuj(h3, w3, h2, w2, x3, y3, n - 1, e);
+
+				Application.DoEvents();//!
 			}
 		}
 
@@ -90,16 +93,16 @@ namespace AlgorytmySzkolne.ContentUCs
 				{
 					MessageBox.Show(Nazwy.emsgSierpinskiPoziomy, Nazwy.eBłąd,
 						MessageBoxButtons.OK, MessageBoxIcon.Error);
-					n = 10;
-					LevelsBox.Text = "10";
+					n = 8;
+					LevelsBox.Text = "8";
 				}
 			}
 			else
 			{
 				MessageBox.Show(Nazwy.emsgSierpinskiPoziomy, Nazwy.eBłąd,
 						MessageBoxButtons.OK, MessageBoxIcon.Error);
-				n = 10;
-				LevelsBox.Text = "10";
+				n = 8;
+				LevelsBox.Text = "8";
 			}
 
 			WasClicked = true;

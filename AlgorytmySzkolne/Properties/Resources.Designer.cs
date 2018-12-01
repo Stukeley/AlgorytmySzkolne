@@ -65,7 +65,7 @@ namespace AlgorytmySzkolne.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap arrow_icon {
             get {
-                object obj = ResourceManager.GetObject("arrow icon", resourceCulture);
+                object obj = ResourceManager.GetObject("arrow_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -75,7 +75,7 @@ namespace AlgorytmySzkolne.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap exit_icon {
             get {
-                object obj = ResourceManager.GetObject("exit icon", resourceCulture);
+                object obj = ResourceManager.GetObject("exit_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -85,7 +85,7 @@ namespace AlgorytmySzkolne.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap help_icon {
             get {
-                object obj = ResourceManager.GetObject("help icon", resourceCulture);
+                object obj = ResourceManager.GetObject("help_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -95,7 +95,7 @@ namespace AlgorytmySzkolne.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap home_icon {
             get {
-                object obj = ResourceManager.GetObject("home icon", resourceCulture);
+                object obj = ResourceManager.GetObject("home_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -105,7 +105,7 @@ namespace AlgorytmySzkolne.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap info_icon {
             get {
-                object obj = ResourceManager.GetObject("info icon", resourceCulture);
+                object obj = ResourceManager.GetObject("info_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -115,7 +115,7 @@ namespace AlgorytmySzkolne.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap language_icon {
             get {
-                object obj = ResourceManager.GetObject("language icon", resourceCulture);
+                object obj = ResourceManager.GetObject("language_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

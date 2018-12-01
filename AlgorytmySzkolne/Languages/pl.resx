@@ -585,4 +585,22 @@ Wynik: 2 3 + 4 *</value>
   <data name="iFWymierna" xml:space="preserve">
     <value>Wybierz stopień licznika i mianownika, a nastepnie podaj wszystkie współczynniki oddzielone spacjami w nawiasach (rownież oddzielonych spacjami) poprzedzonych literami L i M.</value>
   </data>
+  <data name="tAlgorytmySzkolne" xml:space="preserve">
+    <value>Algorytmy Szkolne</value>
+  </data>
+  <data name="tAproksymacja" xml:space="preserve">
+    <value>Aproksymacja</value>
+  </data>
+  <data name="tHetmani" xml:space="preserve">
+    <value>Hetmani</value>
+  </data>
+  <data name="tSierpiński" xml:space="preserve">
+    <value>Trójkąt Sierpińskiego</value>
+  </data>
+  <data name="tSkoczek" xml:space="preserve">
+    <value>Skoczek</value>
+  </data>
+  <data name="tWykres" xml:space="preserve">
+    <value>Szkic wykresu funkcji</value>
+  </data>
 </root>

@@ -129,7 +129,7 @@
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.MaximizeBox = false;
 			this.Name = "Aproksymacja";
-			this.Text = Nazwy.bAproksymacja;
+			this.Text = Nazwy.tAproksymacja;
 			this.TopPanel.ResumeLayout(false);
 			this.TopPanel.PerformLayout();
 			this.ResumeLayout(false);

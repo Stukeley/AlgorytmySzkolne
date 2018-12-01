@@ -118,22 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="arrow icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="arrow_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="language icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="language_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\language icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="info icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="info_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\info icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="home icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="home_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="exit icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="exit_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="help icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="help_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\help icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

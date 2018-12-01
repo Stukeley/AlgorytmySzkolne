@@ -103,7 +103,7 @@
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.MaximizeBox = false;
 			this.Name = "Sierpinski";
-			this.Text = "Trójkąt Sierpińskiego";
+			this.Text = Nazwy.tSierpiński;
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
 			this.ResumeLayout(false);

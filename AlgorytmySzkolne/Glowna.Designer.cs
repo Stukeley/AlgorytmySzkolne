@@ -46,12 +46,14 @@
 			this.Controls.Add(this.algorytmyUC1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.KeyPreview = true;
+			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "Glowna";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Glowna_OnClose);
 			this.Load += new System.EventHandler(this.Glowna_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Glowna_KeyDown);
 			this.ResumeLayout(false);
+			this.Text = Nazwy.tAlgorytmySzkolne;
 
         }
 

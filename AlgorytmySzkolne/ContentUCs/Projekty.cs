@@ -41,7 +41,14 @@ namespace AlgorytmySzkolne.ContentUCs
 		{
 			if (String.IsNullOrEmpty(AlgorytmyZachlanne.Fankszyn))
 			{
-				MessageBox.Show(Nazwy.emsgNiePodanoFunkcji, Nazwy.eBłąd, MessageBoxButtons.OK, MessageBoxIcon.Error);
+				var result = MessageBox.Show(Nazwy.emsgBłądFunkcji, Nazwy.eBłąd,
+						MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+				if (result == DialogResult.Yes)
+				{
+					RunAlgorithms.LosujFunkcje();
+					var graph = new Graph();
+					graph.Show();
+				}
 			}
 			else
 			{

@@ -10,18 +10,34 @@ namespace AlgorytmySzkolne.ContentUCs
 		Hetman
 	}
 
+	public enum Kolor
+	{
+		Biały,
+		Czarny
+	}
+
 	public partial class Hetman : Form
 	{
 		public static Typy Typ;//Skoczek lub Hetman
 		private int w, h;
 		private int[,] liczby;
-		public static Image img0, img1, img2;
+		public static Image img0, img1, img2, img3;
 		private static string LabelText;
 		private bool First;//tylko Skoczek
 
 		public Hetman()
 		{
 			InitializeComponent();
+
+			if (Typ == Typy.Hetman)
+			{
+				this.Text = Nazwy.tHetmani;
+			}
+			else if (Typ == Typy.Skoczek)
+			{
+				this.Text = Nazwy.tSkoczek;
+			}
+
 			liczby = new int[8, 8];//"siatka" liczb
 			w = Panel1.Width / 8;
 			h = Panel1.Height / 8;
@@ -32,19 +48,25 @@ namespace AlgorytmySzkolne.ContentUCs
 				LabelText = "/8";
 				HetmanProgressBar.Maximum = 8;
 				label1.Text = Nazwy.hIlośćH;
+				img2 = Image.FromFile(@"Resources\hetmanC.png");
+				img3 = Image.FromFile(@"Resources\hetmanB.png");
 			}
 			else if (Typ == Typy.Skoczek)
 			{
 				LabelText = "/64";
 				HetmanProgressBar.Maximum = 64;
 				label1.Text = Nazwy.hIlośćS;
+				img2 = Image.FromFile(@"Resources\skoczekC.png");
+				img3 = Image.FromFile(@"Resources\skoczekB.png");
 			}
+			//img2 - czarna figura na białe pola
+			//img3 - biała figura na szare pola
 
 			label2.Text = HetmanProgressBar.Value.ToString() + LabelText;
 
 			img0 = Image.FromFile(@"Resources\0.png");
 			img1 = Image.FromFile(@"Resources\1.png");
-			img2 = Image.FromFile(@"Resources\2.png");
+			//img2 = Image.FromFile(@"Resources\2.png");
 		}
 
 		private void Hetman_Load(object sender, EventArgs e)
@@ -83,10 +105,12 @@ namespace AlgorytmySzkolne.ContentUCs
 					if ((i + j) % 2 == 0)
 					{
 						box.BackColor = Color.White;
+						box.kolor = Kolor.Biały;
 					}
 					else
 					{
 						box.BackColor = Color.Gray;
+						box.kolor = Kolor.Czarny;
 					}
 
 					Panel1.Controls.Add(box);
@@ -439,7 +463,14 @@ namespace AlgorytmySzkolne.ContentUCs
 							}
 							else if (temp == 2)
 							{
-								k.Image = img2;
+								if (k.kolor == Kolor.Biały)
+								{
+									k.Image = img2;
+								}
+								else if (k.kolor == Kolor.Czarny)
+								{
+									k.Image = img3;
+								}
 							}
 							else if (temp == 3)
 							{
@@ -484,6 +515,7 @@ namespace AlgorytmySzkolne.ContentUCs
 	public partial class Kratka : PictureBox
 	{
 		public int row, col;
+		public Kolor kolor;
 
 		public Kratka() : base()
 		{

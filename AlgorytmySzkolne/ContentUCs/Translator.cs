@@ -8,6 +8,8 @@ using System.Resources;
 using System.Net;
 using System.IO;
 using System.Configuration;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace AlgorytmySzkolne.ContentUCs
 {
@@ -20,6 +22,7 @@ namespace AlgorytmySzkolne.ContentUCs
 		public static string CurrentLanguage { get; set; }//niepotrzebne
 		public static string TargetLang { get; set; }//?
 		public static string LanguagePair { get; set; }//postaci l1|l2 np. en|fr - angielski zawsze będzie pierwszy
+		private static bool IsRunning = false;
 
 		public static Dictionary<string, string> CodeNamePairs = new Dictionary<string, string>();
 
@@ -112,7 +115,7 @@ namespace AlgorytmySzkolne.ContentUCs
 			}
 		}
 
-		public static void Translate()
+		public static async Task Translate()//działa asynchronicznie
 		{
 			string CurrentCode = "en";
 			string TargetCode = CodeNamePairs.FirstOrDefault(x => x.Value == TargetLang).Key;
@@ -133,36 +136,50 @@ namespace AlgorytmySzkolne.ContentUCs
 			}
 			else
 			{
-				MessageBox.Show("This language file doesn't exist yet. Translating it might take a moment. Please ensure you have a " +
-					"working Internet connection, then press OK.", "Translate", MessageBoxButtons.OK);
-
-				try//daje poprawnie "en", chociaż nie wyświetla się to w App.config
+				if (IsRunning)
 				{
-					var AllStringsEN = new Dictionary<string, string>();
-					var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-					var settings = config.AppSettings.Settings;
-					var directoryEN = Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).ToString()) + $"\\Languages\\{CurrentCode}.resx";//zawsze en
-					settings["language"].Value = TargetCode;
-					config.Save(ConfigurationSaveMode.Modified);
-					ConfigurationManager.RefreshSection(config.AppSettings.SectionInformation.Name);
-
-					using (var reader = new ResXResourceReader(directoryEN))//zczytujemy angielskie
-					{
-						var id = reader.GetEnumerator();
-						while (id.MoveNext())
-						{
-							AllStringsEN.Add(id.Key.ToString(), id.Value.ToString());
-						}
-					}
-
-					//tutaj mamy gotowy angielski dictionary
-					var OutputDictionary = OptimizedStringTranslator(AllStringsEN);//tutaj otrzymujemy gotowy, przetłumaczony ten tego
-					WriteFile(OutputDictionary, directory);
-					Application.Restart();
+					MessageBox.Show("There's already a translation going on in the background!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 				}
-				catch (ConfigurationErrorsException)
+				else
 				{
-					MessageBox.Show("Error in changing language.");
+					MessageBox.Show("This language file doesn't exist yet. Translating it might take a moment. Please ensure you have a " +
+						"working Internet connection, then press OK. You can keep working in the background, the app will ask to reboot once " +
+						"the translation is ready.", "Translate", MessageBoxButtons.OK);
+
+					try//daje poprawnie "en", chociaż nie wyświetla się to w App.config
+					{
+						var AllStringsEN = new Dictionary<string, string>();
+						var directoryEN = Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).ToString()) + $"\\Languages\\{CurrentCode}.resx";//zawsze en
+
+						using (var reader = new ResXResourceReader(directoryEN))//zczytujemy angielskie
+						{
+							var id = reader.GetEnumerator();
+							while (id.MoveNext())
+							{
+								AllStringsEN.Add(id.Key.ToString(), id.Value.ToString());
+							}
+						}
+
+						//async test
+						var task = Task.Run(() => OptimizedStringTranslator(AllStringsEN));
+						IsRunning = true;
+
+						//tutaj mamy gotowy angielski dictionary
+						/*var OutputDictionary = OptimizedStringTranslator(AllStringsEN);*///tutaj otrzymujemy gotowy, przetłumaczony ten tego
+						await task;
+						//WriteFile(OutputDictionary, directory);
+						WriteFile(task.Result, directory);
+						var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+						var settings = config.AppSettings.Settings;
+						settings["language"].Value = TargetCode;
+						config.Save(ConfigurationSaveMode.Modified);
+						ConfigurationManager.RefreshSection(config.AppSettings.SectionInformation.Name);
+						Application.Restart();
+					}
+					catch (ConfigurationErrorsException)
+					{
+						MessageBox.Show("Error in changing language.");
+					}
 				}
 			}
 		}
@@ -170,6 +187,7 @@ namespace AlgorytmySzkolne.ContentUCs
 		public Translator()
 		{
 			InitializeComponent();
+			CodeNamePairs.Clear();
 		}
 
 		private void Translator_Load(object sender, EventArgs e)
@@ -195,13 +213,13 @@ namespace AlgorytmySzkolne.ContentUCs
 			LanguagesBox.DataSource = LanguageBoxCollection;
 		}
 
-		private void RunButton_Click(object sender, EventArgs e)
+		private async void RunButton_Click(object sender, EventArgs e)
 		{
 			TargetLang = LanguagesBox.GetItemText(LanguagesBox.SelectedItem);
 
 			if (!string.IsNullOrEmpty(TargetLang))
 			{
-				Translate();//debug for now
+				await Translate();//debug for now
 			}
 			else
 			{
@@ -211,17 +229,24 @@ namespace AlgorytmySzkolne.ContentUCs
 
 		private void RevertLanguageButton_Click(object sender, EventArgs e)
 		{
-			var result = MessageBox.Show("This will revert the current language to Polish. Are you sure?", "Revert language",
-				MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
-			if (result == DialogResult.Yes)
+			if (IsRunning)
 			{
-				var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-				var settings = config.AppSettings.Settings;
-				settings["language"].Value = "pl";
-				config.Save(ConfigurationSaveMode.Modified);
-				ConfigurationManager.RefreshSection(config.AppSettings.SectionInformation.Name);
-				Application.Restart();
+				MessageBox.Show("There's already a translation going on in the background!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			}
+			else
+			{
+				var result = MessageBox.Show("This will revert the current language to Polish. Are you sure?", "Revert language",
+					MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+				if (result == DialogResult.Yes)
+				{
+					var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+					var settings = config.AppSettings.Settings;
+					settings["language"].Value = "pl";
+					config.Save(ConfigurationSaveMode.Modified);
+					ConfigurationManager.RefreshSection(config.AppSettings.SectionInformation.Name);
+					Application.Restart();
+				}
 			}
 		}
 	}

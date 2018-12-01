@@ -582,4 +582,22 @@
   <data name="iFWymierna" xml:space="preserve">
     <value>Choose the degree of numerator and denominator, then provide all coefficients (even if they are equal to 0) divided by a single space in parentheses preceded by the letters L (for numerator) and M (for denominator). See example.</value>
   </data>
+  <data name="tAlgorytmySzkolne" xml:space="preserve">
+    <value>School Algorithms</value>
+  </data>
+  <data name="tAproksymacja" xml:space="preserve">
+    <value>Approximation</value>
+  </data>
+  <data name="tHetmani" xml:space="preserve">
+    <value>Bishops</value>
+  </data>
+  <data name="tSierpiński" xml:space="preserve">
+    <value>Sierpinski Triangle</value>
+  </data>
+  <data name="tSkoczek" xml:space="preserve">
+    <value>Knight</value>
+  </data>
+  <data name="tWykres" xml:space="preserve">
+    <value>Function graph</value>
+  </data>
 </root>

@@ -78,6 +78,15 @@ namespace AlgorytmySzkolne
 		public static string aCzynniki = "Rozkład na czynniki";
 		public static string aPrzedział = "Suma liczb całkowitych z tego przedziału";
 
+		//Tytuły
+
+		public static string tAlgorytmySzkolne = "Algorytmy Szkolne";
+		public static string tAproksymacja = "Aproksymacja";
+		public static string tSierpiński = "Trójkąt Sierpińskiego";
+		public static string tWykres = "Szkic wykresu funkcji";
+		public static string tHetmani = "Hetmani";
+		public static string tSkoczek = "Skoczek";
+
 		//Podaj + zapytania
 
 		public static string strCzyChceszWyjść = "Czy chcesz wyjść z aplikacji?";
@@ -299,6 +308,7 @@ namespace AlgorytmySzkolne
 				using (var manager = new ResXResourceSet(directory))
 				{
 					//nie wiem jak z performance
+
 					strGlowna = manager.GetString("strGlowna");
 					strInfo = manager.GetString("strInfo");
 					strKlasyczne = manager.GetString("strKlasyczne");
@@ -321,9 +331,11 @@ namespace AlgorytmySzkolne
 					strPierwiastek2 = manager.GetString("strPierwiastek2");
 					strCalka = manager.GetString("strCalka");
 					strCalka2 = manager.GetString("strCalka2");
+
 					oWartosc = manager.GetString("oWartosc");
 					oNaONP = manager.GetString("oNaONP");
 					oZONP = manager.GetString("oZONP");
+
 					fWielomian = manager.GetString("fWielomian");
 					fWymierna = manager.GetString("fWymierna");
 					fPierwiastek = manager.GetString("fPierwiastek");
@@ -333,6 +345,7 @@ namespace AlgorytmySzkolne
 					fCtg = manager.GetString("fCtg");
 					fLosuj = manager.GetString("fLosuj");
 					fAlternatywa = manager.GetString("fAlternatywa");
+
 					aX = manager.GetString("aX");
 					aPI = manager.GetString("aPI");
 					aWynik = manager.GetString("aWynik");
@@ -342,6 +355,14 @@ namespace AlgorytmySzkolne
 					aPierwsza = manager.GetString("aPierwsza");
 					aCzynniki = manager.GetString("aCzynniki");
 					aPrzedział = manager.GetString("aPrzedział");
+
+					tAlgorytmySzkolne = manager.GetString("tAlgorytmySzkolne");
+					tAproksymacja = manager.GetString("tAproksymacja");
+					tSierpiński = manager.GetString("tSierpiński");
+					tHetmani = manager.GetString("tHetmani");
+					tSkoczek = manager.GetString("tSkoczek");
+					tWykres = manager.GetString("tWykres");
+
 					strCzyChceszWyjść = manager.GetString("strCzyChceszWyjść");
 					strWyjście = manager.GetString("strWyjście");
 					strPodajArgument = manager.GetString("strPodajArgument");
@@ -359,6 +380,7 @@ namespace AlgorytmySzkolne
 					strInfo2_1 = manager.GetString("strInfo2_1");
 					strInfo2_2 = manager.GetString("strInfo2_2");
 					strInfo2_3 = manager.GetString("strInfo2_3");
+
 					iOstrzeżenie = manager.GetString("iOstrzeżenie");
 					iNiepewne = manager.GetString("iNiepewne");
 					iTypFunkcji = manager.GetString("iTypFunkcji");
@@ -383,15 +405,18 @@ namespace AlgorytmySzkolne
 					iFLosuj = manager.GetString("iFLosuj");
 					iFTrygonometrycznaX = manager.GetString("iFTrygonometrycznaX");
 					iFTrygonometrycznaPI = manager.GetString("iFTrygonometrycznaPI");
+
 					pArgument = manager.GetString("pArgument");
 					pOblicz = manager.GetString("pOblicz");
 					pWykonaj = manager.GetString("pWykonaj");
+
 					eBłąd = manager.GetString("eBłąd");
 					eBłądStopnia = manager.GetString("eBłądStopnia");
 					eSukces = manager.GetString("eSukces");
 					eWylosowano = manager.GetString("eWylosowano");
 					eUstawiono = manager.GetString("eUstawiono");
 					eNieZnaleziono = manager.GetString("eNieZnaleziono");
+
 					emsgBłądArgumentu = manager.GetString("emsgBłądArgumentu");
 					emsgNiePodanoFunkcji = manager.GetString("emsgNiePodanoFunkcji");
 					emsgBłądFunkcji = manager.GetString("emsgBłądFunkcji");
@@ -403,6 +428,7 @@ namespace AlgorytmySzkolne
 					emsgIlośćOdcinków = manager.GetString("emsgIlośćOdcinków");
 					emsgNieprawidłowyStopień = manager.GetString("emsgNieprawidłowyStopień");
 					emsgStopieńLosowejFunkcji = manager.GetString("emsgStopieńLosowejFunkcji");
+
 					hIlośćH = manager.GetString("hIlośćH");
 					hIlośćS = manager.GetString("hIlośćS");
 					hFailH = manager.GetString("hFailH");
@@ -412,6 +438,7 @@ namespace AlgorytmySzkolne
 					hGratulacjeH = manager.GetString("hGratulacjeH");
 					hGratulacjeS = manager.GetString("hGratulacjeS");
 					hRestart = manager.GetString("hRestart");
+
 					bKlasyczne = manager.GetString("bKlasyczne");
 					bZachlanne = manager.GetString("bZachlanne");
 					bSystemy = manager.GetString("bSystemy");

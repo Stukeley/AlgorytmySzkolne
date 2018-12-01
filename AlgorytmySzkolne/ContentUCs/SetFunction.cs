@@ -104,6 +104,11 @@ namespace AlgorytmySzkolne.ContentUCs
 						MessageBox.Show(Nazwy.emsgNieprawidłowyStopień, Nazwy.eBłądStopnia, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 					}
 				}
+				else if (AlgorytmyZachlanne.TypFankszynu == Nazwy.fSin || AlgorytmyZachlanne.TypFankszynu == Nazwy.fCos ||
+							AlgorytmyZachlanne.TypFankszynu == Nazwy.fTg || AlgorytmyZachlanne.TypFankszynu == Nazwy.fCtg)
+				{
+					//
+				}
 				else//gdy użytkownik poda coś swojego zamiast wyboru z listy
 				{
 					MessageBox.Show("Incorrect type of function! Please choose one from the list, rather than typing something in.", Nazwy.eBłąd,

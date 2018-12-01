@@ -40,6 +40,7 @@ namespace AlgorytmySzkolne.ContentUCs
 				InputBox.Text = "2000";
 			}
 			WasClicked = true;
+			OutputBox.Text = "";
 			DrawingPanel.Refresh();
 		}
 
@@ -75,9 +76,10 @@ namespace AlgorytmySzkolne.ContentUCs
 						e.Graphics.FillRectangle(Brushes.Cyan, X, Y, 1, 1);
 					}
 					Thread.Sleep(1);
+					Application.DoEvents();//!
 				}
 				paj = 4 * ((double)wkole / (double)punkty);
-				string wynik = String.Format("{0:F6}", paj);
+				string wynik = String.Format("{0:F4}", paj);
 				OutputBox.Text = wynik;
 			}
 		}
