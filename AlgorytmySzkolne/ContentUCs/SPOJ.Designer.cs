@@ -57,7 +57,7 @@
             this.CopyButton.Name = "CopyButton";
             this.CopyButton.Size = new System.Drawing.Size(100, 40);
             this.CopyButton.TabIndex = 2;
-            this.CopyButton.Text = "Kopiuj";
+            this.CopyButton.Text = Nazwy.bKopiuj;
             this.CopyButton.UseVisualStyleBackColor = false;
             this.CopyButton.Click += new System.EventHandler(this.CopyButton_Click);
             // 

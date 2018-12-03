@@ -58,7 +58,7 @@
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(199, 25);
 			this.label1.TabIndex = 2;
-			this.label1.Text = "Podaj ilość poziomów";
+			this.label1.Text = Nazwy.bPoziomy;
 			// 
 			// LevelsBox
 			// 
@@ -77,7 +77,7 @@
 			this.RunButton.Name = "RunButton";
 			this.RunButton.Size = new System.Drawing.Size(108, 46);
 			this.RunButton.TabIndex = 1;
-			this.RunButton.Text = "Pokaż";
+			this.RunButton.Text = Nazwy.bPokaż;
 			this.RunButton.UseVisualStyleBackColor = true;
 			this.RunButton.Click += new System.EventHandler(this.RunButton_Click);
 			// 

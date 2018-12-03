@@ -117,7 +117,7 @@
 			// 
 			this.ObliczButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.ObliczButton.Font = new System.Drawing.Font("Trebuchet MS", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.ObliczButton.Location = new System.Drawing.Point(884, 27);
+			this.ObliczButton.Location = new System.Drawing.Point(669, 134);
 			this.ObliczButton.Margin = new System.Windows.Forms.Padding(4);
 			this.ObliczButton.Name = "ObliczButton";
 			this.ObliczButton.Size = new System.Drawing.Size(179, 74);
@@ -195,7 +195,7 @@
 			this.EpsilonLabel.Name = "EpsilonLabel";
 			this.EpsilonLabel.Size = new System.Drawing.Size(291, 37);
 			this.EpsilonLabel.TabIndex = 12;
-			this.EpsilonLabel.Text = Nazwy.bDokładność;
+			this.EpsilonLabel.Text = "Dokładność";
 			this.EpsilonLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
 			this.EpsilonLabel.Visible = false;
 			// 
@@ -204,10 +204,10 @@
 			this.HelpLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.HelpLabel.BackColor = System.Drawing.Color.Transparent;
 			this.HelpLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.HelpLabel.Location = new System.Drawing.Point(487, 158);
+			this.HelpLabel.Location = new System.Drawing.Point(487, 212);
 			this.HelpLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.HelpLabel.Name = "HelpLabel";
-			this.HelpLabel.Size = new System.Drawing.Size(542, 284);
+			this.HelpLabel.Size = new System.Drawing.Size(542, 230);
 			this.HelpLabel.TabIndex = 13;
 			this.HelpLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			// 

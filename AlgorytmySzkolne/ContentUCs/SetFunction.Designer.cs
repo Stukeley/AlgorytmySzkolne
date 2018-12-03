@@ -94,7 +94,7 @@
 			this.SetFunctionButton.Name = "SetFunctionButton";
 			this.SetFunctionButton.Size = new System.Drawing.Size(115, 42);
 			this.SetFunctionButton.TabIndex = 7;
-			this.SetFunctionButton.Text = "Ustaw";
+			this.SetFunctionButton.Text = Nazwy.bUstaw;
 			this.SetFunctionButton.UseVisualStyleBackColor = true;
 			this.SetFunctionButton.Visible = false;
 			this.SetFunctionButton.Click += new System.EventHandler(this.SetFunctionButton_Click);

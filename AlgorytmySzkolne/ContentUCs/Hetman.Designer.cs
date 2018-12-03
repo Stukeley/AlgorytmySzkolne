@@ -64,7 +64,7 @@
 			// RestartButton
 			// 
 			this.RestartButton.Location = new System.Drawing.Point(452, 7);
-			this.RestartButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.RestartButton.Margin = new System.Windows.Forms.Padding(4);
 			this.RestartButton.Name = "RestartButton";
 			this.RestartButton.Size = new System.Drawing.Size(78, 30);
 			this.RestartButton.TabIndex = 3;
@@ -111,8 +111,9 @@
 			this.Controls.Add(this.Panel1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.MinimizeBox = false;
 			this.Name = "Hetman";
-			this.Text = Nazwy.tHetmani;
+			this.Text = "Hetmani";
 			this.Load += new System.EventHandler(this.Hetman_Load);
 			this.Panel2.ResumeLayout(false);
 			this.Panel2.PerformLayout();
