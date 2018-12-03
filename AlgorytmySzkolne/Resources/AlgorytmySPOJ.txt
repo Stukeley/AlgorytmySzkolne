@@ -187,7 +187,7 @@ using System;
 
 public class Potęgi
     {
-        public static void mejn()
+        public static void Main()
         {
             int D = int.Parse(Console.ReadLine());
             int ostatniaCyfra;
@@ -402,7 +402,7 @@ using System.Numerics;
 
     public class BigIntegery
     {
-        public static void mejn()
+        public static void Main()
         {
             int n = int.Parse(Console.ReadLine());
             for (int i = 0; i < n; i++)

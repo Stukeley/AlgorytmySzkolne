@@ -28,9 +28,14 @@ namespace AlgorytmySzkolne.ContentUCs
 				Brushes.LimeGreen,
 				Brushes.OrangeRed
 			};
-			x = DrawingPanel.Width;
-			y = DrawingPanel.Height;
-			iterator = 0;
+		}
+
+		private void Sierpinski_Resize(object sender, EventArgs e)
+		{
+			var width = this.Width;
+			var height = this.Height - panel1.Height;
+			DrawingPanel.Size = new Size(width, height);
+			DrawingPanel.Refresh();
 		}
 
 		private void DrawingPanel_Paint(object sender, PaintEventArgs e)
@@ -38,6 +43,10 @@ namespace AlgorytmySzkolne.ContentUCs
 			if (WasClicked)
 			{
 				WasClicked = false;
+				x = DrawingPanel.Width;
+				y = DrawingPanel.Height;
+				iterator = 0;
+
 				PointF[] punkty = new PointF[3]//największy trójkąt
                 {
 					new PointF(x/2, 0),

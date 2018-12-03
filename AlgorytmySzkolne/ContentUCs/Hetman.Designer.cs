@@ -109,9 +109,10 @@
 			this.ClientSize = new System.Drawing.Size(533, 519);
 			this.Controls.Add(this.Panel2);
 			this.Controls.Add(this.Panel1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.MinimizeBox = false;
+			this.MaximizeBox = false;
 			this.Name = "Hetman";
 			this.Text = "Hetmani";
 			this.Load += new System.EventHandler(this.Hetman_Load);

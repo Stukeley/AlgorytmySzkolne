@@ -52,16 +52,18 @@
 			// 
 			// label1
 			// 
+			this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.label1.Location = new System.Drawing.Point(12, 19);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(199, 25);
 			this.label1.TabIndex = 2;
-			this.label1.Text = Nazwy.bPoziomy;
+			this.label1.Text = "Podaj ilość poziomów";
 			// 
 			// LevelsBox
 			// 
+			this.LevelsBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.LevelsBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.LevelsBox.Location = new System.Drawing.Point(288, 18);
 			this.LevelsBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -71,13 +73,14 @@
 			// 
 			// RunButton
 			// 
+			this.RunButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.RunButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.RunButton.Location = new System.Drawing.Point(413, 9);
 			this.RunButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.RunButton.Name = "RunButton";
 			this.RunButton.Size = new System.Drawing.Size(108, 46);
 			this.RunButton.TabIndex = 1;
-			this.RunButton.Text = Nazwy.bPokaż;
+			this.RunButton.Text = "Pokaż";
 			this.RunButton.UseVisualStyleBackColor = true;
 			this.RunButton.Click += new System.EventHandler(this.RunButton_Click);
 			// 
@@ -98,12 +101,12 @@
 			this.ClientSize = new System.Drawing.Size(533, 544);
 			this.Controls.Add(this.DrawingPanel);
 			this.Controls.Add(this.panel1);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.MaximizeBox = false;
+			this.MinimumSize = new System.Drawing.Size(551, 591);
 			this.Name = "Sierpinski";
-			this.Text = Nazwy.tSierpiński;
+			this.Text = "Trójkąt Sierpińskiego";
+			this.Resize += new System.EventHandler(this.Sierpinski_Resize);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
 			this.ResumeLayout(false);

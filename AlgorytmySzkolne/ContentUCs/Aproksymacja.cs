@@ -12,6 +12,7 @@ namespace AlgorytmySzkolne.ContentUCs
 		private int IloscPunktow = 0;
 		private bool WasClicked = false;
 		private int wkole, punkty;
+		private int timeout = 0;
 
 		public Aproksymacja()
 		{
@@ -75,7 +76,11 @@ namespace AlgorytmySzkolne.ContentUCs
 					{
 						e.Graphics.FillRectangle(Brushes.Cyan, X, Y, 1, 1);
 					}
-					Thread.Sleep(1);
+					timeout++;
+					if (timeout % 50 == 0)
+					{
+						Thread.Sleep(1);
+					}
 					Application.DoEvents();//!
 				}
 				paj = 4 * ((double)wkole / (double)punkty);

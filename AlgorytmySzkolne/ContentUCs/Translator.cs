@@ -45,8 +45,12 @@ namespace AlgorytmySzkolne.ContentUCs
 			result = result.Substring(0, result.IndexOf("</span>"));
 
 			//usuwanie pozostałości
+
 			result = result.Replace("&#39;", "'");
 			result = result.Replace("&#8217;", "'");
+
+			//prymitywna metoda xd
+
 			if (TargetLang == "French" || TargetLang == "Italian" || TargetLang == "Romanian" || TargetLang == "Esperanto" || TargetLang == "Spanish")
 			{
 				result = result.Replace("č", "e");
