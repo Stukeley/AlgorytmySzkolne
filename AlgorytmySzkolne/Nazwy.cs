@@ -180,6 +180,8 @@ namespace AlgorytmySzkolne
 		public static string iFTrygonometrycznaPI = "Funkcja przesunięta o podaną ilość PI. Może zawierać ułamki, ale tylko w postaci dziesiętnej. " +
 					"Podaj tylko jedną liczbę.";
 
+		public static string iPodajWspółczynniki = "Podaj kolejne współczynniki nawet jeżeli wynoszą one 0. Mogą być to liczby z przecinkiem.";
+
 		//Zawartość pól tekstowych żeby fajnie wyglądały itp.
 
 		public static string pArgument = "Podaj argument...";
@@ -206,6 +208,7 @@ namespace AlgorytmySzkolne
 		public static string emsgIlośćOdcinków = "Błąd w ilości odcinków.";
 		public static string emsgNieprawidłowyStopień = "Nieprawidłowy stopień funkcji";//
 		public static string emsgStopieńLosowejFunkcji = "Nieporawnie podano stopień losowej funkcji. Pamiętaj, że dozwolone są tylko liczby całkowite dodatnie.";//
+		public static string emsgNiepoprawnyWspółczynnikFunkcji = "Współczynniki funkcji muszą być liczbami!";//
 
 		//Hetman
 
@@ -405,6 +408,7 @@ namespace AlgorytmySzkolne
 					iFLosuj = manager.GetString("iFLosuj");
 					iFTrygonometrycznaX = manager.GetString("iFTrygonometrycznaX");
 					iFTrygonometrycznaPI = manager.GetString("iFTrygonometrycznaPI");
+					iPodajWspółczynniki = manager.GetString("iPodajWspółczynniki");
 
 					pArgument = manager.GetString("pArgument");
 					pOblicz = manager.GetString("pOblicz");
@@ -428,6 +432,7 @@ namespace AlgorytmySzkolne
 					emsgIlośćOdcinków = manager.GetString("emsgIlośćOdcinków");
 					emsgNieprawidłowyStopień = manager.GetString("emsgNieprawidłowyStopień");
 					emsgStopieńLosowejFunkcji = manager.GetString("emsgStopieńLosowejFunkcji");
+					emsgNiepoprawnyWspółczynnikFunkcji = manager.GetString("emsgNiepoprawnyWspółczynnikFunkcji");
 
 					hIlośćH = manager.GetString("hIlośćH");
 					hIlośćS = manager.GetString("hIlośćS");

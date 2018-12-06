@@ -192,7 +192,8 @@ namespace AlgorytmySzkolne.ContentUCs
 			}
 			else if (selection == Nazwy.fAlternatywa)
 			{
-				MessageBox.Show("Not implemented yet!", "Soon™", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				var alt = new Alternative();
+				alt.Show();
 			}
 			else if (selection == Nazwy.fSin || selection == Nazwy.fCos || selection == Nazwy.fTg || selection == Nazwy.fCtg)
 			{

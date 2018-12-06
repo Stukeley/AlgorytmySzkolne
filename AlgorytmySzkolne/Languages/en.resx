@@ -600,4 +600,10 @@
   <data name="tWykres" xml:space="preserve">
     <value>Function graph</value>
   </data>
+  <data name="emsgNiepoprawnyWspółczynnikFunkcji" xml:space="preserve">
+    <value>Coefficients have to be numbers!</value>
+  </data>
+  <data name="iPodajWspółczynniki" xml:space="preserve">
+    <value>Provide subsequent coefficients even if they are equal to 0. They can be numbers with a comma.</value>
+  </data>
 </root>

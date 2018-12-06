@@ -603,4 +603,10 @@ Wynik: 2 3 + 4 *</value>
   <data name="tWykres" xml:space="preserve">
     <value>Szkic wykresu funkcji</value>
   </data>
+  <data name="emsgNiepoprawnyWspółczynnikFunkcji" xml:space="preserve">
+    <value>Współczynniki funkcji muszą być liczbami!</value>
+  </data>
+  <data name="iPodajWspółczynniki" xml:space="preserve">
+    <value>Podaj kolejne współczynniki nawet jeżeli wynoszą one 0. Mogą być to liczby z przecinkiem.</value>
+  </data>
 </root>

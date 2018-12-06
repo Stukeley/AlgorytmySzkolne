@@ -87,6 +87,12 @@
       <DependentUpon>AlgorytmyUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Algorytmy.cs" />
+    <Compile Include="ContentUCs\Alternative.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContentUCs\Alternative.Designer.cs">
+      <DependentUpon>Alternative.cs</DependentUpon>
+    </Compile>
     <Compile Include="ContentUCs\Aproksymacja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AlgorytmyUC.resx">
       <DependentUpon>AlgorytmyUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentUCs\Alternative.resx">
+      <DependentUpon>Alternative.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ContentUCs\Aproksymacja.resx">
       <DependentUpon>Aproksymacja.cs</DependentUpon>
