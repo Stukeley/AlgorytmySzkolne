@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using AlgorytmySzkolne.ContentUCs;
+using System.Resources;
+using System.Configuration;
 
 namespace AlgorytmySzkolne
 {
@@ -103,8 +105,32 @@ namespace AlgorytmySzkolne
 
 		private void LanguageChangeButton_Click(object sender, EventArgs e)
 		{
-			var translator = new Translator();
-			translator.Show();
+			var result = MessageBox.Show(Nazwy.emsgTranslacjaNieDziała, ":(", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+			if (result == DialogResult.Yes)
+			{
+				//get current language and change it to the other one
+
+				var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+				var settings = config.AppSettings.Settings;
+
+				var currentLanguage = settings["language"].Value;
+
+				if (currentLanguage == "en")
+				{
+					settings["language"].Value = "pl";
+				}
+				else
+				{
+					settings["language"].Value = "en";
+				}
+
+				config.Save(ConfigurationSaveMode.Modified);
+				ConfigurationManager.RefreshSection(config.AppSettings.SectionInformation.Name);
+				Application.Restart();
+			}
+			//var translator = new Translator();
+			//translator.Show();
 		}
 
 		private void ExitButton_Click(object sender, EventArgs e)

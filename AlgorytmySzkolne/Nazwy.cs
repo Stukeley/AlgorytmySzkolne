@@ -209,6 +209,7 @@ namespace AlgorytmySzkolne
 		public static string emsgNieprawidłowyStopień = "Nieprawidłowy stopień funkcji";//
 		public static string emsgStopieńLosowejFunkcji = "Nieporawnie podano stopień losowej funkcji. Pamiętaj, że dozwolone są tylko liczby całkowite dodatnie.";//
 		public static string emsgNiepoprawnyWspółczynnikFunkcji = "Współczynniki funkcji muszą być liczbami!";//
+		public static string emsgTranslacjaNieDziała = "Z powodu zmiany w polityce i architekturze Google Translate, nie ma już możliwości tłumaczenia na dowolny język. Jedynymi dostępnymi językami są polski i angielski. Czy chesz dokonać zmiany?";
 
 		//Hetman
 
@@ -433,6 +434,7 @@ namespace AlgorytmySzkolne
 					emsgNieprawidłowyStopień = manager.GetString("emsgNieprawidłowyStopień");
 					emsgStopieńLosowejFunkcji = manager.GetString("emsgStopieńLosowejFunkcji");
 					emsgNiepoprawnyWspółczynnikFunkcji = manager.GetString("emsgNiepoprawnyWspółczynnikFunkcji");
+					emsgTranslacjaNieDziała = manager.GetString("emsgTranslacjaNieDziała");
 
 					hIlośćH = manager.GetString("hIlośćH");
 					hIlośćS = manager.GetString("hIlośćS");

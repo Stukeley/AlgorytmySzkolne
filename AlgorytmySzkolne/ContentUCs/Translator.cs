@@ -73,9 +73,12 @@ namespace AlgorytmySzkolne.ContentUCs
 					var url = string.Format(@"http://www.google.com/translate_t?hl=en&ie=UTF8&text={0}&langpair={1}", pair.Value, LanguagePair);
 					var w = web.DownloadString(url);
 
-					w = w.Substring(w.IndexOf("<span title=\"") + "<span title=\"".Length);
+					//w = w.Substring(w.IndexOf("<span title=\"") + "<span title=\"".Length);
+					//w = w.Substring(w.IndexOf(">") + 1);
+					//w = w.Substring(0, w.IndexOf("</span>"));
+					w = w.Substring(w.IndexOf(@"<span title="" class="">") + @"<span title="" class="">".Length);
 					w = w.Substring(w.IndexOf(">") + 1);
-					w = w.Substring(0, w.IndexOf("</span>"));
+					w = w.Substring(0, w.IndexOf(@"</span>"));
 					w = w.Replace("&#39;", "'");
 					w = w.Replace("&#8217;", "'");
 					if (TargetLang == "French" || TargetLang == "Italian" || TargetLang == "Romanian" || TargetLang == "Esperanto" || TargetLang == "Spanish")

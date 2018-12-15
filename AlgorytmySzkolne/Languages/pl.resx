@@ -609,4 +609,7 @@ Wynik: 2 3 + 4 *</value>
   <data name="iPodajWspółczynniki" xml:space="preserve">
     <value>Podaj kolejne współczynniki nawet jeżeli wynoszą one 0. Mogą być to liczby z przecinkiem.</value>
   </data>
+  <data name="emsgTranslacjaNieDziała" xml:space="preserve">
+    <value>Z powodu zmiany w polityce i architekturze Google Translate, nie ma już możliwości tłumaczenia na dowolny język. Jedynymi dostępnymi językami są polski i angielski. Czy chesz dokonać zmiany?</value>
+  </data>
 </root>

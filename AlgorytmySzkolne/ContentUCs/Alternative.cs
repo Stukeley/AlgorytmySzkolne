@@ -153,7 +153,7 @@ namespace AlgorytmySzkolne.ContentUCs
 				AlgorytmyZachlanne.TypFankszynu = Nazwy.fWielomian;
 				AlgorytmyZachlanne.Stopien = stopień;
 
-				MessageBox.Show(Nazwy.eSukces);
+				MessageBox.Show(Nazwy.eSukces, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 			}
 		}
 	}

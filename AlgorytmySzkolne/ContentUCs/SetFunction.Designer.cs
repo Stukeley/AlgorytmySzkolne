@@ -68,22 +68,22 @@
 			this.FunctionChoiceBox.Font = new System.Drawing.Font("High Tower Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.FunctionChoiceBox.ForeColor = System.Drawing.Color.Maroon;
 			this.FunctionChoiceBox.FormattingEnabled = true;
-			this.FunctionChoiceBox.Text = Nazwy.bWybierzFunkcję;
 			this.FunctionChoiceBox.Items.AddRange(new object[] {
-			Nazwy.fWielomian,
-			Nazwy.fWymierna,
-			Nazwy.fPierwiastek,
-			Nazwy.fSin,
-			Nazwy.fCos,
-			Nazwy.fTg,
-			Nazwy.fCtg,
-			Nazwy.fLosuj,
-			Nazwy.fAlternatywa });
+            "Wielomian",
+            "Funkcja wymierna",
+            "Pierwiastek",
+            "Sinus",
+            "Cosinus",
+            "Tangens",
+            "Cotangens",
+            "Losuj",
+            "Alternatywna metoda"});
 			this.FunctionChoiceBox.Location = new System.Drawing.Point(429, 30);
 			this.FunctionChoiceBox.Margin = new System.Windows.Forms.Padding(4);
 			this.FunctionChoiceBox.Name = "FunctionChoiceBox";
 			this.FunctionChoiceBox.Size = new System.Drawing.Size(208, 31);
-			this.FunctionChoiceBox.TabIndex = 6;
+			this.FunctionChoiceBox.TabIndex = 0;
+			this.FunctionChoiceBox.Text = "Wybierz funkcję";
 			this.FunctionChoiceBox.SelectionChangeCommitted += new System.EventHandler(this.FunctionChoiceBox_SelectionChangeCommitted);
 			// 
 			// SetFunctionButton
@@ -93,8 +93,8 @@
 			this.SetFunctionButton.Margin = new System.Windows.Forms.Padding(4);
 			this.SetFunctionButton.Name = "SetFunctionButton";
 			this.SetFunctionButton.Size = new System.Drawing.Size(115, 42);
-			this.SetFunctionButton.TabIndex = 7;
-			this.SetFunctionButton.Text = Nazwy.bUstaw;
+			this.SetFunctionButton.TabIndex = 5;
+			this.SetFunctionButton.Text = "Ustaw";
 			this.SetFunctionButton.UseVisualStyleBackColor = true;
 			this.SetFunctionButton.Visible = false;
 			this.SetFunctionButton.Click += new System.EventHandler(this.SetFunctionButton_Click);
@@ -107,7 +107,7 @@
 			this.StopienBox1.Margin = new System.Windows.Forms.Padding(4);
 			this.StopienBox1.Name = "StopienBox1";
 			this.StopienBox1.Size = new System.Drawing.Size(208, 31);
-			this.StopienBox1.TabIndex = 8;
+			this.StopienBox1.TabIndex = 2;
 			this.StopienBox1.Visible = false;
 			this.StopienBox1.Enter += new System.EventHandler(this.StopienBox1_Enter);
 			// 
@@ -119,7 +119,7 @@
 			this.StopienBox2.Margin = new System.Windows.Forms.Padding(4);
 			this.StopienBox2.Name = "StopienBox2";
 			this.StopienBox2.Size = new System.Drawing.Size(208, 31);
-			this.StopienBox2.TabIndex = 9;
+			this.StopienBox2.TabIndex = 3;
 			this.StopienBox2.Visible = false;
 			this.StopienBox2.Enter += new System.EventHandler(this.StopienBox2_Enter);
 			// 
@@ -135,9 +135,9 @@
 			this.ArgumentChoiceBox1.Location = new System.Drawing.Point(429, 110);
 			this.ArgumentChoiceBox1.Margin = new System.Windows.Forms.Padding(4);
 			this.ArgumentChoiceBox1.Name = "ArgumentChoiceBox1";
-			this.ArgumentChoiceBox1.Text = Nazwy.bWybierzTypArgumentu;
 			this.ArgumentChoiceBox1.Size = new System.Drawing.Size(208, 31);
-			this.ArgumentChoiceBox1.TabIndex = 10;
+			this.ArgumentChoiceBox1.TabIndex = 1;
+			this.ArgumentChoiceBox1.Text = "Wybierz typ argumentu";
 			this.ArgumentChoiceBox1.Visible = false;
 			this.ArgumentChoiceBox1.SelectionChangeCommitted += new System.EventHandler(this.ArgumentChoiceBox1_SelectionChangeCommitted);
 			// 

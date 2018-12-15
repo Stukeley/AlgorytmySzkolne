@@ -606,4 +606,7 @@
   <data name="iPodajWspółczynniki" xml:space="preserve">
     <value>Provide subsequent coefficients even if they are equal to 0. They can be numbers with a comma.</value>
   </data>
+  <data name="emsgTranslacjaNieDziała" xml:space="preserve">
+    <value>Due to changes in Google Translate policy and architecture, it is impossible to translate into any language. The only available ones are Polish and English. Would you like to change the language?</value>
+  </data>
 </root>

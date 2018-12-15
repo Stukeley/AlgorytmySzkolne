@@ -383,7 +383,8 @@ namespace AlgorytmySzkolne
 			bool czy;
 			double wynik = 0;
 			string pom1, pom2;
-			int indexpom1, a, n;
+			int indexpom1, n;
+			double a;
 
 			pom1 = Fankszyn;
 			n = Stopien;
@@ -391,7 +392,7 @@ namespace AlgorytmySzkolne
 			while ((indexpom1 = pom1.IndexOf(' ')) > 0)
 			{
 				pom2 = pom1.Substring(0, indexpom1);
-				czy = int.TryParse(pom2, out a);
+				czy = double.TryParse(pom2, out a);
 				if (czy)
 				{
 					wynik += Math.Pow(x, n) * a;
@@ -404,7 +405,7 @@ namespace AlgorytmySzkolne
 				}
 			}
 
-			czy = int.TryParse(pom1, out a);
+			czy = double.TryParse(pom1, out a);
 			if (czy)
 				wynik += a;
 
