@@ -394,25 +394,25 @@
     <value>Error in line segment amount.</value>
   </data>
   <data name="hIlośćH" xml:space="preserve">
-    <value>Amount of bishops</value>
+    <value>Amount of Queens</value>
   </data>
   <data name="hIlośćS" xml:space="preserve">
     <value>Amount of Knights</value>
   </data>
   <data name="hFailH" xml:space="preserve">
-    <value>Failed to put down eight bishops.</value>
+    <value>Failed to put down eight queens.</value>
   </data>
   <data name="hFailS" xml:space="preserve">
     <value>Failed to place the knight on all tiles.</value>
   </data>
   <data name="hNieMożnaH" xml:space="preserve">
-    <value>Cannot place a bishop here!</value>
+    <value>Cannot place a queen here!</value>
   </data>
   <data name="hNieMożnaS" xml:space="preserve">
     <value>Cannot place the knight here!</value>
   </data>
   <data name="hGratulacjeH" xml:space="preserve">
-    <value>Congratulations, you put down eight bishops!</value>
+    <value>Congratulations, you put down eight queens!</value>
   </data>
   <data name="hGratulacjeS" xml:space="preserve">
     <value>Congratulations, you placed the knight on all tiles exactly once!</value>
